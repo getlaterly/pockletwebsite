@@ -674,7 +674,7 @@ const Footer = () => {
         <div className="mt-6 flex items-center gap-5">
           {/* Instagram */}
           <a 
-            href="https://instagram.com/laterly" 
+            href="https://www.instagram.com/getlaterly/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="transition-opacity hover:opacity-80"
@@ -696,7 +696,7 @@ const Footer = () => {
           
           {/* TikTok */}
           <a 
-            href="https://tiktok.com/@laterly" 
+            href="https://www.tiktok.com/@getlaterly" 
             target="_blank" 
             rel="noopener noreferrer"
             className="transition-opacity hover:opacity-80"
@@ -711,7 +711,7 @@ const Footer = () => {
           
           {/* YouTube */}
           <a 
-            href="https://youtube.com/@laterly" 
+            href="https://www.youtube.com/@GetLaterly" 
             target="_blank" 
             rel="noopener noreferrer"
             className="transition-opacity hover:opacity-80"
@@ -724,7 +724,7 @@ const Footer = () => {
           
           {/* RedNote (小紅書) */}
           <a 
-            href="https://xiaohongshu.com/user/profile/laterly" 
+            href="https://www.xiaohongshu.com/user/profile/63ef043f000000000f012e97" 
             target="_blank" 
             rel="noopener noreferrer"
             className="transition-opacity hover:opacity-80"
@@ -777,7 +777,7 @@ const Footer = () => {
           {/* Social icons */}
           <div className="mt-6 flex items-center gap-5">
             <a 
-              href="https://instagram.com/laterly" 
+              href="https://www.instagram.com/getlaterly/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
@@ -798,7 +798,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://tiktok.com/@laterly" 
+              href="https://www.tiktok.com/@getlaterly" 
               target="_blank" 
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
@@ -812,7 +812,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://youtube.com/@laterly" 
+              href="https://www.youtube.com/@GetLaterly" 
               target="_blank" 
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
@@ -824,7 +824,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://xiaohongshu.com/user/profile/laterly" 
+              href="https://www.xiaohongshu.com/user/profile/63ef043f000000000f012e97" 
               target="_blank" 
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
