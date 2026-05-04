@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Background colors from tokens.ts */
+  --background: 7 10 95;        /* #FCF4F2 */
+  --background-secondary: 0 8 99; /* #FFF9F7 */
+  --card: 12 38 99;              /* #FFFDFC */
+  --background-warm: 21 26 93;   /* #F7E8E3 */
+  
+  /* Brand colors from tokens.ts */
+  --primary: 325 23 58;          /* #A8778F - plum */
+  --primary-foreground: 0 0 100;
+  --secondary: 0 8 99;           /* #FFF9F7 */
+  --secondary-foreground: 338 24 36;
+  
+  /* Text colors from tokens.ts */
+  --foreground: 336 24 26;       /* #47343C */
+  --muted: 338 19 85;
+  --muted-foreground: 336 17 54; /* #7E646E */
+  
+  /* Accent colors from tokens.ts */
+  --accent: 10 62 70;            /* #E19389 - coral */
+  --accent-foreground: 0 0 100;
+  --rose: 355 55 68;             /* #C98E92 - dustyRose */
+  
+  /* Border from tokens.ts */
+  --border: 0 34 92;             /* #EFDCDC */
+  
+  /* Category colors from tokens.ts */
+  --cat-eat: 10 64 69;           /* #DF8E84 */
+  --cat-go: 195 36 62;           /* #7EABB9 */
+  --cat-buy: 43 56 64;           /* #D8B06A */
+  --cat-browse: 270 31 64;       /* #A78AB6 */
+  --cat-do: 100 20 58;           /* #83A07E */
+  
+  --background-alt: 7 10 97;
+  
+  /* Font system */
+  --font-brand: "DM Serif Display";
+  --font-ui-en: "Nunito Sans";
+  --font-ui-tc: "Noto Sans TC";
+  --font-ui-sc: "Noto Sans SC";
+  --font-ui-jp: "Noto Sans JP";
+  
+  /* Default UI font (English) */
+  --font-ui-current: var(--font-ui-en);
+  --font-heading-current: var(--font-brand);
+}
+
+/* Language specific font overrides */
+:root[lang^="zh-Hant"], :root[lang="zh-TW"], :root[lang="zh-HK"] {
+  --font-ui-current: var(--font-ui-tc);
+  --font-heading-current: var(--font-ui-tc);
+}
+
+:root[lang^="zh-Hans"], :root[lang="zh-CN"] {
+  --font-ui-current: var(--font-ui-sc);
+  --font-heading-current: var(--font-ui-sc);
+}
+
+:root[lang^="ja"] {
+  --font-ui-current: var(--font-ui-jp);
+  --font-heading-current: var(--font-ui-jp);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui-current);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .display-flourish em {
+    font-style: italic;
+    color: hsl(var(--accent));
+  }
+  
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  
+  .map-topo {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .map-grid {
+    background-color: hsl(var(--secondary));
+  }
+}
