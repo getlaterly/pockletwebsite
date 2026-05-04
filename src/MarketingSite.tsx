@@ -471,9 +471,9 @@ const MapSection = () => {
                     <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "hsl(var(--cat-eat))" }} />
                     <span className="text-[13px] font-medium text-muted-foreground">{t("map.eat")}</span>
                   </div>
-                  <div className="font-display mt-0.5 text-[22px] leading-tight text-foreground sm:text-[24px]">Best Bakery In Town</div>
-                  <div className="mt-1 text-[15px] font-medium text-foreground/80">Bean Around Bakery-Café</div>
-                  <div className="mt-0.5 text-[13px] text-muted-foreground">350 Queens Parade, Fitzroy North</div>
+                <div className="font-display mt-0.5 text-[22px] leading-tight text-foreground sm:text-[24px]">{t("map.pinTitle")}</div>
+                <div className="mt-1 text-[15px] font-medium text-foreground/80">{t("map.pinSubtitle")}</div>
+                <div className="mt-0.5 text-[13px] text-muted-foreground">{t("map.pinAddress")}</div>
                 </div>
                 <div className="mt-2 flex sm:mt-0 sm:self-center">
                   <button className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#6b8e73] px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-card sm:w-auto">

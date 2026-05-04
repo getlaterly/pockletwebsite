@@ -44,15 +44,14 @@ const PrivacyPage = () => {
           {t("privacy.intro1")}
         </p>
         <p>
-          Everything you save lives on your device. We don't sell your data, train AI models on it, 
-          or use it for advertising.
+          {t("privacy.intro2")}
         </p>
       </div>
 
       {/* What we collect */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          What we collect
+          {t("privacy.collectTitle")}
         </h2>
         
         <div className="mt-8 space-y-8 text-[15px] leading-relaxed text-foreground sm:text-base">
@@ -108,7 +107,7 @@ const PrivacyPage = () => {
       {/* What we don't collect */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          What we don't collect
+          {t("privacy.notCollectTitle")}
         </h2>
         
         <ul className="mt-8 space-y-3 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
@@ -138,7 +137,7 @@ const PrivacyPage = () => {
       {/* Third-party services */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          Third-party services
+          {t("privacy.thirdPartyTitle")}
         </h2>
         
         <div className="mt-8 space-y-8 text-[15px] leading-relaxed text-foreground sm:text-base">
@@ -190,7 +189,7 @@ const PrivacyPage = () => {
       {/* Future features */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          Future features
+          {t("privacy.futureTitle")}
         </h2>
         
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed sm:text-base">
@@ -224,7 +223,7 @@ const PrivacyPage = () => {
       {/* Your control */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          Your control
+          {t("privacy.controlTitle")}
         </h2>
         
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed sm:text-base">
@@ -258,7 +257,7 @@ const PrivacyPage = () => {
       {/* Children */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          Children's privacy
+          {t("privacy.childrenTitle")}
         </h2>
         
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
@@ -280,7 +279,7 @@ const PrivacyPage = () => {
       {/* Updates */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          Updates to this policy
+          {t("privacy.updatesTitle")}
         </h2>
         
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
@@ -299,7 +298,7 @@ const PrivacyPage = () => {
       {/* Contact */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
-          Questions?
+          {t("privacy.questionsTitle")}
         </h2>
         
         <div className="mt-8 space-y-4 text-[15px] leading-relaxed text-foreground sm:text-base">
@@ -323,7 +322,7 @@ const PrivacyPage = () => {
           to="/"
           className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
         >
-          <ArrowLeft className="h-4 w-4" /> {t("privacy.back")} to home
+          <ArrowLeft className="h-4 w-4" /> {t("privacy.backHome")}
         </Link>
       </div>
     </main>

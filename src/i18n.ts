@@ -80,7 +80,10 @@ const resources: Record<string, any> = {
         buy: "Buy",
         browse: "Browse",
         do: "Do",
-        directions: "Directions"
+        directions: "Directions",
+        pinTitle: "Best Bakery In Town",
+        pinSubtitle: "Bean Around Bakery-Café",
+        pinAddress: "350 Queens Parade, Fitzroy North"
       },
       cta: {
         eyebrow: "Get started",
@@ -250,7 +253,10 @@ const resources: Record<string, any> = {
         buy: "買",
         browse: "逛",
         do: "做",
-        directions: "導航"
+        directions: "導航",
+        pinTitle: "鎮上最棒的麵包店",
+        pinSubtitle: "Bean Around Bakery-Café",
+        pinAddress: "350 Queens Parade, Fitzroy North"
       },
       cta: {
         eyebrow: "開始使用",
@@ -420,7 +426,10 @@ const resources: Record<string, any> = {
         buy: "买",
         browse: "逛",
         do: "做",
-        directions: "导航"
+        directions: "导航",
+        pinTitle: "镇上最棒的面包店",
+        pinSubtitle: "Bean Around Bakery-Café",
+        pinAddress: "350 Queens Parade, Fitzroy North"
       },
       cta: {
         eyebrow: "开始使用",
@@ -590,7 +599,10 @@ const resources: Record<string, any> = {
         buy: "買う",
         browse: "見る",
         do: "する",
-        directions: "経路"
+        directions: "経路",
+        pinTitle: "街で最高のベーカリー",
+        pinSubtitle: "Bean Around Bakery-Café",
+        pinAddress: "350 Queens Parade, Fitzroy North"
       },
       cta: {
         eyebrow: "はじめよう",
