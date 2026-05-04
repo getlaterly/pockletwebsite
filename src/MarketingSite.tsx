@@ -1,40 +1,24 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
-  MapPin,
   Bookmark,
-  Camera,
   Link as LinkIcon,
   Bell,
   Layers,
   Search,
-  Moon,
   Globe,
-  WifiOff,
-  Compass,
   Navigation,
   Coffee,
   Utensils,
   ShoppingBag,
-  Sparkles,
   Check,
-  Star,
   Heart,
   Play,
-  Upload,
-  Instagram,
-  Facebook,
-  Mail,
   ChevronDown,
 } from "lucide-react";
-import cafeImg from "@/assets/save-cafe.jpg";
-import pizzaImg from "@/assets/save-pizza.jpg";
-import trailImg from "@/assets/save-trail.jpg";
-import booksImg from "@/assets/save-books.jpg";
-import vaseImg from "@/assets/save-vase.jpg";
-import sofaImg from "@/assets/save-sofa.jpg";
 import laterlyLogo from "@/assets/laterly-logo-cropped.png";
 import heroVisualImg from "@/assets/hero-visual.png";
 import mapBakeryImg from "@/assets/map-bakery-cropped.png";
@@ -48,22 +32,12 @@ const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
-const Pill = ({ children, tone = "default" }: { children: React.ReactNode; tone?: "default" | "accent" | "sage" }) => {
-  const tones = {
-    default: "bg-secondary text-secondary-foreground",
-    accent: "bg-accent/15 text-accent",
-    sage: "bg-primary/10 text-primary",
-  } as const;
-  return (
-    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${tones[tone]}`}>
-      {children}
-    </span>
-  );
-};
 
 /* ---------- Nav ---------- */
 
-const Nav = () => (
+const Nav = () => {
+  const { t } = useTranslation();
+  return (
   <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl">
     <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
       <Link to="/" className="flex items-center gap-2">
@@ -74,15 +48,18 @@ const Nav = () => (
         href="#download"
         className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:shadow-card hover:-translate-y-0.5 md:px-4 md:py-2"
       >
-        Get Laterly <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+        {t("nav.getLaterly")} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
       </a>
     </div>
   </header>
-);
+  );
+};
 
 /* ---------- Hero ---------- */
 
-const Hero = () => (
+const Hero = () => {
+  const { t } = useTranslation();
+  return (
   <section className="relative overflow-hidden bg-[#FDF7F5]">
     <div className="grain absolute inset-0" />
 
@@ -90,20 +67,20 @@ const Hero = () => (
       {/* Left text column */}
       <div className="relative z-20 lg:col-span-6 xl:col-span-5 lg:flex lg:flex-col lg:justify-center">
         <h1 className="font-display text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
-          Save it now.<br />Make it a <em className="bg-gradient-brand bg-clip-text text-transparent not-italic pr-2">Laterly</em>
+          {t("hero.title1")}<br />{t("hero.title2")} <em className="bg-gradient-brand bg-clip-text text-transparent not-italic pr-2">Laterly</em>
         </h1>
         <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-foreground sm:mt-5 sm:text-lg md:mt-6 md:text-xl">
-          Save posts, places, and ideas you want to come back to — and actually find them when it matters.
+          {t("hero.desc1")}
         </p>
         <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-foreground/60 sm:text-base">
-          See what you saved nearby, when you need it.
+          {t("hero.desc2")}
         </p>
         <div className="mt-6 sm:mt-8 md:mt-10">
           <a
             href="#download"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow sm:w-auto sm:px-8 sm:py-4 sm:text-base"
           >
-            Get Laterly <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5" />
+            {t("nav.getLaterly")} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5" />
           </a>
         </div>
       </div>
@@ -121,75 +98,69 @@ const Hero = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
-/* ---------- Logo / quote strip ---------- */
-
-const Strip = () => (
-  <section className="border-y border-border/60 bg-gradient-paper">
-    <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-6 py-6 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-      <span>“The bookmark app I finally open.”</span>
-      <span className="hidden md:inline">— Side by Side</span>
-      <span className="hidden md:inline">★ 4.9 · App Store</span>
-      <span>Featured · Designer Daily</span>
-    </div>
-  </section>
-);
 
 /* ---------- Problem Section ---------- */
 
-const Problem = () => (
+const Problem = () => {
+  const { t } = useTranslation();
+  return (
   <section className="relative py-16 sm:py-20 md:py-28">
     <div className="mx-auto max-w-3xl px-5 text-center sm:px-6">
-      <Eyebrow>Sound familiar</Eyebrow>
+      <Eyebrow>{t("problem.eyebrow")}</Eyebrow>
       {/* Title - Hook */}
       <h2 className="font-display mt-4 text-[28px] leading-[1.2] tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl">
-        You saved it for later.<br />But later never came.
+        <span dangerouslySetInnerHTML={{ __html: t("problem.title") }} />
       </h2>
       
       {/* Examples */}
       <div className="mt-10 space-y-2 text-[16px] leading-[1.6] text-foreground/80 sm:mt-12 sm:space-y-2.5 sm:text-[17px] md:mt-14 md:text-lg">
-        <p>A restaurant from Instagram.</p>
-        <p>A video from TikTok.</p>
-        <p>A place you found on YouTube.</p>
+        <p>{t("problem.ex1")}</p>
+        <p>{t("problem.ex2")}</p>
+        <p>{t("problem.ex3")}</p>
       </div>
       
       {/* Pain */}
       <div className="mt-10 space-y-1.5 text-[17px] leading-[1.6] text-foreground sm:mt-12 sm:text-lg md:mt-14">
-        <p>You forgot it.</p>
-        <p>Or forgot where you saved it.</p>
+        <p>{t("problem.pain1")}</p>
+        <p>{t("problem.pain2")}</p>
       </div>
       
       {/* Transition + Solution */}
       <div className="mx-auto mt-12 max-w-2xl sm:mt-14 md:mt-16">
         <p className="font-display text-[20px] leading-[1.2] tracking-tight text-foreground sm:text-[22px] md:text-2xl lg:text-[26px]">
-          That's where Laterly comes in.
+          {t("problem.sol1")}
         </p>
         <p className="mt-4 text-[17px] leading-[1.6] text-foreground sm:mt-5 sm:text-lg md:text-xl md:leading-[1.5]">
-          One place to save. One place to come back.
+          {t("problem.sol2")}
         </p>
       </div>
     </div>
   </section>
-);
+  );
+};
 
 /* ---------- How it Works ---------- */
 
-const HowItWorks = () => (
+const HowItWorks = () => {
+  const { t } = useTranslation();
+  return (
   <section id="how" className="relative py-16 sm:py-20 md:py-28">
     <div className="mx-auto max-w-5xl px-5 sm:px-6">
       <div className="text-center">
-        <Eyebrow>How it works</Eyebrow>
+        <Eyebrow>{t("how.eyebrow")}</Eyebrow>
         <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-          Simple.<br className="md:hidden" /><span className="hidden md:inline"> </span>Nothing to manage
+          <span dangerouslySetInnerHTML={{ __html: t("how.title") }} />
         </h2>
       </div>
 
       <div className="mt-12 grid gap-8 sm:mt-16 sm:gap-10 md:grid-cols-3 md:gap-8">
         {[
-          { num: "1", title: "Save", desc: "Save from any app in a few taps." },
-          { num: "2", title: "Add what matters", desc: "Name it, tag it, or pin a location." },
-          { num: "3", title: "Come back", desc: "Get reminded and actually do it." },
+          { num: "1", title: t("how.step1Title"), desc: t("how.step1Desc") },
+          { num: "2", title: t("how.step2Title"), desc: t("how.step2Desc") },
+          { num: "3", title: t("how.step3Title"), desc: t("how.step3Desc") },
         ].map((step) => (
           <div key={step.num} className="text-center md:text-left">
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-brand text-primary-foreground shadow-soft md:mx-0">
@@ -202,11 +173,14 @@ const HowItWorks = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 /* ---------- Video showcase ---------- */
 
-const VideoShowcase = () => (
+const VideoShowcase = () => {
+  const { t } = useTranslation();
+  return (
   <section id="video" className="relative overflow-hidden py-16 sm:py-20 md:py-28">
     <div className="absolute inset-0 bg-gradient-paper" />
     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -218,12 +192,12 @@ const VideoShowcase = () => (
 
     <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
       <div className="mx-auto max-w-2xl text-center">
-        <Eyebrow>See it in motion</Eyebrow>
+        <Eyebrow>{t("video.eyebrow")}</Eyebrow>
         <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-          Watch it happen
+          {t("video.title")}
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[16px] leading-[1.7] text-foreground sm:mt-5 sm:text-[17px]">
-          From saving to actually coming back to it.
+          {t("video.desc")}
         </p>
       </div>
 
@@ -268,8 +242,8 @@ const VideoShowcase = () => (
                     <Play className="h-6 w-6 translate-x-0.5 fill-current sm:h-7 sm:w-7" />
                   </button>
                   <div className="text-xs text-foreground/70 sm:text-sm">
-                    30-second demo
-                    <div className="mt-0.5 text-[10px] text-foreground/50 sm:text-xs">Save → Find → Act</div>
+                    {t("video.demo")}
+                    <div className="mt-0.5 text-[10px] text-foreground/50 sm:text-xs">{t("video.demoSub")}</div>
                   </div>
                 </div>
 
@@ -287,37 +261,45 @@ const VideoShowcase = () => (
       </motion.div>
     </div>
   </section>
-);
+  );
+};
 
 /* ---------- Features ---------- */
 
 // Desktop features (all 6)
-const featuresDesktop = [
-  { icon: LinkIcon, title: "Save from any app", body: "Share a link from Instagram, TikTok, or anywhere else. Laterly saves it in seconds." },
-  { icon: Layers, title: "Categories that fit life", body: "Eat, Go, Buy, Browse, Do — or invent your own labels with a colour and a glyph." },
-  { icon: Search, title: "Find it again, fast", body: "Search across titles, notes and the text inside your screenshots. Filter, switch, done." },
-  { icon: Bell, title: "Gentle reminders", body: "Nudge yourself for tonight, this weekend, or anytime you need." },
-  { icon: Heart, title: "Mark your favorites", body: "Keep the best ones easy to find. Favorites stay accessible even after you complete them." },
-  { icon: Globe, title: "Made your way", body: "Switch between light and dark themes, and choose your preferred language." },
-];
+
 
 // Mobile features (only 4, simplified copy)
-const featuresMobile = [
-  { icon: LinkIcon, title: "Save from any app", body: "Save from Instagram, TikTok, or anywhere in seconds." },
-  { icon: Layers, title: "Categories that fit life", body: "Eat, Go, Buy, Browse — or create your own." },
-  { icon: Search, title: "Find and keep what matters", body: "Search to find what you need. Mark favorites to keep the best ones close." },
-  { icon: Bell, title: "Gentle reminders", body: "A nudge at the right time." },
-];
 
-const Features = () => (
+
+const Features = () => {
+  const { t } = useTranslation();
+  
+  const featuresDesktop = [
+    { icon: LinkIcon, title: t('features.f1Title'), body: t('features.f1Desc') },
+    { icon: Layers, title: t('features.f2Title'), body: t('features.f2Desc') },
+    { icon: Search, title: t('features.f3Title'), body: t('features.f3Desc') },
+    { icon: Bell, title: t('features.f4Title'), body: t('features.f4Desc') },
+    { icon: Heart, title: t('features.f5Title'), body: t('features.f5Desc') },
+    { icon: Globe, title: t('features.f6Title'), body: t('features.f6Desc') },
+  ];
+
+  const featuresMobile = [
+    { icon: LinkIcon, title: t('features.f1Title'), body: t('features.f1DescMob') },
+    { icon: Layers, title: t('features.f2Title'), body: t('features.f2DescMob') },
+    { icon: Search, title: t('features.f3TitleMob'), body: t('features.f3DescMob') },
+    { icon: Bell, title: t('features.f4Title'), body: t('features.f4DescMob') },
+  ];
+
+  return (
   <section id="features" className="relative py-16 sm:py-20 md:py-24 bg-gradient-paper">
     <div className="mx-auto max-w-7xl px-5 sm:px-6">
       {/* Desktop version */}
       <div className="hidden md:block">
         <div className="max-w-2xl">
-          <Eyebrow>What's inside</Eyebrow>
+          <Eyebrow>{t("features.eyebrow")}</Eyebrow>
           <h2 className="font-display mt-4 text-[26px] leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            The boring parts, handled.
+            {t("features.title")}
           </h2>
         </div>
         <div className="mt-8 grid gap-3 overflow-hidden rounded-2xl border border-border bg-border sm:mt-12 sm:gap-px sm:rounded-3xl md:grid-cols-2 lg:grid-cols-3">
@@ -341,9 +323,9 @@ const Features = () => (
       {/* Mobile version */}
       <div className="md:hidden">
         <div className="max-w-2xl">
-          <Eyebrow>What's inside</Eyebrow>
+          <Eyebrow>{t("features.eyebrow")}</Eyebrow>
           <h2 className="font-display mt-5 text-[26px] leading-tight tracking-tight text-foreground">
-            The boring parts, handled.
+            {t("features.title")}
           </h2>
         </div>
         <div className="mt-8 grid gap-3 overflow-hidden rounded-2xl border border-border bg-border">
@@ -360,7 +342,8 @@ const Features = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 /* ---------- THE MAP SECTION ---------- */
 
@@ -372,27 +355,29 @@ const mapPins = [
   { x: 52, y: 44, cat: "browse", icon: Bookmark, label: "Bookshop" },
 ];
 
-const MapSection = () => (
+const MapSection = () => {
+  const { t } = useTranslation();
+  return (
   <section id="map" className="relative overflow-hidden bg-gradient-paper py-16 sm:py-20 md:py-28">
     <div className="grain absolute inset-0" />
     <div className="relative mx-auto max-w-5xl px-5 sm:px-6">
       {/* Centered content */}
       <div className="text-center">
-        <Eyebrow>On the map</Eyebrow>
+        <Eyebrow>{t("map.eyebrow")}</Eyebrow>
         <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-          See what's saved nearby
+          {t("map.title")}
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.7] text-foreground sm:mt-6 sm:text-[17px] md:text-lg">
-          When you're out, open the map and see what you saved around you.
+          {t("map.desc")}
         </p>
         
         <div className="mx-auto mt-4 max-w-xl space-y-1.5 text-[16px] font-medium leading-[1.6] text-muted-foreground sm:text-[17px]">
-          <p>No digging through screenshots.</p>
-          <p>No jumping between apps.</p>
+          <p>{t("map.point1")}</p>
+          <p>{t("map.point2")}</p>
         </div>
         
         <p className="mx-auto mt-6 max-w-xl text-[16px] font-medium leading-[1.6] text-foreground sm:mt-8 sm:text-[17px]">
-          Just decide and go.
+          {t("map.point3")}
         </p>
       </div>
 
@@ -484,7 +469,7 @@ const MapSection = () => (
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "hsl(var(--cat-eat))" }} />
-                    <span className="text-[13px] font-medium text-muted-foreground">Eat</span>
+                    <span className="text-[13px] font-medium text-muted-foreground">{t("map.eat")}</span>
                   </div>
                   <div className="font-display mt-0.5 text-[22px] leading-tight text-foreground sm:text-[24px]">Best Bakery In Town</div>
                   <div className="mt-1 text-[15px] font-medium text-foreground/80">Bean Around Bakery-Café</div>
@@ -493,7 +478,7 @@ const MapSection = () => (
                 <div className="mt-2 flex sm:mt-0 sm:self-center">
                   <button className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#6b8e73] px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-card sm:w-auto">
                     <Navigation className="h-4 w-4" />
-                    Directions
+                    {t("map.directions")}
                   </button>
                 </div>
               </motion.div>
@@ -503,28 +488,31 @@ const MapSection = () => (
       </motion.div>
     </div>
   </section>
-);
+  );
+};
 
 /* ---------- Final CTA ---------- */
 
-const FinalCTA = () => (
+const FinalCTA = () => {
+  const { t } = useTranslation();
+  return (
   <section id="download" className="relative py-16 sm:py-20 md:py-28">
     <div className="mx-auto max-w-3xl px-5 text-center sm:px-6">
-      <Eyebrow>Get started</Eyebrow>
+      <Eyebrow>{t("cta.eyebrow")}</Eyebrow>
       <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-        Make later happen
+        {t("cta.title")}
       </h2>
       <p className="mx-auto mt-5 max-w-xl text-[16px] leading-[1.7] text-foreground sm:mt-6 sm:text-[17px] md:text-lg">
-        Start saving the things you actually want to come back to.
+        {t("cta.desc")}
       </p>
       <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-        A calm pocket for the things you'll get to.
+        {t("cta.sub")}
       </p>
       
       {/* Mobile: Buttons */}
       <div className="md:hidden">
         <p className="mt-10 text-xs uppercase tracking-[0.2em] text-muted-foreground/80 sm:mt-12">
-          Available on
+          {t("cta.avail")}
         </p>
         
         <div className="mt-3 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
@@ -532,62 +520,63 @@ const FinalCTA = () => (
             href="#" 
             className="inline-flex w-full items-center justify-center rounded-xl bg-foreground px-8 py-3.5 text-sm font-semibold text-background shadow-card transition-all hover:-translate-y-0.5 hover:shadow-glow sm:w-auto sm:px-10 sm:py-4"
           >
-            App Store
+            {t("cta.appstore")}
           </a>
           <a 
             href="#" 
             className="inline-flex w-full items-center justify-center rounded-xl bg-foreground px-8 py-3.5 text-sm font-semibold text-background shadow-card transition-all hover:-translate-y-0.5 hover:shadow-glow sm:w-auto sm:px-10 sm:py-4"
           >
-            Google Play
+            {t("cta.googleplay")}
           </a>
         </div>
       </div>
 
       {/* Desktop: QR Codes */}
       <div className="mt-12 hidden items-center justify-center gap-8 md:flex lg:gap-12">
-        {/* App Store QR */}
+        {/* {t("cta.appstore")} QR */}
         <div className="flex flex-col items-center gap-3">
           <div className="flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-border bg-card shadow-card lg:h-44 lg:w-44">
             <div className="flex flex-col items-center text-center">
               <svg className="mb-3 h-20 w-20 text-foreground/20" viewBox="0 0 100 100" fill="currentColor">
                 <path d="M0 0h30v30H0zM10 10h10v10H10zM70 0h30v30H70zM80 10h10v10H80zM0 70h30v30H0zM10 80h10v10H10zM40 0h20v10H40zM40 20h10v20H40zM60 20h10v10H60zM50 40h20v10H50zM30 40h10v20H30zM0 40h20v10H0zM0 50h10v10H0zM20 50h10v20H20zM80 40h20v10H80zM70 50h10v20H70zM90 60h10v20H90zM40 60h20v10H40zM40 80h10v20H40zM60 70h10v10H60zM70 80h20v20H70zM80 90h10v10H80z" />
               </svg>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">App Store</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{t("cta.appstore")}</p>
             </div>
           </div>
-          <p className="text-sm font-medium text-foreground">App Store</p>
+          <p className="text-sm font-medium text-foreground">{t("cta.appstore")}</p>
         </div>
 
-        {/* Google Play QR */}
+        {/* {t("cta.googleplay")} QR */}
         <div className="flex flex-col items-center gap-3">
           <div className="flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-border bg-card shadow-card lg:h-44 lg:w-44">
             <div className="flex flex-col items-center text-center">
               <svg className="mb-3 h-20 w-20 text-foreground/20" viewBox="0 0 100 100" fill="currentColor">
                 <path d="M0 0h30v30H0zM10 10h10v10H10zM70 0h30v30H70zM80 10h10v10H80zM0 70h30v30H0zM10 80h10v10H10zM40 0h20v10H40zM40 20h10v20H40zM60 20h10v10H60zM50 40h20v10H50zM30 40h10v20H30zM0 40h20v10H0zM0 50h10v10H0zM20 50h10v20H20zM80 40h20v10H80zM70 50h10v20H70zM90 60h10v20H90zM40 60h20v10H40zM40 80h10v20H40zM60 70h10v10H60zM70 80h20v20H70zM80 90h10v10H80z" />
               </svg>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Google Play</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{t("cta.googleplay")}</p>
             </div>
           </div>
-          <p className="text-sm font-medium text-foreground">Google Play</p>
+          <p className="text-sm font-medium text-foreground">{t("cta.googleplay")}</p>
         </div>
       </div>
       
       <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-[11px] text-muted-foreground/70 sm:gap-4 sm:text-xs">
         <span className="inline-flex items-center gap-1.5">
-          <Check className="h-3 w-3 text-primary/80 sm:h-3.5 sm:w-3.5" /> Free to sign up
+          <Check className="h-3 w-3 text-primary/80 sm:h-3.5 sm:w-3.5" /> {t("cta.free")}
         </span>
         <span className="text-muted-foreground/40">·</span>
         <span className="inline-flex items-center gap-1.5">
-          <Check className="h-3 w-3 text-primary/80 sm:h-3.5 sm:w-3.5" /> No ads or tracking
+          <Check className="h-3 w-3 text-primary/80 sm:h-3.5 sm:w-3.5" /> {t("cta.noads")}
         </span>
         <span className="text-muted-foreground/40">·</span>
         <span className="inline-flex items-center gap-1.5">
-          <Check className="h-3 w-3 text-primary/80 sm:h-3.5 sm:w-3.5" /> Unlimited saves
+          <Check className="h-3 w-3 text-primary/80 sm:h-3.5 sm:w-3.5" /> {t("cta.unlimited")}
         </span>
       </div>
     </div>
   </section>
-);
+  );
+};
 
 /* ---------- Language Selector ---------- */
 
@@ -600,8 +589,11 @@ const languages = [
 ];
 
 const LanguageSelector = () => {
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+  // Find current language from i18n.language or fallback to first
+  const currentLang = languages.find(l => l.code === i18n.language) || languages[0];
+  const [selectedLanguage, setSelectedLanguage] = useState(currentLang);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -623,8 +615,7 @@ const LanguageSelector = () => {
   const handleLanguageSelect = (language: typeof languages[0]) => {
     setSelectedLanguage(language);
     setIsOpen(false);
-    // TODO: Implement actual language switching logic here
-    // Example: i18n.changeLanguage(language.code);
+    i18n.changeLanguage(language.code);
   };
 
   return (
@@ -664,7 +655,9 @@ const LanguageSelector = () => {
 
 /* ---------- Footer ---------- */
 
-const Footer = () => (
+const Footer = () => {
+  const { t } = useTranslation();
+  return (
   <footer className="border-t border-border bg-gradient-paper">
     <div className="mx-auto max-w-7xl px-6 py-16">
       {/* Mobile: vertical layout */}
@@ -674,7 +667,7 @@ const Footer = () => (
           <span className="font-brand text-xl text-foreground">Laterly</span>
         </div>
         <p className="mt-5 text-sm text-muted-foreground/80">
-          Built for real life — now and later.
+          {t("footer.tagline")}
         </p>
         
         {/* Social icons */}
@@ -748,22 +741,22 @@ const Footer = () => (
         <nav className="mt-10 space-y-2.5 text-sm text-muted-foreground">
           <div>
             <a href="#how" className="transition-colors hover:text-foreground">
-              How it works
+              {t("footer.how")}
             </a>
           </div>
           <div>
             <a href="#map" className="transition-colors hover:text-foreground">
-              Find things nearby
+              {t("footer.nearby")}
             </a>
           </div>
           <div>
             <a href="mailto:getlaterly@gmail.com" className="transition-colors hover:text-foreground">
-              Contact
+              {t("footer.contact")}
             </a>
           </div>
           <div>
             <Link to="/privacy" className="transition-colors hover:text-foreground">
-              Privacy
+              {t("footer.privacy")}
             </Link>
           </div>
         </nav>
@@ -778,7 +771,7 @@ const Footer = () => (
             <span className="font-brand text-xl text-foreground">Laterly</span>
           </div>
           <p className="mt-5 text-sm text-muted-foreground/80">
-            Built for real life — now and later.
+            {t("footer.tagline")}
           </p>
           
           {/* Social icons */}
@@ -847,19 +840,19 @@ const Footer = () => (
 
         {/* Right: Navigation */}
         <div>
-          <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60">Explore</div>
+          <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60">{t("footer.explore")}</div>
           <nav className="mt-4 flex flex-col gap-2.5 text-sm text-muted-foreground">
             <a href="#how" className="transition-colors hover:text-foreground">
-              How it works
+              {t("footer.how")}
             </a>
             <a href="#map" className="transition-colors hover:text-foreground">
-              Find things nearby
+              {t("footer.nearby")}
             </a>
             <a href="mailto:getlaterly@gmail.com" className="transition-colors hover:text-foreground">
-              Contact
+              {t("footer.contact")}
             </a>
             <Link to="/privacy" className="transition-colors hover:text-foreground">
-              Privacy
+              {t("footer.privacy")}
             </Link>
           </nav>
         </div>
@@ -874,7 +867,8 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 /* ---------- Page ---------- */
 
