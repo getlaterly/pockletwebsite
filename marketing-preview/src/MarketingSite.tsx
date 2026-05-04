@@ -38,17 +38,6 @@ import sofaImg from "@/assets/save-sofa.jpg";
 import laterlyLogo from "@/assets/laterly-logo-cropped.png";
 import heroVisualImg from "@/assets/hero-visual.png";
 import mapBakeryImg from "@/assets/map-bakery-cropped.png";
-import { supabase } from "./lib/supabaseClient";
-
-const signInWithGoogle = async () => {
-  const { error } = await supabase.auth.signInWithOAuth({
-    provider: 'google',
-    options: {
-      redirectTo: 'https://getlaterly.com',
-    }
-  });
-  if (error) console.error(error);
-};
 
 /* ---------- Small primitives ---------- */
 
@@ -81,20 +70,12 @@ const Nav = () => (
         <img src={laterlyLogo} alt="Laterly" className="h-[26px] w-auto" />
         <span className="font-brand text-xl tracking-tight text-foreground">Laterly</span>
       </Link>
-      <div className="flex items-center gap-4">
-        <button
-          onClick={signInWithGoogle}
-          className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Log in
-        </button>
-        <a
-          href="#download"
-          className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:shadow-card hover:-translate-y-0.5 md:px-4 md:py-2"
-        >
-          Get Laterly <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-        </a>
-      </div>
+      <a
+        href="#download"
+        className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:shadow-card hover:-translate-y-0.5 md:px-4 md:py-2"
+      >
+        Get Laterly <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+      </a>
     </div>
   </header>
 );
