@@ -21,7 +21,7 @@ const PrivacyPage = () => {
         </Link>
         <Link
           to="/"
-          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          className="inline-flex items-center gap-1.5 p-2 -mr-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4" /> {t("privacy.back")}
         </Link>

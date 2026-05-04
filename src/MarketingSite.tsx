@@ -416,7 +416,7 @@ const MapSection = () => {
                     whileHover={{ scale: 1.1, y: -4, zIndex: 10 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 * i, type: "spring", stiffness: 220, damping: 18 }}
-                    className="absolute -translate-x-1/2 -translate-y-full cursor-pointer"
+                    className="absolute -translate-x-1/2 -translate-y-full cursor-pointer p-3 -m-3"
                     style={{ left: `${p.x}%`, top: `${p.y}%` }}
                   >
                     <div className="flex flex-col items-center">
@@ -622,7 +622,7 @@ const LanguageSelector = () => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex items-center gap-1.5 text-xs text-muted-foreground/50 transition-colors hover:text-muted-foreground/70"
+        className="inline-flex items-center gap-1.5 p-2 -mr-2 text-xs text-muted-foreground/50 transition-colors hover:text-muted-foreground/70"
         aria-label="Select language"
       >
         <Globe className="h-3 w-3" />
@@ -677,7 +677,7 @@ const Footer = () => {
             href="https://www.instagram.com/getlaterly/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="transition-opacity hover:opacity-80"
+            className="p-2 -m-2 transition-opacity hover:opacity-80"
             aria-label="Instagram"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
@@ -699,7 +699,7 @@ const Footer = () => {
             href="https://www.tiktok.com/@getlaterly" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="transition-opacity hover:opacity-80"
+            className="p-2 -m-2 transition-opacity hover:opacity-80"
             aria-label="TikTok"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
@@ -714,7 +714,7 @@ const Footer = () => {
             href="https://www.youtube.com/@GetLaterly" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="transition-opacity hover:opacity-80"
+            className="p-2 -m-2 transition-opacity hover:opacity-80"
             aria-label="YouTube"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#FF0000">
@@ -727,7 +727,7 @@ const Footer = () => {
             href="https://www.xiaohongshu.com/user/profile/63ef043f000000000f012e97" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="transition-opacity hover:opacity-80"
+            className="p-2 -m-2 transition-opacity hover:opacity-80"
             aria-label="RedNote"
           >
             <svg className="h-5 w-5" viewBox="0 0 200 200" fill="none">
@@ -738,24 +738,24 @@ const Footer = () => {
         </div>
         
         {/* Navigation */}
-        <nav className="mt-10 space-y-2.5 text-sm text-muted-foreground">
+        <nav className="mt-10 space-y-1 text-sm text-muted-foreground">
           <div>
-            <a href="#how" className="transition-colors hover:text-foreground">
+            <a href="#how" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.how")}
             </a>
           </div>
           <div>
-            <a href="#map" className="transition-colors hover:text-foreground">
+            <a href="#map" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.nearby")}
             </a>
           </div>
           <div>
-            <a href="mailto:getlaterly@gmail.com" className="transition-colors hover:text-foreground">
+            <a href="mailto:getlaterly@gmail.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.contact")}
             </a>
           </div>
           <div>
-            <Link to="/privacy" className="transition-colors hover:text-foreground">
+            <Link to="/privacy" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.privacy")}
             </Link>
           </div>
@@ -780,7 +780,7 @@ const Footer = () => {
               href="https://www.instagram.com/getlaterly/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-80"
+              className="p-2 -m-2 transition-opacity hover:opacity-80"
               aria-label="Instagram"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
@@ -801,7 +801,7 @@ const Footer = () => {
               href="https://www.tiktok.com/@getlaterly" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-80"
+              className="p-2 -m-2 transition-opacity hover:opacity-80"
               aria-label="TikTok"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
@@ -815,7 +815,7 @@ const Footer = () => {
               href="https://www.youtube.com/@GetLaterly" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-80"
+              className="p-2 -m-2 transition-opacity hover:opacity-80"
               aria-label="YouTube"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#FF0000">
@@ -827,7 +827,7 @@ const Footer = () => {
               href="https://www.xiaohongshu.com/user/profile/63ef043f000000000f012e97" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-80"
+              className="p-2 -m-2 transition-opacity hover:opacity-80"
               aria-label="RedNote"
             >
               <svg className="h-5 w-5" viewBox="0 0 200 200" fill="none">
@@ -841,17 +841,17 @@ const Footer = () => {
         {/* Right: Navigation */}
         <div>
           <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60">{t("footer.explore")}</div>
-          <nav className="mt-4 flex flex-col gap-2.5 text-sm text-muted-foreground">
-            <a href="#how" className="transition-colors hover:text-foreground">
+          <nav className="mt-4 flex flex-col gap-1 text-sm text-muted-foreground">
+            <a href="#how" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.how")}
             </a>
-            <a href="#map" className="transition-colors hover:text-foreground">
+            <a href="#map" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.nearby")}
             </a>
-            <a href="mailto:getlaterly@gmail.com" className="transition-colors hover:text-foreground">
+            <a href="mailto:getlaterly@gmail.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.contact")}
             </a>
-            <Link to="/privacy" className="transition-colors hover:text-foreground">
+            <Link to="/privacy" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.privacy")}
             </Link>
           </nav>
