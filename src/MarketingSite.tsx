@@ -4,16 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
-  Bookmark,
   Link as LinkIcon,
   Bell,
   Layers,
   Search,
   Globe,
-  Navigation,
-  Coffee,
-  Utensils,
-  ShoppingBag,
   Check,
   Heart,
   Play,
@@ -21,7 +16,7 @@ import {
 } from "lucide-react";
 import laterlyLogo from "@/assets/laterly-logo-cropped.png";
 import heroVisualImg from "@/assets/hero-visual.png";
-import mapBakeryImg from "@/assets/map-bakery-cropped.png";
+import mapIllustrationImg from "@/assets/map-illustration.png";
 
 /* ---------- Small primitives ---------- */
 
@@ -63,7 +58,7 @@ const Hero = () => {
   <section className="relative overflow-hidden bg-[#FDF7F5]">
     <div className="grain absolute inset-0" />
 
-    <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-8 sm:gap-12 sm:px-6 sm:py-10 md:py-14 lg:grid-cols-12 lg:gap-16 lg:py-20">
+    <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:gap-12 sm:px-6 sm:py-14 md:py-16 lg:grid-cols-12 lg:gap-16 lg:py-24">
       {/* Left text column */}
       <div className="relative z-20 lg:col-span-6 xl:col-span-5 lg:flex lg:flex-col lg:justify-center">
         <h1 className="font-display text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
@@ -107,7 +102,7 @@ const Hero = () => {
 const Problem = () => {
   const { t } = useTranslation();
   return (
-  <section className="relative py-16 sm:py-20 md:py-28">
+  <section className="relative py-16 sm:py-20 md:py-24 lg:py-28">
     <div className="mx-auto max-w-3xl px-5 text-center sm:px-6">
       <Eyebrow>{t("problem.eyebrow")}</Eyebrow>
       {/* Title - Hook */}
@@ -147,7 +142,7 @@ const Problem = () => {
 const HowItWorks = () => {
   const { t } = useTranslation();
   return (
-  <section id="how" className="relative py-16 sm:py-20 md:py-28">
+  <section id="how" className="relative py-16 sm:py-20 md:py-24 lg:py-28">
     <div className="mx-auto max-w-5xl px-5 sm:px-6">
       <div className="text-center">
         <Eyebrow>{t("how.eyebrow")}</Eyebrow>
@@ -181,7 +176,7 @@ const HowItWorks = () => {
 const VideoShowcase = () => {
   const { t } = useTranslation();
   return (
-  <section id="video" className="relative overflow-hidden py-16 sm:py-20 md:py-28">
+  <section id="video" className="relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-28">
     <div className="absolute inset-0 bg-gradient-paper" />
     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
     <div className="grain absolute inset-0" />
@@ -292,7 +287,7 @@ const Features = () => {
   ];
 
   return (
-  <section id="features" className="relative py-16 sm:py-20 md:py-24 bg-gradient-paper">
+  <section id="features" className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-paper">
     <div className="mx-auto max-w-7xl px-5 sm:px-6">
       {/* Desktop version */}
       <div className="hidden md:block">
@@ -347,18 +342,10 @@ const Features = () => {
 
 /* ---------- THE MAP SECTION ---------- */
 
-const mapPins = [
-  { x: 22, y: 30, cat: "eat", icon: Coffee, label: "Café Linné" },
-  { x: 64, y: 22, cat: "go", icon: Navigation, label: "Botanic walk" },
-  { x: 78, y: 58, cat: "eat", icon: Utensils, label: "Pizzeria Otto" },
-  { x: 38, y: 64, cat: "buy", icon: ShoppingBag, label: "Concept store" },
-  { x: 52, y: 44, cat: "browse", icon: Bookmark, label: "Bookshop" },
-];
-
 const MapSection = () => {
   const { t } = useTranslation();
   return (
-  <section id="map" className="relative overflow-hidden bg-gradient-paper py-16 sm:py-20 md:py-28">
+  <section id="map" className="relative overflow-hidden bg-gradient-paper py-16 sm:py-20 md:py-24 lg:py-28">
     <div className="grain absolute inset-0" />
     <div className="relative mx-auto max-w-5xl px-5 sm:px-6">
       {/* Centered content */}
@@ -389,100 +376,13 @@ const MapSection = () => {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="mt-12 sm:mt-14 md:mt-16"
       >
-        <div className="mx-auto max-w-4xl">
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-card sm:rounded-3xl">
-            {/* Map canvas */}
-            <div className="map-topo map-grid relative aspect-[4/3] w-full sm:aspect-[5/4]">
-              {/* curved roads */}
-              <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 80" preserveAspectRatio="none">
-                <path d="M -5 60 C 20 50, 35 70, 55 55 S 90 35, 110 45" stroke="hsl(var(--border))" strokeWidth="0.6" fill="none" />
-                <path d="M 10 -5 C 25 25, 50 20, 60 50 S 85 75, 95 95" stroke="hsl(var(--border))" strokeWidth="0.6" fill="none" />
-                <path d="M -5 25 C 30 30, 55 10, 80 25 S 110 30, 120 20" stroke="hsl(var(--border))" strokeWidth="0.4" fill="none" strokeDasharray="1 1.5" />
-              </svg>
-
-              {/* park blob */}
-              <div className="absolute left-[8%] top-[55%] h-32 w-40 rounded-[40%] bg-[hsl(var(--cat-do))]/15 blur-[2px]" />
-              {/* water */}
-              <div className="absolute right-[-10%] top-[5%] h-44 w-56 rounded-[45%] bg-[hsl(var(--cat-go))]/15 blur-[2px]" />
-
-              {/* pins */}
-              {mapPins.map((p, i) => {
-                const Icon = p.icon;
-                return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0.6, y: -6 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    whileHover={{ scale: 1.1, y: -4, zIndex: 10 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 * i, type: "spring", stiffness: 220, damping: 18 }}
-                    className="absolute -translate-x-1/2 -translate-y-full cursor-pointer p-3 -m-3"
-                    style={{ left: `${p.x}%`, top: `${p.y}%` }}
-                  >
-                    <div className="flex flex-col items-center">
-                      <div
-                        className="grid h-10 w-10 place-items-center rounded-full text-white shadow-card ring-4 ring-background"
-                        style={{ backgroundColor: `hsl(var(--cat-${p.cat}))` }}
-                      >
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <div
-                        className="mt-1 h-2 w-2 rotate-45"
-                        style={{ backgroundColor: `hsl(var(--cat-${p.cat}))` }}
-                      />
-                    </div>
-                  </motion.div>
-                );
-              })}
-
-              {/* compass */}
-              <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-card/90 text-xs font-semibold shadow-soft backdrop-blur">
-                N
-              </div>
-              {/* scale */}
-              <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-card/90 px-3 py-1 text-[10px] text-muted-foreground shadow-soft backdrop-blur">
-                <span className="h-px w-8 bg-foreground/60" />
-                200 m
-              </div>
-
-              {/* legend */}
-              <div className="absolute right-4 bottom-4 flex items-center gap-2 rounded-full bg-card/90 px-3 py-1.5 text-[10px] shadow-soft backdrop-blur">
-                {(["eat", "go", "buy", "browse", "do"] as const).map((c) => (
-                  <span key={c} className="flex items-center gap-1 capitalize text-muted-foreground">
-                    <span className="h-2 w-2 rounded-full" style={{ backgroundColor: `hsl(var(--cat-${c}))` }} />
-                    {c}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Selected pin card */}
-            <div className="relative z-10 -mt-6 rounded-t-[2rem] border-t border-border bg-card shadow-[0_-12px_30px_rgba(122,74,88,0.06)]">
-              {/* Drag handle */}
-              <div className="mx-auto mt-4 h-1.5 w-10 rounded-full bg-border" />
-              
-              <motion.div 
-                whileHover={{ y: -2 }}
-                className="grid cursor-pointer gap-4 p-5 pb-6 transition-colors sm:grid-cols-[auto_1fr_auto] sm:items-center sm:gap-5 sm:p-6 sm:pb-7"
-              >
-                <img src={mapBakeryImg} alt="Best Bakery In Town" className="aspect-square w-20 rounded-2xl object-cover shadow-soft sm:w-24" />
-                <div className="flex flex-col justify-center">
-                  <div className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "hsl(var(--cat-eat))" }} />
-                    <span className="text-[13px] font-medium text-muted-foreground">{t("map.eat")}</span>
-                  </div>
-                <div className="font-display mt-0.5 text-[22px] leading-tight text-foreground sm:text-[24px]">{t("map.pinTitle")}</div>
-                <div className="mt-1 text-[15px] font-medium text-foreground/80">{t("map.pinSubtitle")}</div>
-                <div className="mt-0.5 text-[13px] text-muted-foreground">{t("map.pinAddress")}</div>
-                </div>
-                <div className="mt-2 flex sm:mt-0 sm:self-center">
-                  <button className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#6b8e73] px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-card sm:w-auto">
-                    <Navigation className="h-4 w-4" />
-                    {t("map.directions")}
-                  </button>
-                </div>
-              </motion.div>
-            </div>
+        <div className="mx-auto max-w-5xl">
+          <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 shadow-card sm:rounded-3xl">
+            <img
+              src={mapIllustrationImg}
+              alt="Laterly map showing saved places nearby"
+              className="block w-full h-auto object-cover"
+            />
           </div>
         </div>
       </motion.div>
@@ -496,7 +396,7 @@ const MapSection = () => {
 const FinalCTA = () => {
   const { t } = useTranslation();
   return (
-  <section id="download" className="relative py-16 sm:py-20 md:py-28">
+  <section id="download" className="relative py-16 sm:py-20 md:py-24 lg:py-28">
     <div className="mx-auto max-w-3xl px-5 text-center sm:px-6">
       <Eyebrow>{t("cta.eyebrow")}</Eyebrow>
       <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
@@ -659,7 +559,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
   <footer className="border-t border-border bg-gradient-paper">
-    <div className="mx-auto max-w-7xl px-6 py-16">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:py-20">
       {/* Mobile: vertical layout */}
       <div className="md:hidden">
         <div className="flex items-center gap-2">
@@ -750,7 +650,7 @@ const Footer = () => {
             </a>
           </div>
           <div>
-            <a href="mailto:getlaterly@gmail.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
+            <a href="mailto:support@getlaterly.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.contact")}
             </a>
           </div>
@@ -848,7 +748,7 @@ const Footer = () => {
             <a href="#map" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.nearby")}
             </a>
-            <a href="mailto:getlaterly@gmail.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
+            <a href="mailto:support@getlaterly.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.contact")}
             </a>
             <Link to="/privacy" className="inline-block py-1.5 transition-colors hover:text-foreground">
