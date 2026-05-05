@@ -194,7 +194,7 @@ const resources: Record<string, any> = {
       },
       problem: {
         eyebrow: "是不是很常這樣？",
-        title: "每次都說「晚點看」，<br />然後就沒有<em class='italic text-primary'>然後</em>了。",
+        title: "每次都說「晚點看」，<br />然後就沒有<em class='italic text-primary'>然後了</em>。",
         ex1: "滑 IG 看到一家超美咖啡廳。",
         ex2: "看 TikTok 學到的神奇小撇步。",
         ex3: "YouTube 上介紹的秘境景點。",
@@ -215,14 +215,14 @@ const resources: Record<string, any> = {
       },
       video: {
         eyebrow: "眼見為憑",
-        title: "看看我們怎麼<em class='italic text-primary'>做到</em>的",
+        title: "看看我們怎麼<em class='italic text-primary'>做到的</em>",
         desc: "從無腦收藏，到真的把清單實現的超順暢體驗。",
         demo: "30 秒精華",
         demoSub: "收藏 → 找回 → 出發"
       },
       features: {
         eyebrow: "裡面有什麼料",
-        title: "那些最麻煩的事，我們幫你<em class='italic text-primary'>搞定</em>了。",
+        title: "那些最麻煩的事，我們幫你<em class='italic text-primary'>搞定了</em>",
         f1Title: "什麼 App 都能存",
         f1Desc: "把 Instagram、TikTok 還是任何地方的連結分享過來。Laterly 幾秒內幫你搞定。",
         f1DescMob: "管他是 IG 還是 TikTok，幾秒內無痛收藏。",
@@ -243,7 +243,7 @@ const resources: Record<string, any> = {
       },
       map: {
         eyebrow: "打開地圖",
-        title: "看看<em class='italic text-primary'>附近</em>有什麼好料",
+        title: "看看附近有什麼<em class='italic text-primary'>好料</em>",
         desc: "人在外面不知道要去哪？打開地圖，看看附近有沒有你以前存過的好地方。",
         point1: "不用再從幾萬張截圖裡大海撈針。",
         point2: "不用在各種 App 之間瘋狂切換。",
@@ -367,7 +367,7 @@ const resources: Record<string, any> = {
       },
       problem: {
         eyebrow: "是不是你的真实写照？",
-        title: "每次都说“马了等于看了”，<br />然后就放到<em class='italic text-primary'>吃灰</em>。",
+        title: "每次都说“马了等于看了”，<br />然后就放到<em class='italic text-primary'>吃灰</em>",
         ex1: "刷小红书看到一家绝美咖啡店。",
         ex2: "看抖音学到的神仙小妙招。",
         ex3: "B站上刷到的宝藏旅游地。",
@@ -388,14 +388,14 @@ const resources: Record<string, any> = {
       },
       video: {
         eyebrow: "眼见为实",
-        title: "看看我们怎么<em class='italic text-primary'>做到</em>的",
+        title: "看看我们怎么<em class='italic text-primary'>做到的</em>",
         desc: "从无脑收藏，到真的把心愿单挨个打卡的丝滑体验。",
         demo: "30 秒极速看懂",
         demoSub: "收藏 → 找回 → 出发"
       },
       features: {
         eyebrow: "里面有什么大招",
-        title: "那些最烦人的事，我们帮你<em class='italic text-primary'>搞定</em>了。",
+        title: "那些最烦人的事，我们帮你<em class='italic text-primary'>搞定了</em>",
         f1Title: "万物皆可存",
         f1Desc: "把小红书、抖音还是任何地方的链接分享过来。Laterly 几秒内帮你搞定。",
         f1DescMob: "管他是小红书还是抖音，几秒内无痛收藏。",
@@ -416,7 +416,7 @@ const resources: Record<string, any> = {
       },
       map: {
         eyebrow: "打开地图",
-        title: "看看<em class='italic text-primary'>附近</em>有什么好店",
+        title: "看看附近有什么<em class='italic text-primary'>好店</em>",
         desc: "人在外面不知道去哪？打开地图，看看附近有没有你以前码过的宝藏地点。",
         point1: "不用再从几万张截图里大海捞针。",
         point2: "不用在各种 App 之间疯狂切屏。",
