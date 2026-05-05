@@ -269,7 +269,7 @@ const PrivacyPage = () => {
           </p>
           <p>
             {t("privacy.childrenDesc3Prefix")}{" "}
-            <a href="mailto:getlaterly@gmail.com" className="text-primary underline hover:text-primary/80">
+            <a href="mailto:support@getlaterly.com" className="text-primary underline hover:text-primary/80">
               {t("privacy.email")}
             </a>{t("privacy.childrenDesc3Suffix")}
           </p>
@@ -306,8 +306,8 @@ const PrivacyPage = () => {
             {t("privacy.questionsDesc1")}
           </p>
           <p>
-            <a href="mailto:getlaterly@gmail.com" className="font-medium text-primary underline hover:text-primary/80">
-              getlaterly@gmail.com
+            <a href="mailto:support@getlaterly.com" className="font-medium text-primary underline hover:text-primary/80">
+              support@getlaterly.com
             </a>
           </p>
         </div>
