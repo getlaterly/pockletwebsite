@@ -778,6 +778,10 @@ const Footer = () => {
 export const MarketingSite = () => {
   const { scrollY } = useScroll();
   
+  useEffect(() => {
+    document.title = "Laterly | Home";
+  }, []);
+
   // Subtle parallax for global background halos
   const y1 = useTransform(scrollY, [0, 2000], [0, 150]);
   const y2 = useTransform(scrollY, [0, 2000], [0, -100]);

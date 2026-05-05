@@ -8,6 +8,7 @@ const PrivacyPage = () => {
   const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "Laterly | Privacy";
   }, []);
 
   return (

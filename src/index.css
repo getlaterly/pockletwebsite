@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
   /* Background colors from tokens.ts */
   --background: 7 10 95;        /* #FCF4F2 */
   --background-secondary: 0 8 99; /* #FFF9F7 */
@@ -67,6 +68,8 @@
 
 body {
   margin: 0;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-family: var(--font-ui-current);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
