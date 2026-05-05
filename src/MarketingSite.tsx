@@ -377,7 +377,7 @@ const MapSection = () => {
         className="mt-12 sm:mt-14 md:mt-16"
       >
         <div className="mx-auto max-w-5xl">
-          <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 shadow-card sm:rounded-3xl">
+          <div className="relative overflow-hidden rounded-2xl shadow-card sm:rounded-3xl">
             <img
               src={mapIllustrationImg}
               alt="Laterly map showing saved places nearby"
