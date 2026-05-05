@@ -62,7 +62,7 @@ const Hero = () => {
       {/* Left text column */}
       <div className="relative z-20 lg:col-span-6 xl:col-span-5 lg:flex lg:flex-col lg:justify-center">
         <h1 className="font-display text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
-          {t("hero.title1")}<br />{t("hero.title2")} <em className="bg-gradient-brand bg-clip-text text-transparent not-italic pr-2">Laterly</em>
+          {t("hero.title1")}<br />{t("hero.title2")} <em className="italic text-primary">Laterly</em>
         </h1>
         <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-foreground sm:mt-5 sm:text-lg md:mt-6 md:text-xl">
           {t("hero.desc1")}
@@ -188,9 +188,10 @@ const VideoShowcase = () => {
     <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
       <div className="mx-auto max-w-2xl text-center">
         <Eyebrow>{t("video.eyebrow")}</Eyebrow>
-        <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-          {t("video.title")}
-        </h2>
+        <h2 
+          className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl"
+          dangerouslySetInnerHTML={{ __html: t("video.title") }}
+        />
         <p className="mx-auto mt-4 max-w-xl text-[16px] leading-[1.7] text-foreground sm:mt-5 sm:text-[17px]">
           {t("video.desc")}
         </p>
@@ -293,9 +294,10 @@ const Features = () => {
       <div className="hidden md:block">
         <div className="max-w-2xl">
           <Eyebrow>{t("features.eyebrow")}</Eyebrow>
-          <h2 className="font-display mt-4 text-[26px] leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            {t("features.title")}
-          </h2>
+          <h2 
+            className="font-display mt-4 text-[26px] leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl"
+            dangerouslySetInnerHTML={{ __html: t("features.title") }}
+          />
         </div>
         <div className="mt-8 grid gap-3 overflow-hidden rounded-2xl border border-border bg-border sm:mt-12 sm:gap-px sm:rounded-3xl md:grid-cols-2 lg:grid-cols-3">
           {featuresDesktop.map(({ icon: Icon, title, body }) => (
@@ -319,9 +321,10 @@ const Features = () => {
       <div className="md:hidden">
         <div className="max-w-2xl">
           <Eyebrow>{t("features.eyebrow")}</Eyebrow>
-          <h2 className="font-display mt-5 text-[26px] leading-tight tracking-tight text-foreground">
-            {t("features.title")}
-          </h2>
+          <h2 
+            className="font-display mt-5 text-[26px] leading-tight tracking-tight text-foreground"
+            dangerouslySetInnerHTML={{ __html: t("features.title") }}
+          />
         </div>
         <div className="mt-8 grid gap-3 overflow-hidden rounded-2xl border border-border bg-border">
           {featuresMobile.map(({ icon: Icon, title, body }) => (
@@ -351,9 +354,10 @@ const MapSection = () => {
       {/* Centered content */}
       <div className="text-center">
         <Eyebrow>{t("map.eyebrow")}</Eyebrow>
-        <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-          {t("map.title")}
-        </h2>
+        <h2 
+          className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl"
+          dangerouslySetInnerHTML={{ __html: t("map.title") }}
+        />
         <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.7] text-foreground sm:mt-6 sm:text-[17px] md:text-lg">
           {t("map.desc")}
         </p>
@@ -397,9 +401,10 @@ const FinalCTA = () => {
   <section id="download" className="relative py-16 sm:py-20 md:py-24 lg:py-28">
     <div className="mx-auto max-w-3xl px-5 text-center sm:px-6">
       <Eyebrow>{t("cta.eyebrow")}</Eyebrow>
-      <h2 className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-        {t("cta.title")}
-      </h2>
+      <h2 
+        className="font-display mt-4 text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl"
+        dangerouslySetInnerHTML={{ __html: t("cta.title") }}
+      />
       <p className="mx-auto mt-5 max-w-xl text-[16px] leading-[1.7] text-foreground sm:mt-6 sm:text-[17px] md:text-lg">
         {t("cta.desc")}
       </p>

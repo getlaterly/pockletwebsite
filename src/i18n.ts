@@ -21,7 +21,7 @@ const resources: Record<string, any> = {
       },
       problem: {
         eyebrow: "Sound familiar",
-        title: "You saved it for later.<br />But later never came.",
+        title: "You saved it for later.<br />But later never <em class='italic text-primary'>came</em>.",
         ex1: "A restaurant from Instagram.",
         ex2: "A video from TikTok.",
         ex3: "A place you found on YouTube.",
@@ -32,7 +32,7 @@ const resources: Record<string, any> = {
       },
       how: {
         eyebrow: "How it works",
-        title: "Simple.<br className='md:hidden' /><span className='hidden md:inline'> </span>Nothing to manage",
+        title: "Simple.<br class='md:hidden' /><span class='hidden md:inline'> </span>Nothing to <em class='italic text-primary'>manage</em>",
         step1Title: "Save",
         step1Desc: "Save from any app in a few taps.",
         step2Title: "Add what matters",
@@ -42,14 +42,14 @@ const resources: Record<string, any> = {
       },
       video: {
         eyebrow: "See it in motion",
-        title: "Watch it happen",
+        title: "Watch it <em class='italic text-primary'>happen</em>",
         desc: "From saving to actually coming back to it.",
         demo: "30-second demo",
         demoSub: "Save → Find → Act"
       },
       features: {
         eyebrow: "What's inside",
-        title: "The boring parts, handled.",
+        title: "The boring parts, <em class='italic text-primary'>handled</em>.",
         f1Title: "Save from any app",
         f1Desc: "Share a link from Instagram, TikTok, or anywhere else. Laterly saves it in seconds.",
         f1DescMob: "Save from Instagram, TikTok, or anywhere in seconds.",
@@ -70,7 +70,7 @@ const resources: Record<string, any> = {
       },
       map: {
         eyebrow: "On the map",
-        title: "See what's saved nearby",
+        title: "See what's saved <em class='italic text-primary'>nearby</em>",
         desc: "When you're out, open the map and see what you saved around you.",
         point1: "No digging through screenshots.",
         point2: "No jumping between apps.",
@@ -87,7 +87,7 @@ const resources: Record<string, any> = {
       },
       cta: {
         eyebrow: "Get started",
-        title: "Make later happen",
+        title: "Make later <em class='italic text-primary'>happen</em>",
         desc: "Start saving the things you actually want to come back to.",
         sub: "A calm pocket for the things you'll get to.",
         avail: "Available on",
@@ -194,7 +194,7 @@ const resources: Record<string, any> = {
       },
       problem: {
         eyebrow: "是不是很常這樣？",
-        title: "每次都說「晚點看」，<br />然後就沒有然後了。",
+        title: "每次都說「晚點看」，<br />然後就沒有<em class='italic text-primary'>然後</em>了。",
         ex1: "滑 IG 看到一家超美咖啡廳。",
         ex2: "看 TikTok 學到的神奇小撇步。",
         ex3: "YouTube 上介紹的秘境景點。",
@@ -205,7 +205,7 @@ const resources: Record<string, any> = {
       },
       how: {
         eyebrow: "怎麼玩？",
-        title: "超無腦。<br className='md:hidden' /><span className='hidden md:inline'> </span>完全不用費心整理",
+        title: "超無腦。<br class='md:hidden' /><span class='hidden md:inline'> </span>完全不用費心<em class='italic text-primary'>整理</em>",
         step1Title: "一鍵收藏",
         step1Desc: "點兩下，各大 App 的內容無痛存入。",
         step2Title: "畫個重點",
@@ -215,14 +215,14 @@ const resources: Record<string, any> = {
       },
       video: {
         eyebrow: "眼見為憑",
-        title: "看看我們怎麼做到的",
+        title: "看看我們怎麼<em class='italic text-primary'>做到</em>的",
         desc: "從無腦收藏，到真的把清單實現的超順暢體驗。",
         demo: "30 秒精華",
         demoSub: "收藏 → 找回 → 出發"
       },
       features: {
         eyebrow: "裡面有什麼料",
-        title: "那些最麻煩的事，我們幫你搞定了。",
+        title: "那些最麻煩的事，我們幫你<em class='italic text-primary'>搞定</em>了。",
         f1Title: "什麼 App 都能存",
         f1Desc: "把 Instagram、TikTok 還是任何地方的連結分享過來。Laterly 幾秒內幫你搞定。",
         f1DescMob: "管他是 IG 還是 TikTok，幾秒內無痛收藏。",
@@ -243,7 +243,7 @@ const resources: Record<string, any> = {
       },
       map: {
         eyebrow: "打開地圖",
-        title: "看看附近有什麼好料",
+        title: "看看<em class='italic text-primary'>附近</em>有什麼好料",
         desc: "人在外面不知道要去哪？打開地圖，看看附近有沒有你以前存過的好地方。",
         point1: "不用再從幾萬張截圖裡大海撈針。",
         point2: "不用在各種 App 之間瘋狂切換。",
@@ -260,7 +260,7 @@ const resources: Record<string, any> = {
       },
       cta: {
         eyebrow: "還等什麼？",
-        title: "讓「晚點」成真",
+        title: "讓「晚點」<em class='italic text-primary'>成真</em>",
         desc: "別再只存不看了，現在就把想去的地方、想買的東西通通收進來。",
         sub: "為你想做的事，留一個專屬的收納空間。",
         avail: "這裡都可以下載",
@@ -367,7 +367,7 @@ const resources: Record<string, any> = {
       },
       problem: {
         eyebrow: "是不是你的真实写照？",
-        title: "每次都说“马了等于看了”，<br />然后就放到吃灰。",
+        title: "每次都说“马了等于看了”，<br />然后就放到<em class='italic text-primary'>吃灰</em>。",
         ex1: "刷小红书看到一家绝美咖啡店。",
         ex2: "看抖音学到的神仙小妙招。",
         ex3: "B站上刷到的宝藏旅游地。",
@@ -378,7 +378,7 @@ const resources: Record<string, any> = {
       },
       how: {
         eyebrow: "怎么玩？",
-        title: "超省心。<br className='md:hidden' /><span className='hidden md:inline'> </span>完全不需要费力整理",
+        title: "超省心。<br class='md:hidden' /><span class='hidden md:inline'> </span>完全不需要费力<em class='italic text-primary'>整理</em>",
         step1Title: "一键无脑存",
         step1Desc: "点两下，各大 App 的内容无痛装进来。",
         step2Title: "划个重点",
@@ -388,14 +388,14 @@ const resources: Record<string, any> = {
       },
       video: {
         eyebrow: "眼见为实",
-        title: "看看我们怎么做到的",
+        title: "看看我们怎么<em class='italic text-primary'>做到</em>的",
         desc: "从无脑收藏，到真的把心愿单挨个打卡的丝滑体验。",
         demo: "30 秒极速看懂",
         demoSub: "收藏 → 找回 → 出发"
       },
       features: {
         eyebrow: "里面有什么大招",
-        title: "那些最烦人的事，我们帮你搞定了。",
+        title: "那些最烦人的事，我们帮你<em class='italic text-primary'>搞定</em>了。",
         f1Title: "万物皆可存",
         f1Desc: "把小红书、抖音还是任何地方的链接分享过来。Laterly 几秒内帮你搞定。",
         f1DescMob: "管他是小红书还是抖音，几秒内无痛收藏。",
@@ -416,7 +416,7 @@ const resources: Record<string, any> = {
       },
       map: {
         eyebrow: "打开地图",
-        title: "看看附近有什么好店",
+        title: "看看<em class='italic text-primary'>附近</em>有什么好店",
         desc: "人在外面不知道去哪？打开地图，看看附近有没有你以前码过的宝藏地点。",
         point1: "不用再从几万张截图里大海捞针。",
         point2: "不用在各种 App 之间疯狂切屏。",
@@ -433,7 +433,7 @@ const resources: Record<string, any> = {
       },
       cta: {
         eyebrow: "还等什么？",
-        title: "让“晚点”成真",
+        title: "让“晚点”<em class='italic text-primary'>成真</em>",
         desc: "别再只马不看了，现在就把想去的地方、想买的东西通通收进来。",
         sub: "为你想要做的事，留一个专属的自留地。",
         avail: "支持各大平台",
@@ -540,7 +540,7 @@ const resources: Record<string, any> = {
       },
       problem: {
         eyebrow: "心当たりはありませんか？",
-        title: "後で見ようと保存したまま。<br />でもその「後で」は来なかった。",
+        title: "後で見ようと保存したまま。<br />でもその「後で」は<em class='italic text-primary'>来なかった</em>。",
         ex1: "Instagramで見つけたレストラン。",
         ex2: "TikTokの動画。",
         ex3: "YouTubeで見つけた場所。",
@@ -551,7 +551,7 @@ const resources: Record<string, any> = {
       },
       how: {
         eyebrow: "使い方",
-        title: "シンプル。<br className='md:hidden' /><span className='hidden md:inline'> </span>管理は不要です",
+        title: "シンプル。<br class='md:hidden' /><span class='hidden md:inline'> </span><em class='italic text-primary'>管理</em>は不要です",
         step1Title: "保存",
         step1Desc: "数回のタップでどのアプリからも保存。",
         step2Title: "情報を追加",
@@ -561,14 +561,14 @@ const resources: Record<string, any> = {
       },
       video: {
         eyebrow: "実際の動き",
-        title: "動作を見てみる",
+        title: "<em class='italic text-primary'>動作</em>を見てみる",
         desc: "保存から実際に見返すまで。",
         demo: "30秒デモ",
         demoSub: "保存 → 見つける → 行動"
       },
       features: {
         eyebrow: "機能",
-        title: "面倒なことはすべてお任せ。",
+        title: "面倒なことはすべて<em class='italic text-primary'>お任せ</em>。",
         f1Title: "どのアプリからも保存",
         f1Desc: "Instagram、TikTokなどからリンクを共有。Laterlyが数秒で保存します。",
         f1DescMob: "Instagram、TikTokなどから数秒で保存。",
@@ -589,7 +589,7 @@ const resources: Record<string, any> = {
       },
       map: {
         eyebrow: "マップ上で",
-        title: "近くの保存済み項目を見る",
+        title: "<em class='italic text-primary'>近く</em>の保存済み項目を見る",
         desc: "外出先でマップを開き、周りに保存した場所がないか確認。",
         point1: "スクリーンショットを探し回る必要なし。",
         point2: "アプリ間を行ったり来たりする必要なし。",
@@ -606,7 +606,7 @@ const resources: Record<string, any> = {
       },
       cta: {
         eyebrow: "はじめよう",
-        title: "「後で」を実現する",
+        title: "「後で」を<em class='italic text-primary'>実現する</em>",
         desc: "本当に見返したいものを保存し始めましょう。",
         sub: "やりたいことのための、穏やかなポケット。",
         avail: "対応プラットフォーム",
