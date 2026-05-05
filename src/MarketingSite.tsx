@@ -377,13 +377,11 @@ const MapSection = () => {
         className="mt-12 sm:mt-14 md:mt-16"
       >
         <div className="mx-auto max-w-5xl">
-          <div className="relative overflow-hidden rounded-2xl shadow-card sm:rounded-3xl">
-            <img
-              src={mapIllustrationImg}
-              alt="Laterly map showing saved places nearby"
-              className="block w-full h-auto object-cover"
-            />
-          </div>
+          <img
+            src={mapIllustrationImg}
+            alt="Laterly map showing saved places nearby"
+            className="block w-full h-auto"
+          />
         </div>
       </motion.div>
     </div>
