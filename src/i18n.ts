@@ -66,7 +66,7 @@ const resources: Record<string, any> = {
         f5Title: "Mark your favorites",
         f5Desc: "Keep the best ones easy to find. Favorites stay accessible even after you complete them.",
         f6Title: "Made your way",
-        f6Desc: "Switch between light and dark themes, and choose your preferred language."
+        f6Desc: "Choose your preferred language to make it feel like yours."
       },
       map: {
         eyebrow: "On the map",
@@ -239,7 +239,7 @@ const resources: Record<string, any> = {
         f5Title: "把最愛打星號",
         f5Desc: "超心動的內容隨時置頂。就算打勾完成了，這些最愛還是隨時找得到。",
         f6Title: "你的 App 你做主",
-        f6Desc: "深色模式、淺色模式隨你切換，語言也是你想用哪種就選哪種。"
+        f6Desc: "語言你想用哪種就選哪種，打造你最順手的介面。"
       },
       map: {
         eyebrow: "打開地圖",
@@ -412,7 +412,7 @@ const resources: Record<string, any> = {
         f5Title: "把最爱打上星号",
         f5Desc: "超心动的内容随时置顶。就算打钩完成了，这些最爱还是随时找得到。",
         f6Title: "你的 App 你做主",
-        f6Desc: "深色模式、浅色模式随你切换，语言也是想用哪种就选哪种。"
+        f6Desc: "语言你想用哪种就选哪种，打造你最顺手的界面。"
       },
       map: {
         eyebrow: "打开地图",
@@ -585,7 +585,7 @@ const resources: Record<string, any> = {
         f5Title: "お気に入りをマーク",
         f5Desc: "最高のものを見つけやすく。完了後もアクセス可能です。",
         f6Title: "あなた好みに",
-        f6Desc: "ライト・ダークテーマの切り替え、お好みの言語を選択できます。"
+        f6Desc: "お好みの言語を選択して、あなたらしい使い心地に。"
       },
       map: {
         eyebrow: "マップ上で",
