@@ -12,8 +12,9 @@ import {
   Check,
   Heart,
   ChevronDown,
-  RotateCcw,
+  RefreshCw,
   Play,
+  Pause,
 } from "lucide-react";
 import laterlyLogo from "@/assets/laterly-logo-cropped.png";
 import heroVisualImg from "@/assets/hero-visual.png";
@@ -178,19 +179,51 @@ const VideoShowcase = () => {
   const { t } = useTranslation();
   const [isEnded, setIsEnded] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            if (videoRef.current && !videoRef.current.paused) {
+              videoRef.current.pause();
+              setIsPlaying(false);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handlePlay = () => {
     setHasStarted(true);
     setIsEnded(false);
+    setIsPlaying(true);
     if (videoRef.current) {
-      videoRef.current.currentTime = 0;
       videoRef.current.play();
+    }
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
     }
   };
 
   const handleReplay = () => {
     setIsEnded(false);
+    setIsPlaying(true);
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
       videoRef.current.play();
@@ -233,22 +266,26 @@ const VideoShowcase = () => {
             {/* Screen */}
             <div className="relative overflow-hidden rounded-[1.4rem] bg-gradient-to-br from-[hsl(var(--primary)/0.12)] via-[hsl(var(--rose)/0.10)] to-[hsl(var(--accent)/0.14)] sm:rounded-[1.7rem]">
               {/* 9:16 vertical video */}
-              <div className="relative aspect-[9/19.5] w-full">
+              <div ref={containerRef} className="relative aspect-[9/19.5] w-full">
                 <video
                   ref={videoRef}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover cursor-pointer"
                   src="/laterly-mobile-demo-v3.mp4"
                   playsInline
-                  onEnded={() => setIsEnded(true)}
+                  onClick={isPlaying ? handlePause : handlePlay}
+                  onEnded={() => {
+                    setIsEnded(true);
+                    setIsPlaying(false);
+                  }}
                 />
 
                 {/* Initial Play Overlay */}
                 {!hasStarted && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center sm:gap-4 bg-black/20 backdrop-blur-sm">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center sm:gap-4 bg-black/20 backdrop-blur-sm pointer-events-none">
                     <button
                       type="button"
                       onClick={handlePlay}
-                      className="group relative grid h-14 w-14 place-items-center rounded-full bg-card/90 text-foreground shadow-card backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-16 sm:w-16"
+                      className="group relative grid h-14 w-14 place-items-center rounded-full bg-card/90 text-foreground shadow-card backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-16 sm:w-16 pointer-events-auto"
                       aria-label="Play demo"
                     >
                       <span className="absolute inset-0 -z-10 animate-[ping_3s_ease-in-out_infinite] rounded-full bg-primary/40" />
@@ -256,23 +293,49 @@ const VideoShowcase = () => {
                       <Play className="h-6 w-6 translate-x-0.5 fill-current sm:h-7 sm:w-7" />
                     </button>
                     <div className="text-xs text-white font-medium sm:text-sm drop-shadow-md">
-                      {t("video.demo")}
-                      <div className="mt-0.5 text-[10px] text-white/80 sm:text-xs">{t("video.demoSub")}</div>
+                      See Laterly in motion
                     </div>
                   </div>
                 )}
 
+                {/* Pause/Play Overlay when started but paused */}
+                {hasStarted && !isPlaying && !isEnded && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/20 backdrop-blur-sm pointer-events-none transition-opacity">
+                    <button
+                      type="button"
+                      onClick={handlePlay}
+                      className="group relative grid h-14 w-14 place-items-center rounded-full bg-card/90 text-foreground shadow-card backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-16 sm:w-16 pointer-events-auto"
+                      aria-label="Resume demo"
+                    >
+                      <span className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-60 blur-xl transition-opacity group-hover:opacity-90" />
+                      <Play className="h-6 w-6 translate-x-0.5 fill-current sm:h-7 sm:w-7" />
+                    </button>
+                  </div>
+                )}
+
+                {/* Floating Pause Button (visible only when playing) */}
+                {isPlaying && (
+                  <button
+                    type="button"
+                    onClick={handlePause}
+                    className="absolute bottom-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur transition-transform hover:scale-105 hover:bg-black/60"
+                    aria-label="Pause demo"
+                  >
+                    <Pause className="h-5 w-5 fill-current" />
+                  </button>
+                )}
+
                 {/* Replay Overlay */}
                 {isEnded && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/40 p-6 text-center sm:gap-4 backdrop-blur-sm">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/40 p-6 text-center sm:gap-4 backdrop-blur-sm pointer-events-none">
                     <button
                       type="button"
                       onClick={handleReplay}
-                      className="group relative grid h-14 w-14 place-items-center rounded-full bg-card/90 text-foreground shadow-card backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-16 sm:w-16"
+                      className="group relative grid h-14 w-14 place-items-center rounded-full bg-card/90 text-foreground shadow-card backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-16 sm:w-16 pointer-events-auto"
                       aria-label="Replay demo"
                     >
                       <span className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-60 blur-xl transition-opacity group-hover:opacity-90" />
-                      <RotateCcw className="h-6 w-6 fill-current sm:h-7 sm:w-7" />
+                      <RefreshCw className="h-6 w-6 sm:h-7 sm:w-7" />
                     </button>
                     <div className="text-xs text-white font-medium sm:text-sm">
                       Replay
