@@ -226,7 +226,7 @@ const VideoShowcase = () => {
                 <video
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover"
-                  src="/laterly-mobile-demo-v2.mp4"
+                  src="/laterly-mobile-demo-v3.mp4"
                   autoPlay
                   muted
                   playsInline
