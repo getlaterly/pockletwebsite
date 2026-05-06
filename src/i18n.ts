@@ -6,12 +6,18 @@ const resources: Record<string, any> = {
     translation: {
       nav: {
         getLaterly: "Get Laterly",
+        how: "How it works",
+        map: "Find things nearby",
+        demo: "Demo",
       },
       hero: {
         title1: "Save it now.",
         title2: "Make it a",
         desc1: "Save posts, places, and ideas you want to come back to — and actually find them when it matters.",
         desc2: "See what you saved nearby, when you need it.",
+        trust1: "No ads",
+        trust2: "Private by default",
+        trust3: "Your saves stay yours",
       },
       strip: {
         quote: "“The bookmark app I finally open.”",
@@ -179,12 +185,20 @@ const resources: Record<string, any> = {
   },
   "zh-TW": {
     translation: {
-      nav: { getLaterly: "立刻體驗 Laterly" },
+      nav: {
+        getLaterly: "立刻體驗 Laterly",
+        how: "怎麼玩",
+        map: "探索附近",
+        demo: "示範",
+      },
       hero: {
         title1: "先存下來，",
         title2: "留給",
         desc1: "把 IG 上的絕美咖啡廳、TikTok 爆笑短片、還有你想去的所有寶藏景點通通收進來——保證你下次真的找得到。",
         desc2: "滑開地圖，一秒解鎖你以前在附近存過的所有好料。",
+        trust1: "零廣告",
+        trust2: "預設保護隱私",
+        trust3: "你的收藏還是你的",
       },
       strip: {
         quote: "「這是我這輩子唯一會主動打開的書籤 App。」",
@@ -352,12 +366,20 @@ const resources: Record<string, any> = {
   },
   "zh-CN": {
     translation: {
-      nav: { getLaterly: "立即体验 Laterly" },
+      nav: {
+        getLaterly: "立即体验 Laterly",
+        how: "怎么玩",
+        map: "探索附近",
+        demo: "演示",
+      },
       hero: {
         title1: "先码住，",
         title2: "留给",
         desc1: "把小红书上的宝藏店铺、抖音的搞笑视频、还有你想去的所有打卡地通通装进来——保证你下次真的能翻出来。",
         desc2: "滑开地图，一秒解锁你以前在附近码过的所有好店。",
+        trust1: "零广告",
+        trust2: "默认保护隐私",
+        trust3: "你的收藏还是你的",
       },
       strip: {
         quote: "“这辈子唯一会主动打开的收藏夹 App。”",
@@ -525,12 +547,20 @@ const resources: Record<string, any> = {
   },
   "ja": {
     translation: {
-      nav: { getLaterly: "Laterlyを入手" },
+      nav: {
+        getLaterly: "Laterlyを入手",
+        how: "使い方",
+        map: "近くを探す",
+        demo: "デモ",
+      },
       hero: {
         title1: "今すぐ保存して、",
         title2: "後で楽しむ",
         desc1: "後で見返したい投稿、場所、アイデアを保存し、必要な時にすぐに見つけられます。",
         desc2: "必要な時に、近くで保存した場所を確認できます。",
+        trust1: "広告なし",
+        trust2: "プライバシー重視",
+        trust3: "保存したものはあなたのもの",
       },
       strip: {
         quote: "「ついに開く気になったブックマークアプリ」",

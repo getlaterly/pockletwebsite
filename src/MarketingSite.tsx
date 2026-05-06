@@ -75,6 +75,14 @@ const Nav = () => {
         <span className="font-brand text-xl tracking-tight text-foreground">Laterly</span>
       </Link>
       <div className="flex items-center gap-4 sm:gap-6">
+        <nav className="hidden items-center gap-5 text-sm font-medium text-muted-foreground lg:flex">
+          <a href="#how" className="transition-colors hover:text-foreground">
+            {t("nav.how")}
+          </a>
+          <a href="#map" className="transition-colors hover:text-foreground">
+            {t("nav.map")}
+          </a>
+        </nav>
         <div className="relative" ref={dropdownRef}>
           <button 
             onClick={() => setIsOpen(!isOpen)}
@@ -119,6 +127,22 @@ const Nav = () => {
 
 /* ---------- Hero ---------- */
 
+const TrustStrip = () => {
+  const { t } = useTranslation();
+  const trustItems = [t("hero.trust1"), t("hero.trust2"), t("hero.trust3")];
+
+  return (
+    <div className="mt-5 flex max-w-xl flex-col gap-2 text-[12px] font-medium text-muted-foreground sm:mt-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-2">
+      {trustItems.map((item) => (
+        <span key={item} className="inline-flex items-center gap-1.5">
+          <Check className="h-3.5 w-3.5 text-primary/80" />
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+};
+
 const Hero = () => {
   const { t } = useTranslation();
   return (
@@ -145,6 +169,7 @@ const Hero = () => {
             {t("nav.getLaterly")} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5" />
           </a>
         </div>
+        <TrustStrip />
       </div>
 
       {/* Right hero visual container */}
@@ -335,7 +360,9 @@ const VideoShowcase = () => {
                 <video
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover cursor-pointer"
-                  src="/laterly-mobile-demo-v4.mp4"
+                  src="/laterly-mobile-demo-v4-optimized.mp4"
+                  poster="/laterly-mobile-demo-poster.jpg"
+                  preload="metadata"
                   playsInline
                   onClick={isPlaying ? handlePause : handlePlay}
                   onEnded={() => {
@@ -346,7 +373,7 @@ const VideoShowcase = () => {
 
                 {/* Initial Play Overlay */}
                 {!hasStarted && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center sm:gap-4 bg-black/20 backdrop-blur-sm pointer-events-none">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/25 p-6 text-center sm:gap-4 pointer-events-none">
                     <button
                       type="button"
                       onClick={handlePlay}
