@@ -13,6 +13,7 @@ import {
   Heart,
   ChevronDown,
   RotateCcw,
+  Play,
 } from "lucide-react";
 import laterlyLogo from "@/assets/laterly-logo-cropped.png";
 import heroVisualImg from "@/assets/hero-visual.png";
@@ -176,7 +177,17 @@ const HowItWorks = () => {
 const VideoShowcase = () => {
   const { t } = useTranslation();
   const [isEnded, setIsEnded] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = () => {
+    setHasStarted(true);
+    setIsEnded(false);
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    }
+  };
 
   const handleReplay = () => {
     setIsEnded(false);
@@ -227,11 +238,29 @@ const VideoShowcase = () => {
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover"
                   src="/laterly-mobile-demo-v3.mp4"
-                  autoPlay
-                  muted
                   playsInline
                   onEnded={() => setIsEnded(true)}
                 />
+
+                {/* Initial Play Overlay */}
+                {!hasStarted && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center sm:gap-4 bg-black/20 backdrop-blur-sm">
+                    <button
+                      type="button"
+                      onClick={handlePlay}
+                      className="group relative grid h-14 w-14 place-items-center rounded-full bg-card/90 text-foreground shadow-card backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-16 sm:w-16"
+                      aria-label="Play demo"
+                    >
+                      <span className="absolute inset-0 -z-10 animate-[ping_3s_ease-in-out_infinite] rounded-full bg-primary/40" />
+                      <span className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-60 blur-xl transition-opacity group-hover:opacity-90" />
+                      <Play className="h-6 w-6 translate-x-0.5 fill-current sm:h-7 sm:w-7" />
+                    </button>
+                    <div className="text-xs text-white font-medium sm:text-sm drop-shadow-md">
+                      {t("video.demo")}
+                      <div className="mt-0.5 text-[10px] text-white/80 sm:text-xs">{t("video.demoSub")}</div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Replay Overlay */}
                 {isEnded && (
