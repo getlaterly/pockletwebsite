@@ -255,6 +255,25 @@ const PrivacyPage = () => {
         </div>
       </section>
 
+      {/* Account Deletion */}
+      <section className="mt-12 sm:mt-16">
+        <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
+          {t("privacy.deletionTitle")}
+        </h2>
+        
+        <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
+          <p>
+            {t("privacy.deletionDesc1")}
+          </p>
+          <p>
+            {t("privacy.deletionDesc2")}
+          </p>
+          <p>
+            {t("privacy.deletionDesc3")}
+          </p>
+        </div>
+      </section>
+
       {/* Children */}
       <section className="mt-12 sm:mt-16">
         <h2 className="font-display text-[24px] leading-tight tracking-tight sm:text-3xl">
