@@ -42,7 +42,30 @@ const Eyebrow = ({ children }: { children: React.ReactNode }) => (
 
 const Nav = () => {
   const { t, i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
   const currentLang = languages.find(l => l.code === i18n.language) || (i18n.language === 'en' ? languages[0] : languages[0]);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  const handleLanguageSelect = (code: string) => {
+    i18n.changeLanguage(code);
+    setIsOpen(false);
+  };
 
   return (
   <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl">
@@ -52,29 +75,35 @@ const Nav = () => {
         <span className="font-brand text-xl tracking-tight text-foreground">Laterly</span>
       </Link>
       <div className="flex items-center gap-4 sm:gap-6">
-        <div className="relative group">
-          <button className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2">
+        <div className="relative" ref={dropdownRef}>
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+          >
             <Globe className="h-4 w-4" />
             <span className="hidden sm:inline">{currentLang.label}</span>
-            <ChevronDown className="h-3.5 w-3.5 opacity-50" />
+            <ChevronDown className={`h-3.5 w-3.5 opacity-50 transition-transform ${isOpen ? "rotate-180" : ""}`} />
           </button>
-          <div className="absolute top-full right-0 pt-1 hidden group-hover:block">
-            <div className="w-40 rounded-xl border border-border bg-card p-1.5 shadow-card">
-              {languages.map((language) => (
-                <button
-                  key={language.code}
-                  onClick={() => i18n.changeLanguage(language.code)}
-                  className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${
-                    currentLang.code === language.code
-                      ? 'bg-primary/10 text-primary font-medium'
-                      : 'text-foreground hover:bg-muted'
-                  }`}
-                >
-                  {language.label}
-                </button>
-              ))}
+          
+          {isOpen && (
+            <div className="absolute top-full right-0 pt-1">
+              <div className="w-40 rounded-xl border border-border bg-card p-1.5 shadow-card">
+                {languages.map((language) => (
+                  <button
+                    key={language.code}
+                    onClick={() => handleLanguageSelect(language.code)}
+                    className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${
+                      currentLang.code === language.code
+                        ? 'bg-primary/10 text-primary font-medium'
+                        : 'text-foreground hover:bg-muted'
+                    }`}
+                  >
+                    {language.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <a
           href="#download"
