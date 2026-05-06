@@ -12,6 +12,7 @@ import {
   Check,
   Heart,
   ChevronDown,
+  RotateCcw,
 } from "lucide-react";
 import laterlyLogo from "@/assets/laterly-logo-cropped.png";
 import heroVisualImg from "@/assets/hero-visual.png";
@@ -174,6 +175,17 @@ const HowItWorks = () => {
 
 const VideoShowcase = () => {
   const { t } = useTranslation();
+  const [isEnded, setIsEnded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleReplay = () => {
+    setIsEnded(false);
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    }
+  };
+
   return (
   <section id="video" className="relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-28">
     <div className="absolute inset-0 bg-gradient-paper" />
@@ -212,18 +224,32 @@ const VideoShowcase = () => {
               {/* 9:16 vertical video */}
               <div className="relative aspect-[9/19.5] w-full">
                 <video
+                  ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover"
-                  src="/laterly-mobile-demo.mp4"
+                  src="/laterly-mobile-demo-v2.mp4"
                   autoPlay
                   muted
-                  loop
                   playsInline
+                  onEnded={() => setIsEnded(true)}
                 />
 
-                {/* Time indicator */}
-                <div className="absolute right-3 top-3 rounded-full bg-card/80 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
-                  0:30
-                </div>
+                {/* Replay Overlay */}
+                {isEnded && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/40 p-6 text-center sm:gap-4 backdrop-blur-sm">
+                    <button
+                      type="button"
+                      onClick={handleReplay}
+                      className="group relative grid h-14 w-14 place-items-center rounded-full bg-card/90 text-foreground shadow-card backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-16 sm:w-16"
+                      aria-label="Replay demo"
+                    >
+                      <span className="absolute inset-0 -z-10 rounded-full bg-gradient-brand opacity-60 blur-xl transition-opacity group-hover:opacity-90" />
+                      <RotateCcw className="h-6 w-6 fill-current sm:h-7 sm:w-7" />
+                    </button>
+                    <div className="text-xs text-white font-medium sm:text-sm">
+                      Replay
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             {/* Notch */}
