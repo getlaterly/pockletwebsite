@@ -747,15 +747,77 @@ const resources: Record<string, any> = {
 // Aliases for UK English
 resources['en-GB'] = resources['en-US'] = resources['en'];
 
+const LATERLY_LANG_KEY = 'laterly_language_preference';
+
+const getInitialLanguage = () => {
+  if (typeof window === 'undefined') return 'en';
+
+  const savedLang = localStorage.getItem(LATERLY_LANG_KEY);
+  if (savedLang && resources[savedLang]) {
+    return savedLang;
+  }
+
+  const browserLangs = (typeof navigator !== 'undefined' && navigator.languages) 
+    ? navigator.languages 
+    : (typeof navigator !== 'undefined' && navigator.language) 
+      ? [navigator.language] 
+      : [];
+  
+  for (const lang of browserLangs) {
+    if (!lang) continue;
+    
+    const lowerLang = lang.toLowerCase();
+    
+    if (['zh-hant', 'zh-tw', 'zh-hk', 'zh-mo'].some(code => lowerLang.includes(code))) {
+      localStorage.setItem(LATERLY_LANG_KEY, 'zh-TW');
+      return 'zh-TW';
+    }
+    
+    if (['zh-hans', 'zh-cn', 'zh-sg'].some(code => lowerLang.includes(code))) {
+      localStorage.setItem(LATERLY_LANG_KEY, 'zh-CN');
+      return 'zh-CN';
+    }
+    
+    if (lowerLang === 'zh') {
+      localStorage.setItem(LATERLY_LANG_KEY, 'zh-CN');
+      return 'zh-CN';
+    }
+    
+    if (lowerLang.startsWith('ja')) {
+      localStorage.setItem(LATERLY_LANG_KEY, 'ja');
+      return 'ja';
+    }
+    
+    if (lowerLang.startsWith('en')) {
+      localStorage.setItem(LATERLY_LANG_KEY, 'en');
+      return 'en';
+    }
+  }
+  
+  localStorage.setItem(LATERLY_LANG_KEY, 'en');
+  return 'en';
+};
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
     fallbackLng: 'en',
-    lng: 'en', // Default language
+    lng: getInitialLanguage(), // Default language
     interpolation: {
       escapeValue: false, // React already safes from xss
     },
   });
+
+i18n.on('languageChanged', (lng) => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(LATERLY_LANG_KEY, lng);
+    document.documentElement.lang = lng;
+  }
+});
+
+if (typeof window !== 'undefined') {
+  document.documentElement.lang = i18n.language;
+}
 
 export default i18n;
