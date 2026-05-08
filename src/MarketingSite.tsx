@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { LATERLY_LANG_KEY } from "./i18n";
+import { LATERLY_LANG_KEY, getInitialLanguage } from "./i18n";
 import {
   ArrowRight,
   Link as LinkIcon,
@@ -902,10 +902,16 @@ const Footer = () => {
 
 export const MarketingSite = () => {
   const { scrollY } = useScroll();
+  const { i18n } = useTranslation();
   
   useEffect(() => {
     document.title = "Laterly | Home";
-  }, []);
+    // Ensure we use the saved language or browser language detection when on the home page
+    const initialLang = getInitialLanguage();
+    if (i18n.language !== initialLang) {
+      i18n.changeLanguage(initialLang);
+    }
+  }, [i18n]);
 
   // Subtle parallax for global background halos
   const y1 = useTransform(scrollY, [0, 2000], [0, 150]);

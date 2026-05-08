@@ -1,15 +1,46 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
 import laterlyLogo from "@/assets/laterly-logo-cropped.png";
+import { getInitialLanguage } from "./i18n";
 
 const PrivacyPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [searchParams] = useSearchParams();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Laterly | Privacy";
-  }, []);
+
+    const langParam = searchParams.get("lang");
+    if (langParam) {
+      const lowerLang = langParam.toLowerCase();
+      let targetLang = 'en';
+
+      if (['zh-hant', 'zh-tw', 'zh-hk', 'zh-mo'].some(code => lowerLang.includes(code))) {
+        targetLang = 'zh-TW';
+      } else if (['zh-hans', 'zh-cn', 'zh-sg'].some(code => lowerLang.includes(code))) {
+        targetLang = 'zh-CN';
+      } else if (lowerLang === 'zh') {
+        targetLang = 'zh-CN';
+      } else if (lowerLang.startsWith('ja')) {
+        targetLang = 'ja';
+      } else if (lowerLang.startsWith('en')) {
+        targetLang = 'en';
+      }
+
+      if (i18n.language !== targetLang) {
+        i18n.changeLanguage(targetLang);
+      }
+    } else {
+      // If lang is missing, use existing saved language or browser language detection
+      const initialLang = getInitialLanguage();
+      if (i18n.language !== initialLang) {
+        i18n.changeLanguage(initialLang);
+      }
+    }
+  }, [searchParams, i18n]);
 
   return (
   <div className="min-h-screen bg-gradient-paper">

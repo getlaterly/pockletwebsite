@@ -749,7 +749,7 @@ resources['en-GB'] = resources['en-US'] = resources['en'];
 
 export const LATERLY_LANG_KEY = 'laterly_lang_pref_v2';
 
-const getInitialLanguage = () => {
+export const getInitialLanguage = () => {
   if (typeof window === 'undefined') return 'en';
 
   const savedLang = localStorage.getItem(LATERLY_LANG_KEY);
