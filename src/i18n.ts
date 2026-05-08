@@ -747,7 +747,7 @@ const resources: Record<string, any> = {
 // Aliases for UK English
 resources['en-GB'] = resources['en-US'] = resources['en'];
 
-const LATERLY_LANG_KEY = 'laterly_language_preference';
+export const LATERLY_LANG_KEY = 'laterly_lang_pref_v2';
 
 const getInitialLanguage = () => {
   if (typeof window === 'undefined') return 'en';
@@ -769,32 +769,26 @@ const getInitialLanguage = () => {
     const lowerLang = lang.toLowerCase();
     
     if (['zh-hant', 'zh-tw', 'zh-hk', 'zh-mo'].some(code => lowerLang.includes(code))) {
-      localStorage.setItem(LATERLY_LANG_KEY, 'zh-TW');
       return 'zh-TW';
     }
     
     if (['zh-hans', 'zh-cn', 'zh-sg'].some(code => lowerLang.includes(code))) {
-      localStorage.setItem(LATERLY_LANG_KEY, 'zh-CN');
       return 'zh-CN';
     }
     
     if (lowerLang === 'zh') {
-      localStorage.setItem(LATERLY_LANG_KEY, 'zh-CN');
       return 'zh-CN';
     }
     
     if (lowerLang.startsWith('ja')) {
-      localStorage.setItem(LATERLY_LANG_KEY, 'ja');
       return 'ja';
     }
     
     if (lowerLang.startsWith('en')) {
-      localStorage.setItem(LATERLY_LANG_KEY, 'en');
       return 'en';
     }
   }
   
-  localStorage.setItem(LATERLY_LANG_KEY, 'en');
   return 'en';
 };
 
@@ -811,7 +805,6 @@ i18n
 
 i18n.on('languageChanged', (lng) => {
   if (typeof window !== 'undefined') {
-    localStorage.setItem(LATERLY_LANG_KEY, lng);
     document.documentElement.lang = lng;
   }
 });

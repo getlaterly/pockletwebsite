@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { LATERLY_LANG_KEY } from "./i18n";
 import {
   ArrowRight,
   Link as LinkIcon,
@@ -641,6 +642,7 @@ const LanguageSelector = () => {
 
   const handleLanguageSelect = (language: typeof languages[0]) => {
     setIsOpen(false);
+    localStorage.setItem(LATERLY_LANG_KEY, language.code);
     i18n.changeLanguage(language.code);
   };
 
