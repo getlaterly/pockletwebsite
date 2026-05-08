@@ -397,7 +397,7 @@ const resources: Record<string, any> = {
       },
       problem: {
         eyebrow: "是不是你的真实写照？",
-        title: "每次都说“马了等于看了”，<br />然后就放到<em class='italic text-primary'>吃灰</em>",
+        title: "每次都说“码了等于看了”，<br />然后就放到<em class='italic text-primary'>吃灰</em>",
         ex1: "刷小红书看到一家绝美咖啡店。",
         ex2: "看抖音学到的神仙小妙招。",
         ex3: "B站上刷到的宝藏旅游地。",
@@ -464,7 +464,7 @@ const resources: Record<string, any> = {
       cta: {
         eyebrow: "还等什么？",
         title: "让“晚点”<em class='italic text-primary'>成真</em>",
-        desc: "别再只马不看了，现在就把想去的地方、想买的东西通通收进来。",
+        desc: "别再只码不看了，现在就把想去的地方、想买的东西通通收进来。",
         sub: "为你想要做的事，留一个专属的自留地。",
         avail: "支持各大平台",
         appstore: "App Store",
