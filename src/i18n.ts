@@ -5,7 +5,7 @@ const resources: Record<string, any> = {
   en: {
     translation: {
       nav: {
-        getLaterly: "Get Laterly",
+        getAnew: "Get Anew",
         how: "How it works",
         map: "Find things nearby",
         demo: "Demo",
@@ -33,7 +33,7 @@ const resources: Record<string, any> = {
         ex3: "A place you found on YouTube.",
         pain1: "You forgot it.",
         pain2: "Or forgot where you saved it.",
-        sol1: "That's where Laterly comes in.",
+        sol1: "That's where Anew comes in.",
         sol2: "One place to save. One place to come back."
       },
       how: {
@@ -57,7 +57,7 @@ const resources: Record<string, any> = {
         eyebrow: "What's inside",
         title: "The boring parts, <em class='italic text-primary'>handled</em>.",
         f1Title: "Save from any app",
-        f1Desc: "Share a link from Instagram, TikTok, or anywhere else. Laterly saves it in seconds.",
+        f1Desc: "Share a link from Instagram, TikTok, or anywhere else. Anew saves it in seconds.",
         f1DescMob: "Save from Instagram, TikTok, or anywhere in seconds.",
         f2Title: "Categories that fit life",
         f2Desc: "Eat, Go, Buy, Browse, Do — or invent your own labels with a colour and a glyph.",
@@ -115,7 +115,7 @@ const resources: Record<string, any> = {
         back: "Back",
         title: "Privacy Policy",
         lastUpdated: "Last updated: April 25, 2026",
-        intro1: "Laterly is built around a simple principle: your data stays yours.",
+        intro1: "Anew is built around a simple principle: your data stays yours.",
         intro2: "Everything you save lives on your device. We don't sell your data, train AI models on it, or use it for advertising.",
         collectTitle: "What we collect",
         collect1Title: "On your device (local only)",
@@ -129,7 +129,7 @@ const resources: Record<string, any> = {
         collect3Desc2: "These requests may involve sending the saved URL to these third-party services and source websites.",
         collect4Title: "Location data",
         collect4Desc1: "When you add a location to a saved item or search for places, geocoding services (Photon, Nominatim) resolve addresses and coordinates.",
-        collect4Desc2: "Location data is stored locally and never sent to Laterly's servers.",
+        collect4Desc2: "Location data is stored locally and never sent to Anew's servers.",
         collect5Title: "Notifications",
         collect5Desc1: "Reminders are scheduled and managed entirely on your device. We don't collect or track notification data.",
         notCollectTitle: "What we don't collect",
@@ -169,20 +169,20 @@ const resources: Record<string, any> = {
         controlDesc2: "If you delete the app, all locally stored data is permanently removed from your device.",
         deletionTitle: "Account deletion",
         deletionDesc1: "You have the right to delete your account and all associated data at any time.",
-        deletionDesc2: "To delete your account, open the Laterly app, go to Settings > Account, and tap \"Delete Account\". This action is irreversible and will immediately remove your authentication credentials from our servers.",
+        deletionDesc2: "To delete your account, open the Anew app, go to Settings > Account, and tap \"Delete Account\". This action is irreversible and will immediately remove your authentication credentials from our servers.",
         deletionDesc3: "Please note that since your saved items are stored locally on your device, deleting your account will not automatically delete the data stored on your device. To remove all local data, you must delete the app from your device.",
         childrenTitle: "Children's privacy",
-        childrenDesc1: "Laterly is available to users of all ages. If you're under 13 (or under the age of consent in your country), you should use Laterly with parental guidance.",
-        childrenDesc2: "Since all data is stored locally and we don't collect personal information beyond your email (if you create an account), Laterly is safe for younger users when used responsibly.",
+        childrenDesc1: "Anew is available to users of all ages. If you're under 13 (or under the age of consent in your country), you should use Anew with parental guidance.",
+        childrenDesc2: "Since all data is stored locally and we don't collect personal information beyond your email (if you create an account), Anew is safe for younger users when used responsibly.",
         childrenDesc3Prefix: "Parents: if your child has created an account and you'd like it removed, contact us at",
         email: "support@getlaterly.com",
         childrenDesc3Suffix: ".",
         updatesTitle: "Updates to this policy",
-        updatesDesc1: "We may update this policy as Laterly evolves.",
+        updatesDesc1: "We may update this policy as Anew evolves.",
         updatesDesc2: "If we make significant changes, we'll notify you through the app or via email (if you've created an account).",
         updatesDesc3: "The \"Last updated\" date at the top of this page shows when we last revised this policy.",
         questionsTitle: "Questions?",
-        questionsDesc1: "If you have questions about this privacy policy or how Laterly handles your data, email us at:",
+        questionsDesc1: "If you have questions about this privacy policy or how Anew handles your data, email us at:",
         backHome: "Back to home"
       }
     }
@@ -190,7 +190,7 @@ const resources: Record<string, any> = {
   "zh-TW": {
     translation: {
       nav: {
-        getLaterly: "立刻體驗 Laterly",
+        getAnew: "立刻體驗 Anew",
         how: "怎麼玩",
         map: "探索附近",
         demo: "示範",
@@ -218,7 +218,7 @@ const resources: Record<string, any> = {
         ex3: "YouTube 上介紹的秘境景點。",
         pain1: "你早就忘光了。",
         pain2: "或者根本忘了當初存在哪個 App 裡。",
-        sol1: "這就是為什麼你需要 Laterly。",
+        sol1: "這就是為什麼你需要 Anew。",
         sol2: "通通存在同一個地方，想看隨時找得到。"
       },
       how: {
@@ -242,7 +242,7 @@ const resources: Record<string, any> = {
         eyebrow: "裡面有什麼料",
         title: "那些最麻煩的事，我們幫你<em class='italic text-primary'>搞定了</em>",
         f1Title: "什麼 App 都能存",
-        f1Desc: "把 Instagram、脆還是任何地方的連結分享過來。Laterly 幾秒內幫你搞定。",
+        f1Desc: "把 Instagram、脆還是任何地方的連結分享過來。Anew 幾秒內幫你搞定。",
         f1DescMob: "管他是 IG 還是脆，幾秒內無痛收藏。",
         f2Title: "最懂你生活的分類",
         f2Desc: "吃、去、買、逛、做——或者自己選顏色跟圖示，發明你的專屬標籤。",
@@ -300,7 +300,7 @@ const resources: Record<string, any> = {
         back: "回上一頁",
         title: "隱私權政策",
         lastUpdated: "最後更新：2026年4月25日",
-        intro1: "Laterly 的原則超簡單：你的資料，就是你的。",
+        intro1: "Anew 的原則超簡單：你的資料，就是你的。",
         intro2: "你存的所有東西都乖乖躺在你的手機裡。我們絕對不賣你的資料、不拿去訓練 AI，更不會塞廣告給你。",
         collectTitle: "我們收集了什麼",
         collect1Title: "只存在你手機裡的資料（本機專屬）",
@@ -314,7 +314,7 @@ const resources: Record<string, any> = {
         collect3Desc2: "在抓取資料的過程中，你儲存的網址可能會被傳送給這些第三方服務以及來源網站。",
         collect4Title: "位置資訊",
         collect4Desc1: "當你幫收藏加上地點或是搜尋好去處時，地理編碼服務（Photon、Nominatim）會幫忙把地址轉換成座標。",
-        collect4Desc2: "這些位置資訊只會存在你手機裡，絕對不會傳到 Laterly 的伺服器上。",
+        collect4Desc2: "這些位置資訊只會存在你手機裡，絕對不會傳到 Anew 的伺服器上。",
         collect5Title: "推播通知",
         collect5Desc1: "所有的提醒排程都是你手機自己搞定的，我們完全不會收集或追蹤你的通知紀錄。",
         notCollectTitle: "我們「絕對不」收集的東西",
@@ -354,20 +354,20 @@ const resources: Record<string, any> = {
         controlDesc2: "如果你把 App 刪掉，所有存在手機裡的資料就會跟著永遠消失喔。",
         deletionTitle: "帳號刪除",
         deletionDesc1: "您有權隨時刪除您的帳號及所有相關資料。",
-        deletionDesc2: "若要刪除帳號，請打開 Laterly App，前往「設定」>「帳號」，然後點擊「刪除帳號」。此操作無法復原，並會立即從我們的伺服器中移除您的登入憑證。",
+        deletionDesc2: "若要刪除帳號，請打開 Anew App，前往「設定」>「帳號」，然後點擊「刪除帳號」。此操作無法復原，並會立即從我們的伺服器中移除您的登入憑證。",
         deletionDesc3: "請注意，由於您的收藏內容是儲存在您的裝置本地，刪除帳號並不會自動刪除裝置上的資料。若要移除所有本地資料，您必須從裝置上刪除此 App。",
         childrenTitle: "關於小朋友的隱私",
-        childrenDesc1: "Laterly 誰都能用！但如果你還未滿 13 歲（或是你國家規定的年齡），記得要找爸媽陪你一起用喔。",
+        childrenDesc1: "Anew 誰都能用！但如果你還未滿 13 歲（或是你國家規定的年齡），記得要找爸媽陪你一起用喔。",
         childrenDesc2: "因為資料都存在你手機，而且除了 Email 之外我們不收其他個人資料，所以只要乖乖使用，對年輕朋友來說是很安全的。",
         childrenDesc3Prefix: "家長們看過來：如果你家寶貝自己辦了帳號，而你想把它刪掉，隨時 Email 到 ",
         email: "support@getlaterly.com",
         childrenDesc3Suffix: " 找我們。",
         updatesTitle: "這份政策的更新",
-        updatesDesc1: "Laterly 會越來越好，所以這份政策可能也會跟著進化。",
+        updatesDesc1: "Anew 會越來越好，所以這份政策可能也會跟著進化。",
         updatesDesc2: "如果有什麼超大的變動，我們會透過 App 或是 Email（如果你有註冊）通知你。",
         updatesDesc3: "頁面最上面的「最後更新」日期，就是我們上次修改的時間啦。",
         questionsTitle: "還有問題嗎？",
-        questionsDesc1: "如果你對這份隱私權政策，或是 Laterly 怎麼保護你的資料有任何好奇，隨時寄信給我們：",
+        questionsDesc1: "如果你對這份隱私權政策，或是 Anew 怎麼保護你的資料有任何好奇，隨時寄信給我們：",
         backHome: "回首頁"
       }
     }
@@ -375,7 +375,7 @@ const resources: Record<string, any> = {
   "zh-CN": {
     translation: {
       nav: {
-        getLaterly: "立即体验 Laterly",
+        getAnew: "立即体验 Anew",
         how: "怎么玩",
         map: "探索附近",
         demo: "演示",
@@ -403,7 +403,7 @@ const resources: Record<string, any> = {
         ex3: "B站上刷到的宝藏旅游地。",
         pain1: "你早就忘到九霄云外了。",
         pain2: "或者根本忘了当时存在哪个 App 里。",
-        sol1: "这就是为什么你需要 Laterly。",
+        sol1: "这就是为什么你需要 Anew。",
         sol2: "一键收纳，想看的时候随时能找到。"
       },
       how: {
@@ -427,7 +427,7 @@ const resources: Record<string, any> = {
         eyebrow: "里面有什么大招",
         title: "那些最烦人的事，我们帮你<em class='italic text-primary'>搞定了</em>",
         f1Title: "万物皆可存",
-        f1Desc: "把小红书、抖音还是任何地方的链接分享过来。Laterly 几秒内帮你搞定。",
+        f1Desc: "把小红书、抖音还是任何地方的链接分享过来。Anew 几秒内帮你搞定。",
         f1DescMob: "管他是小红书还是抖音，几秒内无痛收藏。",
         f2Title: "最懂你生活的分类",
         f2Desc: "吃、去、买、逛、做——或者自己挑颜色和图标，DIY 你的专属标签。",
@@ -485,7 +485,7 @@ const resources: Record<string, any> = {
         back: "返回",
         title: "隐私政策",
         lastUpdated: "最后更新：2026年4月25日",
-        intro1: "Laterly 的原则超简单：你的数据，就是你的。",
+        intro1: "Anew 的原则超简单：你的数据，就是你的。",
         intro2: "你存的所有东西都乖乖躺在你的手机里。我们绝对不卖你的数据、不拿去训练 AI，更不会塞广告给你。",
         collectTitle: "我们收集了什么",
         collect1Title: "只存在你手机里的数据（本地专属）",
@@ -499,7 +499,7 @@ const resources: Record<string, any> = {
         collect3Desc2: "在抓取资料的过程中，你保存的网址可能会被发送给这些第三方服务以及来源网站。",
         collect4Title: "位置信息",
         collect4Desc1: "当你帮收藏加上地点或是搜索好去处时，地理编码服务（Photon、Nominatim）会帮忙把地址转换成坐标。",
-        collect4Desc2: "这些位置信息只会存在你手机里，绝对不会传到 Laterly 的服务器上。",
+        collect4Desc2: "这些位置信息只会存在你手机里，绝对不会传到 Anew 的服务器上。",
         collect5Title: "推送通知",
         collect5Desc1: "所有的提醒日程都是你手机自己搞定的，我们完全不会收集或追踪你的通知记录。",
         notCollectTitle: "我们“绝对不”收集的东西",
@@ -539,20 +539,20 @@ const resources: Record<string, any> = {
         controlDesc2: "如果你把 App 删掉，所有存在手机里的数据就会跟着永远消失哦。",
         deletionTitle: "账号删除",
         deletionDesc1: "您有权随时删除您的账号及所有相关数据。",
-        deletionDesc2: "若要删除账号，请打开 Laterly App，前往“设置”>“账号”，然后点击“删除账号”。此操作无法恢复，并会立即从我们的服务器中移除您的登录凭证。",
+        deletionDesc2: "若要删除账号，请打开 Anew App，前往“设置”>“账号”，然后点击“删除账号”。此操作无法恢复，并会立即从我们的服务器中移除您的登录凭证。",
         deletionDesc3: "请注意，由于您的收藏内容是存储在您的设备本地，删除账号并不会自动删除设备上的数据。若要移除所有本地数据，您必须从设备上删除此 App。",
         childrenTitle: "关于小朋友的隐私",
-        childrenDesc1: "Laterly 谁都能用！但如果你还未满 13 岁（或是你国家规定的年龄），记得要找爸妈陪你一起用哦。",
+        childrenDesc1: "Anew 谁都能用！但如果你还未满 13 岁（或是你国家规定的年龄），记得要找爸妈陪你一起用哦。",
         childrenDesc2: "因为数据都存在你手机，而且除了 Email 之外我们不收其他个人资料，所以只要乖乖使用，对年轻朋友来说是很安全的。",
         childrenDesc3Prefix: "家长们看过来：如果你家宝贝自己办了账号，而你想把它删掉，随时 Email 到 ",
         email: "support@getlaterly.com",
         childrenDesc3Suffix: " 找我们。",
         updatesTitle: "这份政策的更新",
-        updatesDesc1: "Laterly 会越来越好，所以这份政策可能也会跟着进化。",
+        updatesDesc1: "Anew 会越来越好，所以这份政策可能也会跟着进化。",
         updatesDesc2: "如果有什么超大的变动，我们会通过 App 或是 Email（如果你有注册）通知你。",
         updatesDesc3: "页面最上面的“最后更新”日期，就是我们上次修改的时间啦。",
         questionsTitle: "还有问题吗？",
-        questionsDesc1: "如果你对这份隐私政策，或是 Laterly 怎么保护你的数据有任何好奇，随时寄信给我们：",
+        questionsDesc1: "如果你对这份隐私政策，或是 Anew 怎么保护你的数据有任何好奇，随时寄信给我们：",
         backHome: "回首页"
       }
     }
@@ -560,7 +560,7 @@ const resources: Record<string, any> = {
   "ja": {
     translation: {
       nav: {
-        getLaterly: "Laterlyを入手",
+        getAnew: "Anewを入手",
         how: "使い方",
         map: "近くを探す",
         demo: "デモ",
@@ -588,7 +588,7 @@ const resources: Record<string, any> = {
         ex3: "YouTubeで見つけた場所。",
         pain1: "忘れてしまった。",
         pain2: "どこに保存したか忘れてしまった。",
-        sol1: "そこでLaterlyの出番です。",
+        sol1: "そこでAnewの出番です。",
         sol2: "保存する場所も、見返す場所もひとつだけ。"
       },
       how: {
@@ -612,7 +612,7 @@ const resources: Record<string, any> = {
         eyebrow: "機能",
         title: "面倒なことはすべて<em class='italic text-primary'>お任せ</em>。",
         f1Title: "どのアプリからも保存",
-        f1Desc: "Instagram、TikTokなどからリンクを共有。Laterlyが数秒で保存します。",
+        f1Desc: "Instagram、TikTokなどからリンクを共有。Anewが数秒で保存します。",
         f1DescMob: "Instagram、TikTokなどから数秒で保存。",
         f2Title: "生活に合ったカテゴリー",
         f2Desc: "食べる、行く、買う、見る、する — 色とアイコンで独自のラベルも作成可能。",
@@ -670,7 +670,7 @@ const resources: Record<string, any> = {
         back: "戻る",
         title: "プライバシーポリシー",
         lastUpdated: "最終更新日：2026年4月25日",
-        intro1: "Laterlyはシンプルな原則に基づいて構築されています：あなたのデータはあなたのものです。",
+        intro1: "Anewはシンプルな原則に基づいて構築されています：あなたのデータはあなたのものです。",
         intro2: "保存したものはすべてデバイス上に保存されます。データを販売したり、AIモデルのトレーニングに使用したり、広告に使用したりすることはありません。",
         collectTitle: "収集する情報",
         collect1Title: "デバイス上（ローカルのみ）",
@@ -684,7 +684,7 @@ const resources: Record<string, any> = {
         collect3Desc2: "これらのリクエストにおいて、保存したURLがこれらのサードパーティサービスおよびソースウェブサイトに送信される場合があります。",
         collect4Title: "位置データ",
         collect4Desc1: "保存した項目に場所を追加したり場所を検索したりすると、ジオコーディングサービス（Photon、Nominatim）が住所と座標を解決します。",
-        collect4Desc2: "位置データはローカルに保存され、Laterlyのサーバーに送信されることはありません。",
+        collect4Desc2: "位置データはローカルに保存され、Anewのサーバーに送信されることはありません。",
         collect5Title: "通知",
         collect5Desc1: "リマインダーのスケジュールと管理は完全にデバイス上で行われます。通知データを収集または追跡することはありません。",
         notCollectTitle: "収集しない情報",
@@ -724,20 +724,20 @@ const resources: Record<string, any> = {
         controlDesc2: "アプリを削除すると、ローカルに保存されているすべてのデータがデバイスから永久に削除されます。",
         deletionTitle: "アカウントの削除",
         deletionDesc1: "お客様は、いつでもご自身のアカウントおよび関連するすべてのデータを削除する権利を有します。",
-        deletionDesc2: "アカウントを削除するには、Laterlyアプリを開き、「設定」>「アカウント」に移動して「アカウントを削除」をタップしてください。この操作は取り消すことができず、サーバーから認証情報が即座に削除されます。",
+        deletionDesc2: "アカウントを削除するには、Anewアプリを開き、「設定」>「アカウント」に移動して「アカウントを削除」をタップしてください。この操作は取り消すことができず、サーバーから認証情報が即座に削除されます。",
         deletionDesc3: "保存されたアイテムはデバイスのローカルに保存されているため、アカウントを削除してもデバイスに保存されているデータは自動的には削除されません。すべてのローカルデータを削除するには、デバイスからアプリを削除する必要があります。",
         childrenTitle: "子供のプライバシー",
-        childrenDesc1: "Laterlyはすべての年齢のユーザーが利用できます。13歳（または居住国の同意年齢）未満の場合は、保護者の指導のもとでLaterlyを使用してください。",
-        childrenDesc2: "すべてのデータはローカルに保存され、メール（アカウントを作成した場合）以外の個人情報を収集しないため、責任を持って使用すればLaterlyは若いユーザーにとって安全です。",
+        childrenDesc1: "Anewはすべての年齢のユーザーが利用できます。13歳（または居住国の同意年齢）未満の場合は、保護者の指導のもとでAnewを使用してください。",
+        childrenDesc2: "すべてのデータはローカルに保存され、メール（アカウントを作成した場合）以外の個人情報を収集しないため、責任を持って使用すればAnewは若いユーザーにとって安全です。",
         childrenDesc3Prefix: "保護者の方へ：子供がアカウントを作成し、削除したい場合は、",
         email: "support@getlaterly.com",
         childrenDesc3Suffix: "までご連絡ください。",
         updatesTitle: "このポリシーの更新",
-        updatesDesc1: "Laterlyの進化に伴い、このポリシーを更新する場合があります。",
+        updatesDesc1: "Anewの進化に伴い、このポリシーを更新する場合があります。",
         updatesDesc2: "重大な変更を行う場合は、アプリまたはメール（アカウントを作成した場合）を通じて通知します。",
         updatesDesc3: "このページの上部にある「最終更新日」は、このポリシーを最後に改訂した日を示しています。",
         questionsTitle: "ご質問ですか？",
-        questionsDesc1: "このプライバシーポリシーやLaterlyのデータ処理について質問がある場合は、メールでお問い合わせください：",
+        questionsDesc1: "このプライバシーポリシーやAnewのデータ処理について質問がある場合は、メールでお問い合わせください：",
         backHome: "ホームに戻る"
       }
     }
