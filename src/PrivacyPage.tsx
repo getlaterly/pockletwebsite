@@ -2,7 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
-import laterlyLogo from "@/assets/laterly-logo-cropped.png";
+import pockletLogo from "@/assets/pocklet-logo.png";
 import { getInitialLanguage } from "./i18n";
 
 const PrivacyPage = () => {
@@ -11,7 +11,7 @@ const PrivacyPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Anew | Privacy";
+    document.title = "Pocklet | Privacy";
 
     const langParam = searchParams.get("lang");
     if (langParam) {
@@ -48,8 +48,8 @@ const PrivacyPage = () => {
     <header className="border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={laterlyLogo} alt="Anew" className="h-[26px] w-auto" />
-          <span className="font-brand text-xl tracking-tight">Anew</span>
+          <img src={pockletLogo} alt="Pocklet" className="h-[26px] w-auto" />
+          <span className="font-brand text-xl tracking-tight">Pocklet</span>
         </Link>
         <Link
           to="/"
@@ -320,7 +320,7 @@ const PrivacyPage = () => {
           </p>
           <p>
             {t("privacy.childrenDesc3Prefix")}{" "}
-            <a href="mailto:support@getlaterly.com" className="text-primary underline hover:text-primary/80">
+            <a href="mailto:support@getpocklet.com" className="text-primary underline hover:text-primary/80">
               {t("privacy.email")}
             </a>{t("privacy.childrenDesc3Suffix")}
           </p>
@@ -357,8 +357,8 @@ const PrivacyPage = () => {
             {t("privacy.questionsDesc1")}
           </p>
           <p>
-            <a href="mailto:support@getlaterly.com" className="font-medium text-primary underline hover:text-primary/80">
-              support@getlaterly.com
+            <a href="mailto:support@getpocklet.com" className="font-medium text-primary underline hover:text-primary/80">
+              support@getpocklet.com
             </a>
           </p>
         </div>

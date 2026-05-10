@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { LATERLY_LANG_KEY, getInitialLanguage } from "./i18n";
+import { POCKLET_LANG_KEY, getInitialLanguage } from "./i18n";
 import {
   ArrowRight,
   Link as LinkIcon,
@@ -17,9 +17,9 @@ import {
   Play,
   Pause,
 } from "lucide-react";
-import laterlyLogo from "@/assets/laterly-logo-cropped.png";
+import pockletLogo from "@/assets/pocklet-logo.png";
 import heroVisualImg from "@/assets/hero-visual.png";
-import mapIllustrationImg from "@/assets/map-illustration.png";
+import pockletMapSectionImg from "@/assets/pocklet-map-section.png";
 
 /* ---------- Small primitives ---------- */
 
@@ -48,8 +48,8 @@ const Nav = () => {
   <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl">
     <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
       <Link to="/" className="flex items-center gap-2">
-        <img src={laterlyLogo} alt="Anew" className="h-[26px] w-auto" />
-        <span className="font-brand text-xl tracking-tight text-foreground">Anew</span>
+        <img src={pockletLogo} alt="Pocklet" className="h-[26px] w-auto" />
+        <span className="font-brand text-xl tracking-tight text-foreground">Pocklet</span>
       </Link>
       <div className="flex items-center gap-4 sm:gap-6">
         <nav className="hidden items-center gap-5 text-sm font-medium text-muted-foreground lg:flex">
@@ -64,7 +64,7 @@ const Nav = () => {
           href="#download"
           className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:shadow-card hover:-translate-y-0.5 md:px-4 md:py-2"
         >
-          {t("nav.getAnew")} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+          {t("nav.getPocklet")} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
         </a>
       </div>
     </div>
@@ -100,7 +100,7 @@ const Hero = () => {
       {/* Left text column */}
       <div className="relative z-20 lg:col-span-6 xl:col-span-5 lg:flex lg:flex-col lg:justify-center">
         <h1 className="font-display text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
-          {t("hero.title1")}<br />{t("hero.title2")} <em className="italic text-primary">Anew</em>
+          {t("hero.title1")}<br />{t("hero.title2")} <em className="italic text-primary">Pocklet</em>
         </h1>
         <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-foreground sm:mt-5 sm:text-lg md:mt-6 md:text-xl">
           {t("hero.desc1")}
@@ -113,7 +113,7 @@ const Hero = () => {
             href="#download"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow sm:w-auto sm:px-8 sm:py-4 sm:text-base"
           >
-            {t("nav.getAnew")} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5" />
+            {t("nav.getPocklet")} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5" />
           </a>
         </div>
         <TrustStrip />
@@ -126,7 +126,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           src={heroVisualImg}
-          alt="Floating Anew saved cards over a soft map background"
+          alt="Floating Pocklet saved cards over a soft map background"
           className="pointer-events-none h-auto w-[120%] max-w-none sm:w-[110%] lg:w-[130%] lg:translate-x-[15%] xl:w-[130%] xl:translate-x-[10%]"
         />
       </div>
@@ -307,8 +307,8 @@ const VideoShowcase = () => {
                 <video
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover cursor-pointer"
-                  src="/laterly-mobile-demo-v4-optimized.mp4"
-                  poster="/laterly-mobile-demo-poster.jpg"
+                  src="/pocklet-mobile-demo-v4-optimized.mp4"
+                  poster="/pocklet-mobile-demo-poster.jpg"
                   preload="metadata"
                   playsInline
                   onClick={isPlaying ? handlePause : handlePlay}
@@ -332,7 +332,7 @@ const VideoShowcase = () => {
                       <Play className="h-6 w-6 translate-x-0.5 fill-current sm:h-7 sm:w-7" />
                     </button>
                     <div className="text-xs text-white font-medium sm:text-sm drop-shadow-md">
-                      See Anew in motion
+                      See Pocklet in motion
                     </div>
                   </div>
                 )}
@@ -516,8 +516,8 @@ const MapSection = () => {
       >
         <div className="mx-auto max-w-5xl">
           <img
-            src={mapIllustrationImg}
-            alt="Anew map showing saved places nearby"
+            src={pockletMapSectionImg}
+            alt="Pocklet map showing saved places nearby"
             className="block w-full h-auto"
           />
         </div>
@@ -642,7 +642,7 @@ const LanguageSelector = () => {
 
   const handleLanguageSelect = (language: typeof languages[0]) => {
     setIsOpen(false);
-    localStorage.setItem(LATERLY_LANG_KEY, language.code);
+    localStorage.setItem(POCKLET_LANG_KEY, language.code);
     i18n.changeLanguage(language.code);
   };
 
@@ -691,8 +691,8 @@ const Footer = () => {
       {/* Mobile: vertical layout */}
       <div className="md:hidden">
         <div className="flex items-center gap-2">
-          <img src={laterlyLogo} alt="Anew" className="h-[26px] w-auto" />
-          <span className="font-brand text-xl text-foreground">Anew</span>
+          <img src={pockletLogo} alt="Pocklet" className="h-[26px] w-auto" />
+          <span className="font-brand text-xl text-foreground">Pocklet</span>
         </div>
         <p className="mt-5 text-sm text-muted-foreground/80">
           {t("footer.tagline")}
@@ -702,7 +702,7 @@ const Footer = () => {
         <div className="mt-6 flex items-center gap-5">
           {/* Instagram */}
           <a 
-            href="https://www.instagram.com/getlaterly/" 
+            href="https://www.instagram.com/getpocklet/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 -m-2 transition-opacity hover:opacity-80"
@@ -724,7 +724,7 @@ const Footer = () => {
           
           {/* TikTok */}
           <a 
-            href="https://www.tiktok.com/@getlaterly" 
+            href="https://www.tiktok.com/@getpocklet" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 -m-2 transition-opacity hover:opacity-80"
@@ -739,7 +739,7 @@ const Footer = () => {
           
           {/* YouTube */}
           <a 
-            href="https://www.youtube.com/@GetAnew"
+            href="https://www.youtube.com/@GetPocklet"
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 -m-2 transition-opacity hover:opacity-80"
@@ -778,7 +778,7 @@ const Footer = () => {
             </a>
           </div>
           <div>
-            <a href="mailto:support@getlaterly.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
+            <a href="mailto:support@getpocklet.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.contact")}
             </a>
           </div>
@@ -795,8 +795,8 @@ const Footer = () => {
         {/* Left: Brand + Tagline + Social */}
         <div className="flex-shrink-0">
           <div className="flex items-center gap-2">
-            <img src={laterlyLogo} alt="Anew" className="h-[26px] w-auto" />
-            <span className="font-brand text-xl text-foreground">Anew</span>
+            <img src={pockletLogo} alt="Pocklet" className="h-[26px] w-auto" />
+            <span className="font-brand text-xl text-foreground">Pocklet</span>
           </div>
           <p className="mt-5 text-sm text-muted-foreground/80">
             {t("footer.tagline")}
@@ -805,7 +805,7 @@ const Footer = () => {
           {/* Social icons */}
           <div className="mt-6 flex items-center gap-5">
             <a 
-              href="https://www.instagram.com/getlaterly/" 
+              href="https://www.instagram.com/getpocklet/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 -m-2 transition-opacity hover:opacity-80"
@@ -826,7 +826,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://www.tiktok.com/@getlaterly" 
+              href="https://www.tiktok.com/@getpocklet" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 -m-2 transition-opacity hover:opacity-80"
@@ -840,7 +840,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://www.youtube.com/@GetAnew"
+              href="https://www.youtube.com/@GetPocklet"
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 -m-2 transition-opacity hover:opacity-80"
@@ -876,7 +876,7 @@ const Footer = () => {
             <a href="#map" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.nearby")}
             </a>
-            <a href="mailto:support@getlaterly.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
+            <a href="mailto:support@getpocklet.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.contact")}
             </a>
             <Link to="/privacy" className="inline-block py-1.5 transition-colors hover:text-foreground">
@@ -890,7 +890,7 @@ const Footer = () => {
     {/* Bottom row */}
     <div className="border-t border-border/40">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-xs text-muted-foreground/60">
-        <span>© {new Date().getFullYear()} Anew</span>
+        <span>© {new Date().getFullYear()} Pocklet</span>
         <LanguageSelector />
       </div>
     </div>
@@ -905,7 +905,7 @@ export const MarketingSite = () => {
   const { i18n } = useTranslation();
   
   useEffect(() => {
-    document.title = "Anew | Home";
+    document.title = "Pocklet | Home";
     // Ensure we use the saved language or browser language detection when on the home page
     const initialLang = getInitialLanguage();
     if (i18n.language !== initialLang) {
