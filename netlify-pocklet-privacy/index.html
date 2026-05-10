@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pocklet | Privacy Policy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: #fcf4f2;
+      --background-secondary: #fff9f7;
+      --card: #fffdfc;
+      --foreground: #47343c;
+      --muted: #7e646e;
+      --primary: #8a3a61;
+      --border: #efdcdc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--foreground);
+      font-family: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 249, 247, 0.95), transparent 32%),
+        linear-gradient(180deg, #fcf4f2 0%, #fff9f7 52%, #fcf4f2 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .header {
+      border-bottom: 1px solid rgba(239, 220, 220, 0.72);
+      background: rgba(255, 253, 252, 0.7);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--foreground);
+      text-decoration: none;
+    }
+
+    .brand img {
+      height: 34px;
+      width: 34px;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .brand span {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px;
+      margin-right: -8px;
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: var(--foreground);
+    }
+
+    main {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    h1,
+    h2 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--foreground);
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.15;
+    }
+
+    h2 {
+      font-size: clamp(24px, 4vw, 30px);
+      line-height: 1.12;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 700;
+      color: var(--foreground);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .updated {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .intro {
+      margin-top: 40px;
+      display: grid;
+      gap: 20px;
+      font-size: 17px;
+      line-height: 1.72;
+    }
+
+    section {
+      margin-top: 56px;
+    }
+
+    .section-body {
+      margin-top: 32px;
+      display: grid;
+      gap: 32px;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .section-body p,
+    .muted {
+      color: var(--muted);
+    }
+
+    .copy-group {
+      display: grid;
+      gap: 12px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 32px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .bullet {
+      margin-top: 1px;
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.7;
+    }
+
+    .footer-card {
+      margin-top: 72px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      text-align: center;
+    }
+
+    .footer-card p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (min-width: 640px) {
+      main {
+        padding: 64px 24px 96px;
+      }
+
+      .intro {
+        margin-top: 48px;
+      }
+
+      section {
+        margin-top: 64px;
+      }
+
+      .footer-card {
+        margin-top: 80px;
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="https://getpocklet.com">
+          <img src="logo.png" alt="Pocklet logo">
+          <span>Pocklet</span>
+        </a>
+
+        <a class="back" href="https://getpocklet.com">
+          ← Back
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 25, 2026</p>
+
+      <div class="intro">
+        <p>Pocklet is built around a simple principle: your saved things stay yours.</p>
+        <p>Everything you save lives on your device. We don't sell your data, train AI models on it, or use it for advertising.</p>
+      </div>
+
+      <section>
+        <h2>What we collect</h2>
+
+        <div class="section-body">
+          <div class="copy-group">
+            <h3>On your device (local only)</h3>
+            <p>Your saved links, screenshots, categories, notes, locations, reminders, and preferences are stored locally using your device's secure storage.</p>
+            <p>This data never leaves your device unless you explicitly share a saved item.</p>
+          </div>
+
+          <div class="copy-group">
+            <h3>Account information (if you sign up)</h3>
+            <p>If you create an account, we store your email address and authentication credentials through Supabase.</p>
+            <p>Currently, your saved content is <em>not</em> synced to our servers. Your account unlocks unlimited saves beyond the guest experience.</p>
+          </div>
+
+          <div class="copy-group">
+            <h3>Links you save</h3>
+            <p>When you save a link, we fetch preview images and titles from the source website using third-party services including Microlink, noembed, vxtwitter, TikTok oEmbed, and our own Supabase function.</p>
+            <p>These requests may involve sending the saved URL to these third-party services and source websites.</p>
+          </div>
+
+          <div class="copy-group">
+            <h3>Location data</h3>
+            <p>When you add a location to a saved item or search for places, geocoding services Photon and Nominatim resolve addresses and coordinates.</p>
+            <p>Location data is stored locally and never sent to Pocklet's servers.</p>
+          </div>
+
+          <div class="copy-group">
+            <h3>Notifications</h3>
+            <p>Reminders are scheduled and managed entirely on your device. We don't collect or track notification data.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>What we don't collect</h2>
+
+        <ul>
+          <li><span class="bullet">•</span><span>We don't track your browsing activity</span></li>
+          <li><span class="bullet">•</span><span>We don't sell your data to third parties</span></li>
+          <li><span class="bullet">•</span><span>We don't use your data to train AI models</span></li>
+          <li><span class="bullet">•</span><span>We don't show ads</span></li>
+          <li><span class="bullet">•</span><span>We don't access your photos unless you explicitly choose to import them</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Third-party services</h2>
+
+        <div class="section-body">
+          <div class="copy-group">
+            <h3>Authentication (Supabase, Google, Apple)</h3>
+            <p>We use Supabase for secure authentication. When you sign up with third-party providers Google or Apple, we only receive the basic profile information needed to create your account, such as your name and email address.</p>
+            <p>We do not share your saved items or app usage data with these providers. Read Supabase's <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
+          </div>
+
+          <div class="copy-group">
+            <h3>Link previews (Microlink, noembed, vxtwitter, TikTok)</h3>
+            <p>When you save a link, we fetch preview images and titles using Microlink, noembed, vxtwitter, TikTok oEmbed, and direct website fetching.</p>
+            <p>These requests are made from our secure Supabase servers. The URLs you save may be sent to these third-party services and source websites to extract metadata.</p>
+          </div>
+
+          <div class="copy-group">
+            <h3>Place search (Photon, Nominatim)</h3>
+            <p>When you search for a location, we use open-source geocoding services.</p>
+            <p>These requests are made directly from your device and may be logged by the service providers.</p>
+          </div>
+
+          <div class="copy-group">
+            <h3>Maps (OpenStreetMap, Carto)</h3>
+            <p>Map tiles are loaded from OpenStreetMap and Carto. Your device makes requests directly to these services when viewing the map.</p>
+            <p>We don't collect or store your map usage.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Future features</h2>
+
+        <div class="section-body">
+          <p>We're considering adding cloud sync in the future, which would allow you to access your saved items across devices.</p>
+          <p>If we add this feature:</p>
+        </div>
+
+        <ul>
+          <li><span class="bullet">•</span><span>It will be entirely optional</span></li>
+          <li><span class="bullet">•</span><span>You'll be notified and asked to opt in</span></li>
+          <li><span class="bullet">•</span><span>Your data will remain encrypted and private</span></li>
+          <li><span class="bullet">•</span><span>We'll update this policy with clear details</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Your control</h2>
+
+        <div class="section-body">
+          <p>Since your data is stored locally, you have complete control:</p>
+        </div>
+
+        <ul>
+          <li><span class="bullet">•</span><span>Delete any saved item at any time</span></li>
+          <li><span class="bullet">•</span><span>Clear all your data from the app settings</span></li>
+          <li><span class="bullet">•</span><span>Delete your account and all associated data</span></li>
+          <li><span class="bullet">•</span><span>Export your data (coming soon)</span></li>
+        </ul>
+
+        <div class="section-body" style="margin-top: 20px;">
+          <p>If you delete the app, all locally stored data is permanently removed from your device.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Account deletion</h2>
+
+        <div class="section-body">
+          <p>You have the right to delete your account and all associated data at any time.</p>
+          <p>To delete your account, open the Pocklet app, go to Settings &gt; Account, and tap "Delete Account". This action is irreversible and will immediately remove your authentication credentials from our servers.</p>
+          <p>Please note that since your saved items are stored locally on your device, deleting your account will not automatically delete the data stored on your device. To remove all local data, you must delete the app from your device.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Children's privacy</h2>
+
+        <div class="section-body">
+          <p>Pocklet is available to users of all ages. If you're under 13, or under the age of consent in your country, you should use Pocklet with parental guidance.</p>
+          <p>Because saved content stays on your device and we don't collect personal information beyond your email address if you create an account, Pocklet is designed to keep data collection minimal.</p>
+          <p>Parents: if your child has created an account and you'd like it removed, contact us at <a href="mailto:support@getpocklet.com">support@getpocklet.com</a>.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Updates to this policy</h2>
+
+        <div class="section-body">
+          <p>We may update this policy as Pocklet evolves.</p>
+          <p>If we make significant changes, we'll notify you through the app or by email if you've created an account.</p>
+          <p>The "Last updated" date at the top of this page shows when we last revised this policy.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Questions?</h2>
+
+        <div class="section-body">
+          <p>If you have questions about this privacy policy or how Pocklet handles your data, email us at:</p>
+          <p><a href="mailto:support@getpocklet.com"><strong>support@getpocklet.com</strong></a></p>
+        </div>
+      </section>
+
+      <div class="footer-card">
+        <p>Save it. Find it. Do it.</p>
+        <a href="https://getpocklet.com">← Back to home</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
