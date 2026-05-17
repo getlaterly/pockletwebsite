@@ -12,6 +12,7 @@ import {
   Globe,
   Check,
   Heart,
+  Sparkles,
   ChevronDown,
   RefreshCw,
   Play,
@@ -477,6 +478,50 @@ const Features = () => {
   );
 };
 
+/* ---------- Plus Spotlight ---------- */
+
+const PlusSpotlight = () => {
+  const { t } = useTranslation();
+
+  const plusFeatures = [
+    { icon: Sparkles, title: t("plus.autoTitle"), body: t("plus.autoDesc") },
+    { icon: Bell, title: t("plus.reminderTitle"), body: t("plus.reminderDesc") },
+  ];
+
+  return (
+    <section className="relative bg-gradient-paper pb-16 sm:pb-20 md:pb-24 lg:pb-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+        <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-soft sm:rounded-3xl">
+          <div className="grid gap-px bg-border md:grid-cols-[0.95fr_1.05fr]">
+            <div className="bg-card p-6 sm:p-8 md:p-10">
+              <Eyebrow>{t("plus.eyebrow")}</Eyebrow>
+              <h2
+                className="font-display mt-4 text-[28px] leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl"
+                dangerouslySetInnerHTML={{ __html: t("plus.title") }}
+              />
+              <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
+                {t("plus.desc")}
+              </p>
+            </div>
+
+            <div className="grid gap-px bg-border sm:grid-cols-2">
+              {plusFeatures.map(({ icon: Icon, title, body }) => (
+                <div key={title} className="bg-card p-6 sm:p-8 md:p-10">
+                  <span className="grid h-10 w-10 place-items-center rounded-xl bg-secondary text-foreground">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="font-display mt-4 text-lg text-foreground sm:text-xl">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 /* ---------- THE MAP SECTION ---------- */
 
 const MapSection = () => {
@@ -782,11 +827,6 @@ const Footer = () => {
               {t("footer.contact")}
             </a>
           </div>
-          <div>
-            <Link to="/privacy" className="inline-block py-1.5 transition-colors hover:text-foreground">
-              {t("footer.privacy")}
-            </Link>
-          </div>
         </nav>
       </div>
 
@@ -879,9 +919,6 @@ const Footer = () => {
             <a href="mailto:support@getpocklet.com" className="inline-block py-1.5 transition-colors hover:text-foreground">
               {t("footer.contact")}
             </a>
-            <Link to="/privacy" className="inline-block py-1.5 transition-colors hover:text-foreground">
-              {t("footer.privacy")}
-            </Link>
           </nav>
         </div>
       </div>
@@ -890,7 +927,18 @@ const Footer = () => {
     {/* Bottom row */}
     <div className="border-t border-border/40">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-xs text-muted-foreground/60">
-        <span>© {new Date().getFullYear()} Pocklet</span>
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+          <span>© {new Date().getFullYear()} Pocklet</span>
+          <div className="flex items-center gap-2">
+            <Link to="/privacy" className="transition-colors hover:text-foreground">
+              {t("footer.privacy")}
+            </Link>
+            <span>·</span>
+            <Link to="/terms" className="transition-colors hover:text-foreground">
+              {t("footer.terms", "Terms of Use")}
+            </Link>
+          </div>
+        </div>
         <LanguageSelector />
       </div>
     </div>
@@ -938,6 +986,7 @@ export const MarketingSite = () => {
           <VideoShowcase />
           <MapSection />
           <Features />
+          <PlusSpotlight />
           <FinalCTA />
         </main>
         <Footer />

@@ -74,6 +74,15 @@ const resources: Record<string, any> = {
         f6Title: "Made your way",
         f6Desc: "Choose your preferred language to make it feel like yours."
       },
+      plus: {
+        eyebrow: "Pocklet Plus",
+        title: "A little extra <em class='italic text-primary'>help</em>",
+        desc: "For the saves that need a bit more care, Plus adds AI-assisted details and more flexible reminders without turning Pocklet into a project.",
+        autoTitle: "Auto Details",
+        autoDesc: "AI helps fill titles, notes, categories, tags, images, and places. You review and edit before saving.",
+        reminderTitle: "Smarter Reminders",
+        reminderDesc: "Choose custom reminder dates and add extra nudges for the saves you really do not want to miss."
+      },
       map: {
         eyebrow: "On the map",
         title: "See what's saved <em class='italic text-primary'>nearby</em>",
@@ -99,17 +108,18 @@ const resources: Record<string, any> = {
         avail: "Available on",
         appstore: "App Store",
         googleplay: "Google Play",
-        free: "Free to sign up",
+        free: "Free to start",
         noads: "No ads or tracking",
-        unlimited: "Unlimited saves"
+        unlimited: "Plus adds Auto Details and smarter reminders"
       },
       footer: {
-        tagline: "Built for real life — now and later.",
+        tagline: "Save it. Find it. Do it",
         explore: "Explore",
         how: "How it works",
         nearby: "Find things nearby",
         contact: "Contact",
-        privacy: "Privacy"
+        privacy: "Privacy",
+        terms: "Terms of Use"
       },
       privacy: {
         back: "Back",
@@ -259,6 +269,15 @@ const resources: Record<string, any> = {
         f6Title: "你的 App 你做主",
         f6Desc: "語言你想用哪種就選哪種，打造你最順手的介面。"
       },
+      plus: {
+        eyebrow: "Pocklet Plus",
+        title: "多一點<em class='italic text-primary'>省心</em>",
+        desc: "需要多一點整理和提醒時，Plus 加入 AI 輔助細節和更彈性的提醒，但 Pocklet 依然保持簡單。",
+        autoTitle: "Auto Details",
+        autoDesc: "AI 幫你補標題、筆記、分類、標籤、圖片和地點。儲存前仍由你確認和修改。",
+        reminderTitle: "Smarter Reminders",
+        reminderDesc: "設定自訂提醒日期，並為重要收藏加上額外提前提醒。"
+      },
       map: {
         eyebrow: "打開地圖",
         title: "看看附近有什麼<em class='italic text-primary'>好料</em>",
@@ -284,9 +303,9 @@ const resources: Record<string, any> = {
         avail: "這裡都可以下載",
         appstore: "App Store",
         googleplay: "Google Play",
-        free: "註冊完全免費",
+        free: "免費開始使用",
         noads: "零廣告，不追蹤",
-        unlimited: "收藏無上限"
+        unlimited: "Plus 加入 Auto Details 和更聰明的提醒"
       },
       footer: {
         tagline: "為你最真實的生活打造——現在存，晚點見。",
@@ -294,7 +313,8 @@ const resources: Record<string, any> = {
         how: "怎麼玩？",
         nearby: "找附近好料",
         contact: "找我們聊聊",
-        privacy: "隱私權政策"
+        privacy: "隱私權政策",
+        terms: "服務條款"
       },
       privacy: {
         back: "回上一頁",
@@ -444,6 +464,15 @@ const resources: Record<string, any> = {
         f6Title: "你的 App 你做主",
         f6Desc: "语言你想用哪种就选哪种，打造你最顺手的界面。"
       },
+      plus: {
+        eyebrow: "Pocklet Plus",
+        title: "多一点<em class='italic text-primary'>省心</em>",
+        desc: "需要多一点整理和提醒时，Plus 加入 AI 辅助细节和更灵活的提醒，但 Pocklet 依然保持简单。",
+        autoTitle: "Auto Details",
+        autoDesc: "AI 帮你补标题、笔记、分类、标签、图片和地点。保存前仍由你确认和修改。",
+        reminderTitle: "Smarter Reminders",
+        reminderDesc: "设置自定义提醒日期，并为重要收藏加上额外提前提醒。"
+      },
       map: {
         eyebrow: "打开地图",
         title: "看看附近有什么<em class='italic text-primary'>好店</em>",
@@ -469,9 +498,9 @@ const resources: Record<string, any> = {
         avail: "支持各大平台",
         appstore: "App Store",
         googleplay: "Google Play",
-        free: "注册完全免费",
+        free: "免费开始使用",
         noads: "零广告，不乱收集数据",
-        unlimited: "收藏无上限"
+        unlimited: "Plus 加入 Auto Details 和更聪明的提醒"
       },
       footer: {
         tagline: "为你最真实的生活打造——现在存，晚点见。",
@@ -479,7 +508,8 @@ const resources: Record<string, any> = {
         how: "怎么玩？",
         nearby: "找附近好店",
         contact: "找我们聊聊",
-        privacy: "隐私政策"
+        privacy: "隐私政策",
+        terms: "服务条款"
       },
       privacy: {
         back: "返回",
@@ -629,6 +659,15 @@ const resources: Record<string, any> = {
         f6Title: "あなた好みに",
         f6Desc: "お好みの言語を選択して、あなたらしい使い心地に。"
       },
+      plus: {
+        eyebrow: "Pocklet Plus",
+        title: "もう少し<em class='italic text-primary'>楽に</em>",
+        desc: "少し手助けがほしい保存には、PlusでAIアシストの詳細入力と柔軟なリマインダーを追加できます。",
+        autoTitle: "Auto Details",
+        autoDesc: "AIがタイトル、メモ、カテゴリー、タグ、画像、場所の入力を手伝います。保存前に確認・編集できます。",
+        reminderTitle: "Smarter Reminders",
+        reminderDesc: "カスタムのリマインダー日付を選び、大事な保存には追加通知を設定できます。"
+      },
       map: {
         eyebrow: "マップ上で",
         title: "<em class='italic text-primary'>近く</em>の保存済み項目を見る",
@@ -654,9 +693,9 @@ const resources: Record<string, any> = {
         avail: "対応プラットフォーム",
         appstore: "App Store",
         googleplay: "Google Play",
-        free: "無料登録",
+        free: "無料で開始",
         noads: "広告・トラッキングなし",
-        unlimited: "無制限の保存"
+        unlimited: "PlusでAuto Detailsとスマート通知"
       },
       footer: {
         tagline: "今とこれからの、リアルな生活のために。",
@@ -664,7 +703,8 @@ const resources: Record<string, any> = {
         how: "使い方",
         nearby: "近くのものを探す",
         contact: "お問い合わせ",
-        privacy: "プライバシーポリシー"
+        privacy: "プライバシーポリシー",
+        terms: "利用規約"
       },
       privacy: {
         back: "戻る",
