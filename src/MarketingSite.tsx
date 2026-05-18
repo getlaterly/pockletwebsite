@@ -308,7 +308,7 @@ const VideoShowcase = () => {
                 <video
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover cursor-pointer"
-                  src="/pocklet-mobile-demo-v4-optimized.mp4"
+                  src="/pocklet-mobile-demo-v5-optimized.mp4"
                   poster="/pocklet-mobile-demo-poster.jpg"
                   preload="metadata"
                   playsInline
