@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pocklet.app",
+      "sha256_cert_fingerprints": [
+        "EB:DC:16:37:7D:4F:3C:A9:9A:4A:2A:21:17:63:7A:D8:21:C1:54:4B:E2:A1:50:CB:C7:CB:A9:C2:03:DB:5C:FA"
+      ]
+    }
+  }
+]
