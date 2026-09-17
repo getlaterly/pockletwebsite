@@ -3,7 +3,7 @@
     "screenTitle": "Privacy Policy",
     "eyebrow": "Privacy",
     "heroTitle": "How Pocklet handles your data",
-    "updated": "Last updated: 13 September 2026",
+    "updated": "Last updated: 17 September 2026",
     "notice": "This policy explains what stays on your device, what you choose to send to online services, and how Pocklet handles accounts, Auto Details, link previews, backups, maps, reminders, and subscriptions.",
     "sections": [
       {
@@ -56,7 +56,7 @@
       },
       {
         "title": "13. Data retention, account deletion, and subscriptions",
-        "body": "Local data remains on your device until you remove it, clear app data, delete your account in Pocklet, or uninstall the app. Exported backups remain wherever you saved them until you delete them there; deleting the app or your account cannot delete those separate copies. Choosing Delete Account in Profile asks the backend to delete your Supabase account and account-linked Auto Details usage record, then clears Pocklet data and scheduled reminders from that device. Deleting your Pocklet account does not cancel an App Store or Google Play subscription. You must manage or cancel it through the store account used to subscribe. RevenueCat, Apple, Google, and other service providers may retain transaction, security, or service records as required by law or their policies."
+        "body": "Local data remains on your device until you remove it, clear app data, delete your account in Pocklet, or uninstall the app. Exported backups remain wherever you saved them until you delete them there; deleting the app or your account cannot delete those separate copies. Choosing Delete Account in Profile asks the backend to delete your Supabase account and account-linked Auto Details usage record, then clears Pocklet data and scheduled reminders from that device. To recover an interrupted deletion, the backend retains a request receipt. While deletion is pending it includes your account identifier; once completed it keeps only an opaque request hash and timestamps, without your account identifier. Deleting your Pocklet account does not cancel an App Store or Google Play subscription. You must manage or cancel it through the store account used to subscribe. RevenueCat, Apple, Google, and other service providers may retain transaction, security, or service records as required by law or their policies."
       },
       {
         "title": "14. Children",
@@ -133,7 +133,7 @@
       },
       {
         "title": "13. 資料保留、帳號刪除與訂閱",
-        "body": "本機資料會留在你的裝置上，直到你移除資料、清除應用程式資料、在 Pocklet 刪除帳號，或解除安裝應用程式。匯出的備份會留在你儲存的位置，直到你自行刪除；刪除應用程式或帳號無法刪除這些獨立副本。在「我的」選擇「刪除帳號」後，Pocklet 會要求後端刪除你的 Supabase 帳號和與帳號連結的自動填入次數紀錄，然後清除該裝置上的 Pocklet 資料與已排程提醒。刪除 Pocklet 帳號不會取消 App Store 或 Google Play 訂閱；你必須透過訂閱時使用的商店帳號管理或取消。RevenueCat、Apple、Google 和其他服務供應商可能會依法律或其政策保留交易、安全性或服務紀錄。"
+        "body": "本機資料會留在你的裝置上，直到你移除資料、清除應用程式資料、在 Pocklet 刪除帳號，或解除安裝應用程式。匯出的備份會留在你儲存的位置，直到你自行刪除；刪除應用程式或帳號無法刪除這些獨立副本。在「我的」選擇「刪除帳號」後，Pocklet 會要求後端刪除你的 Supabase 帳號和與帳號連結的自動填入次數紀錄，然後清除該裝置上的 Pocklet 資料與已排程提醒。為了在刪除中斷後恢復處理，後端會保留請求紀錄；刪除尚未完成時包含帳號識別碼，完成後僅保留不透明的請求雜湊值與時間戳記，不再包含帳號識別碼。刪除 Pocklet 帳號不會取消 App Store 或 Google Play 訂閱；你必須透過訂閱時使用的商店帳號管理或取消。RevenueCat、Apple、Google 和其他服務供應商可能會依法律或其政策保留交易、安全性或服務紀錄。"
       },
       {
         "title": "14. 兒童",
@@ -210,7 +210,7 @@
       },
       {
         "title": "13. 数据保留、账号删除与订阅",
-        "body": "本机数据会留在你的设备上，直到你移除数据、清除应用数据、在 Pocklet 中删除账号，或卸载应用。导出的备份会留在你保存的位置，直到你自行删除；删除应用或账号无法删除这些独立副本。在“我的”中选择“删除账号”后，Pocklet 会请求后端删除你的 Supabase 账号和与账号关联的自动填充次数记录，然后清除该设备上的 Pocklet 数据与已安排提醒。删除 Pocklet 账号不会取消 App Store 或 Google Play 订阅；你必须通过订阅时使用的商店账号管理或取消。RevenueCat、Apple、Google 和其他服务提供商可能会根据法律或其政策保留交易、安全或服务记录。"
+        "body": "本机数据会留在你的设备上，直到你移除数据、清除应用数据、在 Pocklet 中删除账号，或卸载应用。导出的备份会留在你保存的位置，直到你自行删除；删除应用或账号无法删除这些独立副本。在“我的”中选择“删除账号”后，Pocklet 会请求后端删除你的 Supabase 账号和与账号关联的自动填充次数记录，然后清除该设备上的 Pocklet 数据与已安排提醒。为在删除中断后恢复处理，后端会保留请求记录；删除尚未完成时包含账号标识符，完成后仅保留不透明的请求哈希值和时间戳，不再包含账号标识符。删除 Pocklet 账号不会取消 App Store 或 Google Play 订阅；你必须通过订阅时使用的商店账号管理或取消。RevenueCat、Apple、Google 和其他服务提供商可能会根据法律或其政策保留交易、安全或服务记录。"
       },
       {
         "title": "14. 儿童",
