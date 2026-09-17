@@ -1,0 +1,310 @@
+{
+  "en": {
+    "screenTitle": "Privacy Policy",
+    "eyebrow": "Privacy",
+    "heroTitle": "How Pocklet handles your data",
+    "updated": "Last updated: 13 September 2026",
+    "notice": "This policy explains what stays on your device, what you choose to send to online services, and how Pocklet handles accounts, Auto Details, link previews, backups, maps, reminders, and subscriptions.",
+    "sections": [
+      {
+        "title": "1. Who we are",
+        "body": "Pocklet is a mobile app for saving links, screenshots, photos, places, ideas, and reminders so you can revisit them later. For privacy questions, contact us at support@getpocklet.com."
+      },
+      {
+        "title": "2. Local-first storage and manual backups",
+        "body": "Pocklet is local-first. Your saved items, screenshots, photos, notes, tags, thumbnails, dates, reminders, map details, activity, custom categories, and settings are normally stored on your device and are not automatically synced between devices when you sign in. Signed-in users on iOS and Android can manually create a .pockletbackup file containing saved items, activity, custom categories, screenshots, and available local thumbnails. You choose where to save that file, such as on the device, iCloud Drive, or Google Drive, and the chosen storage provider handles it under its own terms. Pocklet does not upload the backup to a Pocklet cloud account and does not password-encrypt the file."
+      },
+      {
+        "title": "3. Account information",
+        "body": "You can start as a guest or create an account. Supabase processes account data such as your email address, user ID, sign-in method, session information, profile name, and a sign-in-provider profile image where available. A profile photo you import from your device is stored locally. If you choose Google or Apple sign-in, that provider also processes sign-in information under its own policy. Pocklet also stores an account-linked count of successful Auto Details so it can apply the free-use allowance."
+      },
+      {
+        "title": "4. Saved content",
+        "body": "You choose what to save in Pocklet. This may include links, text, notes, screenshots, photos, captions, tags, categories, reminders, addresses, place names, and map coordinates. Please avoid saving sensitive information unless you are comfortable keeping it in the app and using the related features."
+      },
+      {
+        "title": "5. Auto Details and AI",
+        "body": "Auto Details is optional and requires a signed-in account and your permission. When you use it, Pocklet sends relevant item context through a Supabase Edge Function to Google AI/Gemini to generate suggestions. Depending on the item, this may include a URL, shared text or caption, page metadata or content, preview data, existing title or notes, category, tags, image or thumbnail information, app language, and place information. You can turn AI processing off on the Privacy Policy screen in the app and continue saving manually. Suggestions may be incomplete or inaccurate, so review them before relying on them. Pocklet does not use saved content to train its own AI models."
+      },
+      {
+        "title": "6. Link previews",
+        "body": "When you save a link, Pocklet may request preview information such as a page title, description, image, icon, and social metadata. The URL and related request data may be sent to the source website, Pocklet Supabase Edge Functions, relevant content platforms such as Instagram, Threads, TikTok, Facebook, RedNote/Xiaohongshu, X/Twitter, YouTube, Reddit, Pinterest, LinkedIn, or Google Maps, and preview or media services such as Microlink, noembed, vxtwitter, oEmbed providers, and remote image/CDN providers."
+      },
+      {
+        "title": "7. Photos and screenshots",
+        "body": "Pocklet only accesses photos or screenshots that you choose to import or share into the app. We do not scan your photo library in the background."
+      },
+      {
+        "title": "8. Location and maps",
+        "body": "Pocklet can save place names, addresses, latitude, longitude, and related notes. If you use map or current-location features, Pocklet may request your approximate or precise device location to center the map, show your position, or estimate distance. Pocklet does not store your live device location as a saved item unless you choose to save location details. Place search and geocoding may send search terms or addresses to services such as Photon and Nominatim/OpenStreetMap. Some map views may load OpenStreetMap/CARTO map tiles. Opening directions may use Apple Maps, Google Maps, or another maps app under their own policies."
+      },
+      {
+        "title": "9. Reminders and notifications",
+        "body": "Pocklet reminders are scheduled locally on your device using device notification features. Delivery can depend on your device settings, notification permissions, time zone, battery mode, and operating system behavior."
+      },
+      {
+        "title": "10. Purchases and subscriptions",
+        "body": "Pocklet Plus purchases and subscriptions are processed by RevenueCat and the Apple App Store or Google Play. They may process an app user or purchase identifier, product and entitlement information, transaction history, renewal or cancellation status, and related device or store data. Pocklet does not receive your full payment card details."
+      },
+      {
+        "title": "11. Third-party services",
+        "body": "To provide the features you request, Pocklet may use Supabase; Google and Apple sign-in; Google AI/Gemini; RevenueCat; Apple App Store and Google Play; Expo and device services; Photon; Nominatim/OpenStreetMap; CARTO and map providers; link preview and oEmbed providers; source websites; and image/CDN providers. These providers process information under their own terms and privacy policies."
+      },
+      {
+        "title": "12. What we do not do",
+        "body": "We do not sell your personal information. Pocklet does not include ads or marketing tracking SDKs. We do not use your saved content to train our own AI models."
+      },
+      {
+        "title": "13. Data retention, account deletion, and subscriptions",
+        "body": "Local data remains on your device until you remove it, clear app data, delete your account in Pocklet, or uninstall the app. Exported backups remain wherever you saved them until you delete them there; deleting the app or your account cannot delete those separate copies. Choosing Delete Account in Profile asks the backend to delete your Supabase account and account-linked Auto Details usage record, then clears Pocklet data and scheduled reminders from that device. Deleting your Pocklet account does not cancel an App Store or Google Play subscription. You must manage or cancel it through the store account used to subscribe. RevenueCat, Apple, Google, and other service providers may retain transaction, security, or service records as required by law or their policies."
+      },
+      {
+        "title": "14. Children",
+        "body": "Pocklet is not intended for children under 13, or under the minimum age required in your country. If you believe a child has provided personal information to Pocklet, contact us so we can help remove it."
+      },
+      {
+        "title": "15. International processing",
+        "body": "Pocklet and its service providers may process information in countries other than where you live. Those countries may have different data protection laws."
+      },
+      {
+        "title": "16. Changes",
+        "body": "We may update this Privacy Policy as Pocklet changes. If we make important changes, we may notify you in the app or by another reasonable method."
+      },
+      {
+        "title": "17. Contact",
+        "body": "Questions about privacy or data? Contact support@getpocklet.com."
+      }
+    ]
+  },
+  "zh-TW": {
+    "screenTitle": "隱私權政策",
+    "eyebrow": "隱私權",
+    "heroTitle": "Pocklet 如何處理你的資料",
+    "updated": "最後更新：2026 年 9 月 17 日",
+    "notice": "本政策說明哪些資料會留在你的裝置上、哪些資料會由你選擇傳送給線上服務，以及 Pocklet 如何處理帳號、自動填入、連結預覽、備份、地圖、提醒和訂閱。",
+    "sections": [
+      {
+        "title": "1. 關於我們",
+        "body": "Pocklet 是一款用來儲存連結、截圖、照片、地點、想法和提醒的行動應用程式，讓你之後可以再回來查看。若有隱私問題，請透過 support@getpocklet.com 聯絡我們。"
+      },
+      {
+        "title": "2. 以本機儲存為主與手動備份",
+        "body": "Pocklet 以本機儲存為主。你的儲存項目、螢幕截圖、照片、備註、標籤、縮圖、日期、提醒、地圖資訊、活動紀錄、自訂分類和設定通常會儲存在裝置上，登入帳號不會自動在裝置間同步這些資料。在 iOS 和 Android 上，已登入的使用者可以手動建立 .pockletbackup 檔案，內含儲存項目、活動紀錄、自訂分類、螢幕截圖和可用的本機縮圖。你自行選擇儲存位置，例如裝置、iCloud Drive 或 Google 雲端硬碟，並由該儲存服務依其條款處理檔案。Pocklet 不會將備份上傳到 Pocklet 雲端帳號，也不會使用密碼加密備份檔案。"
+      },
+      {
+        "title": "3. 帳號資訊",
+        "body": "你可以先以訪客身分使用，或建立帳號。Supabase 會處理電子郵件地址、使用者 ID、登入方式、工作階段資訊、個人檔案名稱，以及登入供應商有提供時的個人檔案圖片。你從裝置匯入的個人檔案照片會儲存在本機。如果你選擇使用 Google 或 Apple 登入，該供應商也會依自身政策處理登入資訊。Pocklet 也會儲存與帳號連結的自動填入成功次數，以套用免費使用額度。"
+      },
+      {
+        "title": "4. 儲存內容",
+        "body": "你可以自行選擇要儲存在 Pocklet 的內容。這可能包括連結、文字、備註、截圖、照片、說明文字、標籤、分類、提醒、地址、地點名稱和地圖座標。除非你願意保存在應用程式中並使用相關功能，請避免儲存敏感資訊。"
+      },
+      {
+        "title": "5. 自動填入和 AI",
+        "body": "自動填入是選用功能，需要登入帳號並取得你的同意。使用時，Pocklet 會透過 Supabase Edge Function 將相關項目內容傳送給 Google AI/Gemini 以產生建議。視項目而定，可能包含 URL、分享文字或貼文說明、頁面中繼資料或內容、預覽資料、現有標題或備註、分類、標籤、圖片或縮圖資訊、應用程式語言和地點資訊。你可以在「隱私權政策」頁面關閉 AI 處理，並繼續手動儲存。建議可能不完整或不準確，使用前請先檢查。Pocklet 不會使用儲存內容來訓練自有 AI 模型。"
+      },
+      {
+        "title": "6. 連結預覽",
+        "body": "當你儲存連結時，Pocklet 可能會要求頁面標題、描述、圖片、圖示和社群中繼資料等預覽內容。URL 和相關請求資料可能會傳送到來源網站、Pocklet Supabase Edge Functions、Instagram、Threads、TikTok、Facebook、RedNote/小紅書、X/Twitter、YouTube、Reddit、Pinterest、LinkedIn 或 Google Maps 等相關內容平台，以及 Microlink、noembed、vxtwitter、oEmbed 服務和遠端圖片/CDN 供應商。"
+      },
+      {
+        "title": "7. 照片和截圖",
+        "body": "Pocklet 只會存取你選擇匯入或分享進應用程式的照片或截圖。我們不會在背景掃描你的照片圖庫。"
+      },
+      {
+        "title": "8. 位置和地圖",
+        "body": "Pocklet 可以儲存地點名稱、地址、經緯度和相關備註。如果你使用地圖或目前位置功能，Pocklet 可能會要求存取約略或精確的裝置位置，用來置中地圖、顯示你的位置或估算距離。除非你選擇儲存位置資訊，Pocklet 不會把你的即時裝置位置存成儲存項目。地點搜尋和地理編碼可能會將搜尋文字或地址傳送到 Photon、Nominatim/OpenStreetMap 等服務。部分地圖檢視可能會載入 OpenStreetMap/CARTO 地圖圖資。開啟路線時，可能會使用 Apple Maps、Google Maps 或其他地圖應用程式，並適用其各自政策。"
+      },
+      {
+        "title": "9. 提醒和通知",
+        "body": "Pocklet 提醒會透過裝置通知功能在本機排程。提醒是否準時送達，可能取決於裝置設定、通知權限、時區、省電模式和作業系統行為。"
+      },
+      {
+        "title": "10. 購買和訂閱",
+        "body": "Pocklet Plus 購買和訂閱由 RevenueCat 以及 Apple App Store 或 Google Play 處理。這些服務可能會處理應用程式使用者或購買識別碼、產品與權益資訊、交易紀錄、續訂或取消狀態，以及相關裝置或商店資料。Pocklet 不會收到你的完整付款卡資料。"
+      },
+      {
+        "title": "11. 第三方服務",
+        "body": "為了提供你所要求的功能，Pocklet 可能會使用 Supabase、Google 和 Apple 登入、Google AI/Gemini、RevenueCat、Apple App Store 和 Google Play、Expo 與裝置服務、Photon、Nominatim/OpenStreetMap、CARTO 與地圖供應商、連結預覽與 oEmbed 服務、來源網站，以及圖片/CDN 供應商。這些供應商會依各自的條款與隱私權政策處理資料。"
+      },
+      {
+        "title": "12. 我們不會做的事",
+        "body": "我們不會出售你的個人資訊。Pocklet 不包含廣告或行銷追蹤 SDK。我們不會使用你的儲存內容來訓練自己的 AI 模型。"
+      },
+      {
+        "title": "13. 資料保留、帳號刪除與訂閱",
+        "body": "本機資料會留在你的裝置上，直到你移除資料、清除應用程式資料、在 Pocklet 刪除帳號，或解除安裝應用程式。匯出的備份會留在你儲存的位置，直到你自行刪除；刪除應用程式或帳號無法刪除這些獨立副本。在「我的」選擇「刪除帳號」後，Pocklet 會要求後端刪除你的 Supabase 帳號和與帳號連結的自動填入次數紀錄，然後清除該裝置上的 Pocklet 資料與已排程提醒。刪除 Pocklet 帳號不會取消 App Store 或 Google Play 訂閱；你必須透過訂閱時使用的商店帳號管理或取消。RevenueCat、Apple、Google 和其他服務供應商可能會依法律或其政策保留交易、安全性或服務紀錄。"
+      },
+      {
+        "title": "14. 兒童",
+        "body": "Pocklet 不適合 13 歲以下，或未達所在國家／地區最低年齡要求的兒童使用。如果你認為兒童向 Pocklet 提供了個人資訊，請聯絡我們，我們會協助移除。"
+      },
+      {
+        "title": "15. 跨境處理",
+        "body": "Pocklet 和服務供應商可能會在你所在國家／地區以外處理資訊。這些地區的資料保護法律可能不同。"
+      },
+      {
+        "title": "16. 政策變更",
+        "body": "我們可能會隨著 Pocklet 變更而更新本隱私權政策。若有重要變更，我們可能會透過應用程式或其他合理方式通知你。"
+      },
+      {
+        "title": "17. 聯絡我們",
+        "body": "若你對隱私或資料處理有疑問，請聯絡 support@getpocklet.com。"
+      }
+    ]
+  },
+  "zh-CN": {
+    "screenTitle": "隐私政策",
+    "eyebrow": "隐私",
+    "heroTitle": "Pocklet 如何处理你的数据",
+    "updated": "最后更新：2026 年 9 月 17 日",
+    "notice": "本政策说明哪些数据会留在你的设备上、哪些数据会由你选择发送给在线服务，以及 Pocklet 如何处理账号、自动填充、链接预览、备份、地图、提醒和订阅。",
+    "sections": [
+      {
+        "title": "1. 关于我们",
+        "body": "Pocklet 是一款用于保存链接、截图、照片、地点、想法和提醒的移动应用，方便你之后回来查看。如有隐私问题，请通过 support@getpocklet.com 联系我们。"
+      },
+      {
+        "title": "2. 以本机存储为主与手动备份",
+        "body": "Pocklet 以本机存储为主。你的保存项目、截图、照片、备注、标签、缩略图、日期、提醒、地图信息、活动记录、自定义分类和设置通常会存储在设备上，登录账号不会自动在设备之间同步这些数据。在 iOS 和 Android 上，已登录用户可手动创建 .pockletbackup 文件，其中包含保存项目、活动记录、自定义分类、截图和可用的本机缩略图。你自行选择存储位置，例如设备、iCloud Drive 或 Google 云端硬盘，并由该存储服务按照其条款处理文件。Pocklet 不会将备份上传到 Pocklet 云端账号，也不会使用密码加密备份文件。"
+      },
+      {
+        "title": "3. 账号信息",
+        "body": "你可以先以访客身份使用，或创建账号。Supabase 会处理电子邮箱地址、用户 ID、登录方式、会话信息、个人资料名称，以及登录提供方有提供时的个人资料图片。你从设备导入的个人资料照片会存储在本机。如果你选择使用 Google 或 Apple 登录，该提供方也会按照自身政策处理登录信息。Pocklet 还会存储与账号关联的自动填充成功次数，以应用免费使用额度。"
+      },
+      {
+        "title": "4. 保存内容",
+        "body": "你可以自行选择要保存在 Pocklet 的内容。这可能包括链接、文字、备注、截图、照片、说明文字、标签、分类、提醒、地址、地点名称和地图坐标。除非你愿意保存在应用中并使用相关功能，请避免保存敏感信息。"
+      },
+      {
+        "title": "5. 自动填充和 AI",
+        "body": "自动填充是可选功能，需要登录账号并获得你的同意。使用时，Pocklet 会通过 Supabase Edge Function 将相关项目内容发送给 Google AI/Gemini 以生成推荐。具体发送的内容取决于项目，可能包含 URL、分享文字或帖子说明、页面元数据或内容、预览数据、现有标题或备注、分类、标签、图片或缩略图信息、应用语言和地点信息。你可以在“隐私政策”页面关闭 AI 处理，并继续手动保存。推荐可能不完整或不准确，使用前请先检查。Pocklet 不会使用保存内容来训练自有 AI 模型。"
+      },
+      {
+        "title": "6. 链接预览",
+        "body": "当你保存链接时，Pocklet 可能会请求页面标题、描述、图片、图标和社交元数据等预览内容。URL 和相关请求数据可能会发送到来源网站、Pocklet Supabase Edge Functions、Instagram、Threads、TikTok、Facebook、RedNote/小红书、X/Twitter、YouTube、Reddit、Pinterest、LinkedIn 或 Google Maps 等相关内容平台，以及 Microlink、noembed、vxtwitter、oEmbed 服务和远程图片/CDN 提供商。"
+      },
+      {
+        "title": "7. 照片和截图",
+        "body": "Pocklet 只会访问你选择导入或分享进应用的照片或截图。我们不会在后台扫描你的照片图库。"
+      },
+      {
+        "title": "8. 位置和地图",
+        "body": "Pocklet 可以保存地点名称、地址、经纬度和相关备注。如果你使用地图或当前位置功能，Pocklet 可能会请求访问大致或精确的设备位置，用于居中地图、显示你的位置或估算距离。除非你选择保存位置信息，Pocklet 不会把你的实时设备位置存成保存项目。地点搜索和地理编码可能会将搜索文字或地址发送到 Photon、Nominatim/OpenStreetMap 等服务。部分地图视图可能会加载 OpenStreetMap/CARTO 地图图块。打开路线时，可能会使用 Apple Maps、Google Maps 或其他地图应用，并适用其各自政策。"
+      },
+      {
+        "title": "9. 提醒和通知",
+        "body": "Pocklet 提醒会通过设备通知功能在本机排程。提醒是否准时送达，可能取决于设备设置、通知权限、时区、省电模式和操作系统行为。"
+      },
+      {
+        "title": "10. 购买和订阅",
+        "body": "Pocklet Plus 购买和订阅由 RevenueCat 以及 Apple App Store 或 Google Play 处理。这些服务可能会处理应用用户或购买标识符、产品与权益信息、交易记录、续订或取消状态，以及相关设备或商店数据。Pocklet 不会收到你的完整付款卡信息。"
+      },
+      {
+        "title": "11. 第三方服务",
+        "body": "为提供你所请求的功能，Pocklet 可能会使用 Supabase、Google 和 Apple 登录、Google AI/Gemini、RevenueCat、Apple App Store 和 Google Play、Expo 与设备服务、Photon、Nominatim/OpenStreetMap、CARTO 与地图提供商、链接预览与 oEmbed 服务、来源网站，以及图片/CDN 提供商。这些提供商会按照各自的条款和隐私政策处理数据。"
+      },
+      {
+        "title": "12. 我们不会做的事",
+        "body": "我们不会出售你的个人信息。Pocklet 不包含广告或营销追踪 SDK。我们不会使用你的保存内容来训练自己的 AI 模型。"
+      },
+      {
+        "title": "13. 数据保留、账号删除与订阅",
+        "body": "本机数据会留在你的设备上，直到你移除数据、清除应用数据、在 Pocklet 中删除账号，或卸载应用。导出的备份会留在你保存的位置，直到你自行删除；删除应用或账号无法删除这些独立副本。在“我的”中选择“删除账号”后，Pocklet 会请求后端删除你的 Supabase 账号和与账号关联的自动填充次数记录，然后清除该设备上的 Pocklet 数据与已安排提醒。删除 Pocklet 账号不会取消 App Store 或 Google Play 订阅；你必须通过订阅时使用的商店账号管理或取消。RevenueCat、Apple、Google 和其他服务提供商可能会根据法律或其政策保留交易、安全或服务记录。"
+      },
+      {
+        "title": "14. 儿童",
+        "body": "Pocklet 不适合 13 岁以下，或未达到所在国家/地区最低年龄要求的儿童使用。如果你认为儿童向 Pocklet 提供了个人信息，请联系我们，我们会协助移除。"
+      },
+      {
+        "title": "15. 跨境处理",
+        "body": "Pocklet 和服务提供商可能会在你所在国家/地区以外处理信息。这些地区的数据保护法律可能不同。"
+      },
+      {
+        "title": "16. 政策变更",
+        "body": "我们可能会随着 Pocklet 变更而更新本隐私政策。如有重要变更，我们可能会通过应用或其他合理方式通知你。"
+      },
+      {
+        "title": "17. 联系我们",
+        "body": "如果你对隐私或数据处理有疑问，请联系 support@getpocklet.com。"
+      }
+    ]
+  },
+  "ja": {
+    "screenTitle": "プライバシーポリシー",
+    "eyebrow": "プライバシー",
+    "heroTitle": "Pocklet におけるデータの扱い",
+    "updated": "最終更新日：2026年8月25日",
+    "notice": "このポリシーでは、Pocklet が保存アイテム、バックアップ、アカウント、Auto Details、リンクプレビュー、マップ、リマインダー、サブスクリプションをどのように扱うかを説明します。",
+    "sections": [
+      {
+        "title": "1. 私たちについて",
+        "body": "Pocklet は、リンク、スクリーンショット、写真、場所、アイデア、リマインダーを保存し、あとで見返せるようにするモバイルアプリです。プライバシーに関するお問い合わせは support@getpocklet.com までご連絡ください。"
+      },
+      {
+        "title": "2. ローカル優先の保存とバックアップ",
+        "body": "Pocklet はローカル優先で設計されています。保存アイテム、スクリーンショット、写真、メモ、タグ、サムネイル、リマインダー、地図情報、設定は通常、お使いの端末に保存されます。一部の機能は、動作に必要な範囲でオンラインサービスに限定的なデータを送信します。手動でバックアップを書き出すと、Pocklet は保存アイテム、アクティビティ履歴、カテゴリ、スクリーンショット、利用可能なローカルサムネイルを含むファイルを作成し、システムの共有メニューまたはファイル選択画面に渡します。iCloud Drive や Google ドライブなど、選択した保存先が各プロバイダーの規約に基づいてファイルを保存します。Pocklet はバックアップファイルをパスワードで暗号化しません。"
+      },
+      {
+        "title": "3. アカウント情報",
+        "body": "Pocklet はゲストとして使うことも、ログインして使うこともできます。アカウントを作成した場合、Supabase がメールアドレス、ログインプロバイダー、ユーザー ID、セッション情報、基本的なプロフィール情報を処理することがあります。Google、Apple、Facebook でログインする場合、それぞれのプロバイダーも自社ポリシーに基づいてログイン情報を処理することがあります。"
+      },
+      {
+        "title": "4. 保存する内容",
+        "body": "Pocklet に何を保存するかはあなたが選択します。保存内容には、リンク、テキスト、メモ、スクリーンショット、写真、キャプション、タグ、カテゴリ、リマインダー、住所、場所の名前、地図座標などが含まれることがあります。アプリ内に保存し、関連機能で使ってよいと思える場合を除き、機密性の高い情報の保存は避けてください。"
+      },
+      {
+        "title": "5. Auto Details と AI",
+        "body": "Auto Details を使うと、Pocklet は関連するアイテム情報を Supabase Edge Function と Google AI/Gemini に送信することがあります。これには URL、共有テキスト、キャプション、ページのメタデータや内容、プレビューデータ、既存のアイテム項目、タグ、サムネイル、アプリの言語、場所情報が含まれることがあります。Auto Details の提案は不正確な場合があるため、内容を確認してください。"
+      },
+      {
+        "title": "6. リンクプレビュー",
+        "body": "リンクを保存すると、Pocklet はページタイトル、説明、画像、アイコン、ソーシャルメタデータなどのプレビュー情報を取得することがあります。これには元のウェブサイト、Pocklet の Supabase Edge Functions、Instagram、Threads、TikTok、Facebook、RedNote/Xiaohongshu、X/Twitter、YouTube、Reddit、Pinterest、LinkedIn、Google Maps などのソーシャル／コンテンツプラットフォーム、Microlink、noembed、vxtwitter、TikTok oEmbed、YouTube oEmbed、リモート画像/CDN プロバイダーが関わることがあります。"
+      },
+      {
+        "title": "7. 写真とスクリーンショット",
+        "body": "Pocklet は、あなたがアプリに読み込む、または共有することを選んだ写真やスクリーンショットだけにアクセスします。写真ライブラリをバックグラウンドでスキャンすることはありません。"
+      },
+      {
+        "title": "8. 位置情報とマップ",
+        "body": "Pocklet は、場所の名前、住所、緯度、経度、関連メモを保存できます。マップや現在地機能を使う場合、Pocklet は地図を中央に合わせる、現在位置を表示する、距離を推定するために、おおよそまたは正確な端末位置情報へのアクセスを求めることがあります。あなたが場所情報を保存することを選ばない限り、Pocklet は現在の端末位置を保存アイテムとして保存しません。場所検索やジオコーディングでは、検索語や住所が Photon、Nominatim/OpenStreetMap などのサービスに送信されることがあります。一部のマップ表示では OpenStreetMap/CARTO の地図タイルを読み込むことがあります。経路を開く場合は、Apple Maps、Google Maps、または他の地図アプリがそれぞれのポリシーに従って使われることがあります。"
+      },
+      {
+        "title": "9. リマインダーと通知",
+        "body": "Pocklet のリマインダーは、端末の通知機能を使ってローカルにスケジュールされます。配信は端末設定、通知権限、タイムゾーン、省電力モード、OS の動作に左右されることがあります。"
+      },
+      {
+        "title": "10. 購入とサブスクリプション",
+        "body": "Pocklet Plus のサブスクリプションは RevenueCat と Apple App Store または Google Play によって管理されます。これらのサービスは、購入 ID、商品 ID、エンタイトルメント状態、更新状態、キャンセル状態、取引メタデータを処理することがあります。Pocklet が支払いカード情報の全体を受け取ることはありません。"
+      },
+      {
+        "title": "11. 第三者サービス",
+        "body": "Pocklet は、機能を提供するために Supabase、Google、Apple、Facebook のログインプロバイダー、Google AI/Gemini、RevenueCat、Apple App Store、Google Play、Expo/端末サービス、Photon、Nominatim/OpenStreetMap、CARTO、地図プロバイダー、リンクプレビューサービス、元のウェブサイト、画像/CDN プロバイダーを使うことがあります。"
+      },
+      {
+        "title": "12. Pocklet が行わないこと",
+        "body": "Pocklet はあなたの個人情報を販売しません。Pocklet には広告 SDK やマーケティング追跡 SDK は含まれていません。保存内容を Pocklet 独自の AI モデルの学習に使うことはありません。"
+      },
+      {
+        "title": "13. データの保持と削除",
+        "body": "ローカルデータは、あなたが削除する、アプリデータを消去する、アプリ内でアカウントを削除する、または Pocklet をアンインストールするまで端末に残ります。書き出したバックアップファイルは、選択した保存先で削除するまで残ります。Pocklet のアカウントやアプリを削除しても、それらのコピーは削除されません。アカウントを削除すると、Pocklet はバックエンドに Supabase アカウントの削除を依頼し、現在のアプリの流れではその端末上の Pocklet ローカルデータも消去します。Pocklet アカウントを削除しても、有効な App Store または Google Play のサブスクリプションは自動では解約されません。サブスクリプションの管理や解約は、各アプリストアのアカウントから行う必要があります。RevenueCat、Apple、Google は、それぞれのポリシーまたは法律で求められる範囲で取引記録を保持することがあります。"
+      },
+      {
+        "title": "14. 子ども",
+        "body": "Pocklet は13歳未満、またはお住まいの国で定められた最低年齢に満たない子どもを対象としていません。子どもが Pocklet に個人情報を提供したと思われる場合は、削除をお手伝いしますのでご連絡ください。"
+      },
+      {
+        "title": "15. 国際的な処理",
+        "body": "Pocklet とそのサービスプロバイダーは、あなたの居住国以外で情報を処理することがあります。そうした国では、データ保護法が異なる場合があります。"
+      },
+      {
+        "title": "16. 変更",
+        "body": "Pocklet の変更に合わせて、このプライバシーポリシーを更新することがあります。重要な変更がある場合は、アプリ内またはその他の合理的な方法でお知らせすることがあります。"
+      },
+      {
+        "title": "17. お問い合わせ",
+        "body": "プライバシーやデータに関するご質問は support@getpocklet.com までご連絡ください。"
+      }
+    ]
+  }
+}

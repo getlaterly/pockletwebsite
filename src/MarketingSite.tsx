@@ -809,6 +809,7 @@ const Footer = () => {
                 {t("footer.privacy")}
               </Link>
               <span>·</span>
+              <Link to="/delete-account" className="transition-colors hover:text-foreground">Delete account</Link>
               <Link to="/terms" className="transition-colors hover:text-foreground">
                 {t("footer.terms", "Terms of Use")}
               </Link>
