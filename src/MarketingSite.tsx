@@ -105,9 +105,11 @@ const Hero = () => {
           <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-foreground sm:mt-5 sm:text-lg md:mt-6 md:text-xl">
             {t("hero.desc1")}
           </p>
-          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-foreground/60 sm:text-base">
-            {t("hero.desc2")}
-          </p>
+          {t("hero.desc2") && (
+            <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-foreground/60 sm:text-base">
+              {t("hero.desc2")}
+            </p>
+          )}
           <div className="mt-6 sm:mt-8 md:mt-10">
             <a
               href="#download"
@@ -829,7 +831,7 @@ export const MarketingSite = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    document.title = "Pocklet | Home";
+    document.title = "Pocklet — Save it. Find it. Do it.";
     const initialLang = getInitialLanguage();
     if (i18n.language !== initialLang) {
       i18n.changeLanguage(initialLang);
