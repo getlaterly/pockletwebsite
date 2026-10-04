@@ -43,7 +43,6 @@
   --font-ui-en: "Nunito Sans";
   --font-ui-tc: "Noto Sans TC";
   --font-ui-sc: "Noto Sans SC";
-  --font-ui-jp: "Noto Sans JP";
   
   /* Default UI font (English) */
   --font-ui-current: var(--font-ui-en);
@@ -59,11 +58,6 @@
 :root[lang^="zh-Hans"], :root[lang="zh-CN"] {
   --font-ui-current: var(--font-ui-sc);
   --font-heading-current: var(--font-ui-sc);
-}
-
-:root[lang^="ja"] {
-  --font-ui-current: var(--font-ui-jp);
-  --font-heading-current: var(--font-ui-jp);
 }
 
 body {

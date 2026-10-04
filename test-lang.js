@@ -18,10 +18,6 @@ function testLang(browserLangs) {
       return 'zh-CN';
     }
     
-    if (lowerLang.startsWith('ja')) {
-      return 'ja';
-    }
-    
     if (lowerLang.startsWith('en')) {
       return 'en';
     }

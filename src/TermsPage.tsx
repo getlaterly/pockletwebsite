@@ -145,8 +145,6 @@ const TermsPage = () => {
         targetLang = "zh-CN";
       } else if (lowerLang === "zh") {
         targetLang = "zh-CN";
-      } else if (lowerLang.startsWith("ja")) {
-        targetLang = "ja";
       } else if (lowerLang.startsWith("en")) {
         targetLang = "en";
       }

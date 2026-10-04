@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { POCKLET_LANG_KEY, getInitialLanguage } from "./i18n";
 import {
-  ArrowRight,
   Link as LinkIcon,
   Bell,
   Layers,
@@ -21,15 +20,14 @@ import {
 import pockletLogo from "@/assets/pocklet-logo.png";
 import heroVisualImg from "@/assets/hero-visual.png";
 import pockletMapSectionImg from "@/assets/pocklet-map-section.png";
+import { MobileMarketingSite } from "./MobileMarketingSite";
 
 /* ---------- Small primitives ---------- */
 
 const languages = [
-  { code: "en-US", label: "English (US)" },
-  { code: "en-GB", label: "English (UK)" },
+  { code: "en", label: "English" },
   { code: "zh-TW", label: "中文（繁體）" },
   { code: "zh-CN", label: "中文（简体）" },
-  { code: "ja", label: "日本語" },
 ];
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
@@ -64,7 +62,7 @@ const Nav = () => {
             href="#download"
             className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:shadow-card hover:-translate-y-0.5 md:px-4 md:py-2"
           >
-            {t("nav.getPocklet")} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            {t("nav.getPocklet")}
           </a>
         </div>
       </div>
@@ -93,14 +91,14 @@ const TrustStrip = () => {
 const Hero = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden bg-[#FDF7F5]">
+    <section className="relative overflow-hidden [--hero-background:#FDF7F5] bg-[var(--hero-background)]">
       <div className="grain absolute inset-0" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:gap-12 sm:px-6 sm:py-14 md:py-16 lg:grid-cols-12 lg:gap-16 lg:py-24">
+      <div className="relative mx-auto grid max-w-7xl gap-6 px-5 py-10 sm:gap-10 sm:px-6 sm:py-14 md:py-16 lg:grid-cols-12 lg:gap-16 lg:py-24">
         {/* Left text column */}
         <div className="relative z-20 lg:col-span-6 xl:col-span-5 lg:flex lg:flex-col lg:justify-center">
-          <h1 className="font-display text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
-            {t("hero.title1")}<br />{t("hero.title2")} <em className="italic text-primary">Pocklet</em>
+          <h1 className="font-display text-[32px] leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl lg:whitespace-nowrap">
+            {t("hero.title1")}<br />{t("hero.title2")} <span className="text-primary">Pocklet</span>
           </h1>
           <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-foreground sm:mt-5 sm:text-lg md:mt-6 md:text-xl">
             {t("hero.desc1")}
@@ -115,21 +113,21 @@ const Hero = () => {
               href="#download"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow sm:w-auto sm:px-8 sm:py-4 sm:text-base"
             >
-              {t("nav.getPocklet")} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5" />
+              {t("nav.getPocklet")}
             </a>
           </div>
           <TrustStrip />
         </div>
 
-        {/* Right hero visual container */}
-        <div className="relative z-10 mt-12 flex w-full justify-center sm:mt-16 lg:col-span-6 xl:col-span-7 lg:mt-0 lg:justify-end">
+        {/* Crop unused canvas; blend the original artwork into the hero. */}
+        <div className="relative z-10 mx-auto aspect-[860/682] w-full max-w-[560px] overflow-hidden bg-[var(--hero-background)] lg:col-span-6 xl:col-span-7 lg:max-w-none lg:self-center">
           <motion.img
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             src={heroVisualImg}
             alt="Floating Pocklet saved cards over a soft map background"
-            className="pointer-events-none h-auto w-[120%] max-w-none sm:w-[110%] lg:w-[130%] lg:translate-x-[15%] xl:w-[130%] xl:translate-x-[10%]"
+            className="pointer-events-none absolute inset-y-0 right-0 h-full w-auto max-w-none mix-blend-darken brightness-[1.035]"
           />
         </div>
       </div>
@@ -158,9 +156,10 @@ const Problem = () => {
           <p>{t("problem.pain2")}</p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl sm:mt-14 md:mt-16">
-          <p className="font-display text-[20px] leading-[1.2] tracking-tight text-foreground sm:text-[22px] md:text-2xl lg:text-[26px]">
-            {t("problem.sol1")}
-          </p>
+          <p
+            className="font-display text-[20px] leading-[1.2] tracking-tight text-foreground sm:text-[22px] md:text-2xl lg:text-[26px]"
+            dangerouslySetInnerHTML={{ __html: t("problem.sol1") }}
+          />
           <p className="mt-4 text-[17px] leading-[1.6] text-foreground sm:mt-5 sm:text-lg md:text-xl md:leading-[1.5]">
             {t("problem.sol2")}
           </p>
@@ -632,7 +631,7 @@ const FinalCTA = () => {
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const currentLang = languages.find(l => l.code === i18n.language) || (i18n.language === 'en' ? languages[0] : languages[0]);
+  const currentLang = languages.find(l => l.code === i18n.language) || languages[0];
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -811,7 +810,6 @@ const Footer = () => {
                 {t("footer.privacy")}
               </Link>
               <span>·</span>
-              <Link to="/delete-account" className="transition-colors hover:text-foreground">Delete account</Link>
               <Link to="/terms" className="transition-colors hover:text-foreground">
                 {t("footer.terms", "Terms of Use")}
               </Link>
@@ -829,6 +827,17 @@ const Footer = () => {
 export const MarketingSite = () => {
   const { scrollY } = useScroll();
   const { i18n } = useTranslation();
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+  );
+
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 767px)");
+    const updateViewport = () => setIsMobile(query.matches);
+    updateViewport();
+    query.addEventListener("change", updateViewport);
+    return () => query.removeEventListener("change", updateViewport);
+  }, []);
 
   useEffect(() => {
     document.title = "Pocklet — Save it. Find it. Do it.";
@@ -841,6 +850,10 @@ export const MarketingSite = () => {
   const y1 = useTransform(scrollY, [0, 2000], [0, 150]);
   const y2 = useTransform(scrollY, [0, 2000], [0, -100]);
   const y3 = useTransform(scrollY, [0, 2000], [0, 80]);
+
+  if (isMobile) {
+    return <MobileMarketingSite languageSelector={<LanguageSelector />} />;
+  }
 
   return (
     <div className="relative min-h-screen bg-[#FEF8F6] selection:bg-primary/20">

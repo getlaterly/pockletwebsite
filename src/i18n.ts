@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { mobileHomepageCopy } from './mobileHomepageCopy';
 
 const resources: Record<string, any> = {
   en: {
@@ -31,24 +32,24 @@ const resources: Record<string, any> = {
         ex1: "A restaurant from Reels.",
         ex2: "A weekend spot from TikTok.",
         ex3: "Something you swore you’d buy later.",
-        pain1: "You forgot it.",
-        pain2: "Or forgot where you saved it.",
-        sol1: "That's where Pocklet comes in.",
+        pain1: "You forgot them.",
+        pain2: "Or forgot where you saved them.",
+        sol1: "That's where <span class='text-primary'>Pocklet</span> comes in.",
         sol2: "One place to save. One place to come back."
       },
       how: {
         eyebrow: "How it works",
         title: "Save it. Find it. Do it.",
         step1Title: "Save a find",
-        step1Desc: "Share a post, paste a link or add a screenshot.",
+        step1Desc: "Save a post, paste a link or add a screenshot.",
         step2Title: "Add what matters",
-        step2Desc: "Name it, tag it, or pin a location.",
+        step2Desc: "Name it, tag it, or add a location to make it easy to come back to.",
         step3Title: "Come back when it counts",
-        step3Desc: "Get reminded and actually do it."
+        step3Desc: "Set a reminder and let Pocklet bring it back when you’re ready to actually do it."
       },
       video: {
-        eyebrow: "See it in motion",
-        title: "See Pocklet in 30 seconds",
+        eyebrow: "Watch Pocklet in action",
+        title: "See <span class='text-primary'>Pocklet</span> in 30 seconds",
         desc: "From saving to actually coming back to it.",
         demo: "30-second demo",
         demoSub: "Save → Find → Act"
@@ -86,10 +87,10 @@ const resources: Record<string, any> = {
       map: {
         eyebrow: "On the map",
         title: "See what you saved around you",
-        desc: "Out and wondering where to eat or go? Open your map and see the places you already saved nearby.",
-        point1: "No digging through screenshots.",
-        point2: "No jumping between apps.",
-        point3: "Just decide and go.",
+        desc: "Out and wondering what's next? Open your map and see the places you already saved nearby",
+        point1: "No digging through screenshots",
+        point2: "No jumping between apps",
+        point3: "Just decide and go",
         eat: "Eat",
         go: "Go",
         buy: "Buy",
@@ -200,8 +201,8 @@ const resources: Record<string, any> = {
   "zh-TW": {
     translation: {
       nav: {
-        getPocklet: "立刻體驗 Pocklet",
-        how: "怎麼玩",
+        getPocklet: "下載 Pocklet",
+        how: "怎麼用",
         map: "探索附近",
         demo: "示範",
       },
@@ -232,7 +233,7 @@ const resources: Record<string, any> = {
         sol2: "通通存在同一個地方，想看隨時找得到。"
       },
       how: {
-        eyebrow: "怎麼玩？",
+        eyebrow: "怎麼用",
         title: "超無腦。<br class='md:hidden' /><span class='hidden md:inline'> </span>完全不用費心<em class='italic text-primary'>整理</em>",
         step1Title: "一鍵收藏",
         step1Desc: "點兩下，各大 App 的內容無痛存入。",
@@ -308,11 +309,11 @@ const resources: Record<string, any> = {
         unlimited: "Plus 加入 Auto Details 和更聰明的提醒"
       },
       footer: {
-        tagline: "為你最真實的生活打造——現在存，晚點見。",
+        tagline: "現在存，晚點見。",
         explore: "到處逛逛",
-        how: "怎麼玩？",
-        nearby: "找附近好料",
-        contact: "找我們聊聊",
+        how: "怎麼用？",
+        nearby: "打開地圖",
+        contact: "聯絡我們",
         privacy: "隱私權政策",
         terms: "服務條款"
       },
@@ -396,7 +397,7 @@ const resources: Record<string, any> = {
     translation: {
       nav: {
         getPocklet: "立即体验 Pocklet",
-        how: "怎么玩",
+        how: "怎么用",
         map: "探索附近",
         demo: "演示",
       },
@@ -427,7 +428,7 @@ const resources: Record<string, any> = {
         sol2: "一键收纳，想看的时候随时能找到。"
       },
       how: {
-        eyebrow: "怎么玩？",
+        eyebrow: "怎么用？",
         title: "超省心。<br class='md:hidden' /><span class='hidden md:inline'> </span>完全不需要费力<em class='italic text-primary'>整理</em>",
         step1Title: "一键无脑存",
         step1Desc: "点两下，各大 App 的内容无痛装进来。",
@@ -503,11 +504,11 @@ const resources: Record<string, any> = {
         unlimited: "Plus 加入 Auto Details 和更聪明的提醒"
       },
       footer: {
-        tagline: "为你最真实的生活打造——现在存，晚点见。",
+        tagline: "现在存，晚点见。",
         explore: "到处逛逛",
-        how: "怎么玩？",
+        how: "怎么用？",
         nearby: "找附近好店",
-        contact: "找我们聊聊",
+        contact: "联系我们",
         privacy: "隐私政策",
         terms: "服务条款"
       },
@@ -587,205 +588,11 @@ const resources: Record<string, any> = {
       }
     }
   },
-  "ja": {
-    translation: {
-      nav: {
-        getPocklet: "Pockletを始める",
-        how: "使い方",
-        map: "近くを探す",
-        demo: "デモ",
-      },
-      hero: {
-        title1: "今すぐ保存して、",
-        title2: "後で楽しむ",
-        desc1: "後で見返したい投稿、場所、アイデアを保存し、必要な時にすぐに見つけられます。",
-        desc2: "必要な時に、近くで保存した場所を確認できます。",
-        trust1: "広告なし",
-        trust2: "プライバシー重視",
-        trust3: "保存したものはあなたのもの",
-      },
-      strip: {
-        quote: "「ついに開く気になったブックマークアプリ」",
-        author: "— Side by Side",
-        rating: "★ 4.9 · App Store",
-        featured: "おすすめ · Designer Daily"
-      },
-      problem: {
-        eyebrow: "心当たりはありませんか？",
-        title: "後で見ようと保存したまま。<br />でもその「後で」は<em class='italic text-primary'>来なかった</em>。",
-        ex1: "Instagramで見つけたレストラン。",
-        ex2: "TikTokの動画。",
-        ex3: "YouTubeで見つけた場所。",
-        pain1: "忘れてしまった。",
-        pain2: "どこに保存したか忘れてしまった。",
-        sol1: "そこでPockletの出番です。",
-        sol2: "保存する場所も、見返す場所もひとつだけ。"
-      },
-      how: {
-        eyebrow: "使い方",
-        title: "シンプル。<br class='md:hidden' /><span class='hidden md:inline'> </span><em class='italic text-primary'>管理</em>は不要です",
-        step1Title: "保存",
-        step1Desc: "数回のタップでどのアプリからも保存。",
-        step2Title: "情報を追加",
-        step2Desc: "名前、タグ、場所を追加。",
-        step3Title: "見返す",
-        step3Desc: "リマインダーを受け取り、実際に行動する。"
-      },
-      video: {
-        eyebrow: "実際の動き",
-        title: "<em class='italic text-primary'>動作</em>を見てみる",
-        desc: "保存から実際に見返すまで。",
-        demo: "30秒デモ",
-        demoSub: "保存 → 見つける → 行動"
-      },
-      features: {
-        eyebrow: "機能",
-        title: "面倒なことはすべて<em class='italic text-primary'>お任せ</em>。",
-        f1Title: "どのアプリからも保存",
-        f1Desc: "Instagram、TikTokなどからリンクを共有。Pockletが数秒で保存します。",
-        f1DescMob: "Instagram、TikTokなどから数秒で保存。",
-        f2Title: "生活に合ったカテゴリー",
-        f2Desc: "食べる、行く、買う、見る、する — 色とアイコンで独自のラベルも作成可能。",
-        f2DescMob: "食べる、行く、買う、見る — 独自の分類も作成可能。",
-        f3Title: "すぐに見つかる",
-        f3Desc: "タイトル、メモ、スクリーンショット内のテキストを検索。フィルタリングも簡単です。",
-        f3TitleMob: "大切なものを見つけて保存",
-        f3DescMob: "必要なものを検索。お気に入りをマークして、常に手元に。",
-        f4Title: "優しいリマインダー",
-        f4Desc: "今夜、今週末、または必要な時にリマインド。",
-        f4DescMob: "適切なタイミングでお知らせ。",
-        f5Title: "お気に入りをマーク",
-        f5Desc: "最高のものを見つけやすく。完了後もアクセス可能です。",
-        f6Title: "あなた好みに",
-        f6Desc: "お好みの言語を選択して、あなたらしい使い心地に。"
-      },
-      plus: {
-        eyebrow: "Pocklet Plus",
-        title: "もう少し<em class='italic text-primary'>楽に</em>",
-        desc: "少し手助けがほしい保存には、PlusでAIアシストの詳細入力と柔軟なリマインダーを追加できます。",
-        autoTitle: "Auto Details",
-        autoDesc: "AIがタイトル、メモ、カテゴリー、タグ、画像、場所の入力を手伝います。保存前に確認・編集できます。",
-        reminderTitle: "Smarter Reminders",
-        reminderDesc: "カスタムのリマインダー日付を選び、大事な保存には追加通知を設定できます。"
-      },
-      map: {
-        eyebrow: "マップ上で",
-        title: "<em class='italic text-primary'>近く</em>の保存済み項目を見る",
-        desc: "外出先でマップを開き、周りに保存した場所がないか確認。",
-        point1: "スクリーンショットを探し回る必要なし。",
-        point2: "アプリ間を行ったり来たりする必要なし。",
-        point3: "決めたら、すぐに出発。" ,
-        eat: "食べる",
-        go: "行く",
-        buy: "買う",
-        browse: "見る",
-        do: "する",
-        directions: "経路",
-        pinTitle: "街で最高のベーカリー",
-        pinSubtitle: "Bean Around Bakery-Café",
-        pinAddress: "350 Queens Parade, Fitzroy North"
-      },
-      cta: {
-        eyebrow: "はじめよう",
-        title: "「後で」を<em class='italic text-primary'>実現する</em>",
-        desc: "本当に見返したいものを保存し始めましょう。",
-        sub: "やりたいことのための、穏やかなポケット。",
-        avail: "対応プラットフォーム",
-        appstore: "App Store",
-        googleplay: "Google Play",
-        free: "無料で開始",
-        noads: "広告・トラッキングなし",
-        unlimited: "PlusでAuto Detailsとスマート通知"
-      },
-      footer: {
-        tagline: "今とこれからの、リアルな生活のために。",
-        explore: "探索",
-        how: "使い方",
-        nearby: "近くのものを探す",
-        contact: "お問い合わせ",
-        privacy: "プライバシーポリシー",
-        terms: "利用規約"
-      },
-      privacy: {
-        back: "戻る",
-        title: "プライバシーポリシー",
-        lastUpdated: "最終更新日：2026年4月25日",
-        intro1: "Pockletはシンプルな原則に基づいて構築されています：あなたのデータはあなたのものです。",
-        intro2: "保存したものはすべてデバイス上に保存されます。データを販売したり、AIモデルのトレーニングに使用したり、広告に使用したりすることはありません。",
-        collectTitle: "収集する情報",
-        collect1Title: "デバイス上（ローカルのみ）",
-        collect1Desc1: "保存したリンク、スクリーンショット、カテゴリー、メモ、場所、リマインダー、設定は、デバイスの安全なストレージを使用してローカルに保存されます。",
-        collect1Desc2: "保存した項目を明示的に共有しない限り、このデータがデバイスから送信されることはありません。",
-        collect2Title: "アカウント情報（登録した場合）",
-        collect2Desc1: "アカウントを作成した場合、Supabaseを通じてメールアドレスと認証情報を保存します。",
-        collect2Desc2: "現在、保存したコンテンツはサーバーに同期<em>されません</em>。アカウントはゲスト体験を超えて無制限の保存を解除します。",
-        collect3Title: "保存したリンク",
-        collect3Desc1: "リンクを保存すると、サードパーティのサービス（Microlink、noembed、vxtwitter、TikTok oEmbed、および独自のSupabase関数など）を使用してソースウェブサイトからプレビュー画像とタイトルを取得します。",
-        collect3Desc2: "これらのリクエストにおいて、保存したURLがこれらのサードパーティサービスおよびソースウェブサイトに送信される場合があります。",
-        collect4Title: "位置データ",
-        collect4Desc1: "保存した項目に場所を追加したり場所を検索したりすると、ジオコーディングサービス（Photon、Nominatim）が住所と座標を解決します。",
-        collect4Desc2: "位置データはローカルに保存され、Pockletのサーバーに送信されることはありません。",
-        collect5Title: "通知",
-        collect5Desc1: "リマインダーのスケジュールと管理は完全にデバイス上で行われます。通知データを収集または追跡することはありません。",
-        notCollectTitle: "収集しない情報",
-        notCollect1: "閲覧活動を追跡しません",
-        notCollect2: "データを第三者に販売しません",
-        notCollect3: "データをAIモデルのトレーニングに使用しません",
-        notCollect4: "広告を表示しません",
-        notCollect5: "明示的にインポートを選択しない限り、写真にアクセスしません",
-        thirdPartyTitle: "サードパーティサービス",
-        tp1Title: "認証 (Supabase, Google, Apple)",
-        tp1Desc1: "安全な認証のためにSupabaseを使用しています。サードパーティプロバイダー（GoogleまたはApple）で登録する場合、アカウントの作成に必要な基本的なプロフィール情報（名前やメールアドレスなど）のみを受け取ります。",
-        tp1Desc2Prefix: "保存した項目やアプリの使用データをこれらのプロバイダーと共有することはありません。Supabaseの",
-        tp1Desc2Link: "プライバシーポリシー",
-        tp1Desc2Suffix: "をお読みください。",
-        tp2Title: "リンクプレビュー (Microlink, noembed, vxtwitter, TikTok)",
-        tp2Desc1: "リンクを保存すると、Microlink、noembed、vxtwitter、TikTok oEmbed、および直接のウェブサイト取得を使用してプレビュー画像とタイトルを取得します。",
-        tp2Desc2: "これらのリクエストは安全なSupabaseサーバーから行われます。メタデータを抽出するために、保存したURLがこれらのサードパーティサービスおよびソースウェブサイトに送信される場合があります。",
-        tp3Title: "場所検索 (Photon, Nominatim)",
-        tp3Desc1: "場所を検索する際、オープンソースのジオコーディングサービスを使用します。",
-        tp3Desc2: "これらのリクエストはデバイスから直接行われ、サービスプロバイダーによって記録される場合があります。",
-        tp4Title: "マップ (OpenStreetMap, Carto)",
-        tp4Desc1: "マップタイルはOpenStreetMapとCartoから読み込まれます。マップを表示する際、デバイスはこれらのサービスに直接リクエストを行います。",
-        tp4Desc2: "マップの利用状況を収集または保存することはありません。",
-        futureTitle: "今後の機能",
-        futureDesc1: "将来、複数のデバイス間で保存した項目にアクセスできるクラウド同期の追加を検討しています。",
-        futureDesc2: "この機能を追加する場合：",
-        futurePoint1: "完全にオプションになります",
-        futurePoint2: "通知され、参加するかどうか尋ねられます",
-        futurePoint3: "データは暗号化され、プライベートに保たれます",
-        futurePoint4: "明確な詳細を記載してこのポリシーを更新します",
-        controlTitle: "コントロール",
-        controlDesc1: "データはローカルに保存されるため、完全にコントロールできます：",
-        controlPoint1: "いつでも保存した項目を削除",
-        controlPoint2: "アプリの設定からすべてのデータを消去",
-        controlPoint3: "アカウントと関連するすべてのデータを削除",
-        controlPoint4: "データをエクスポート（近日公開）",
-        controlDesc2: "アプリを削除すると、ローカルに保存されているすべてのデータがデバイスから永久に削除されます。",
-        deletionTitle: "アカウントの削除",
-        deletionDesc1: "お客様は、いつでもご自身のアカウントおよび関連するすべてのデータを削除する権利を有します。",
-        deletionDesc2: "アカウントを削除するには、Pockletアプリを開き、「設定」>「アカウント」に移動して「アカウントを削除」をタップしてください。この操作は取り消すことができず、サーバーから認証情報が即座に削除されます。",
-        deletionDesc3: "保存されたアイテムはデバイスのローカルに保存されているため、アカウントを削除してもデバイスに保存されているデータは自動的には削除されません。すべてのローカルデータを削除するには、デバイスからアプリを削除する必要があります。",
-        childrenTitle: "子供のプライバシー",
-        childrenDesc1: "Pockletはすべての年齢のユーザーが利用できます。13歳（または居住国の同意年齢）未満の場合は、保護者の指導のもとでPockletを使用してください。",
-        childrenDesc2: "すべてのデータはローカルに保存され、メール（アカウントを作成した場合）以外の個人情報を収集しないため、責任を持って使用すればPockletは若いユーザーにとって安全です。",
-        childrenDesc3Prefix: "保護者の方へ：子供がアカウントを作成し、削除したい場合は、",
-        email: "support@getpocklet.com",
-        childrenDesc3Suffix: "までご連絡ください。",
-        updatesTitle: "このポリシーの更新",
-        updatesDesc1: "Pockletの進化に伴い、このポリシーを更新する場合があります。",
-        updatesDesc2: "重大な変更を行う場合は、アプリまたはメール（アカウントを作成した場合）を通じて通知します。",
-        updatesDesc3: "このページの上部にある「最終更新日」は、このポリシーを最後に改訂した日を示しています。",
-        questionsTitle: "ご質問ですか？",
-        questionsDesc1: "このプライバシーポリシーやPockletのデータ処理について質問がある場合は、メールでお問い合わせください：",
-        backHome: "ホームに戻る"
-      }
-    }
-  }
 };
 
-// Aliases for UK English
-resources['en-GB'] = resources['en-US'] = resources['en'];
+for (const [language, copy] of Object.entries(mobileHomepageCopy)) {
+  resources[language].translation.mobileHome = copy;
+}
 
 export const POCKLET_LANG_KEY = 'pocklet_lang_pref_v1';
 
@@ -793,6 +600,9 @@ export const getInitialLanguage = () => {
   if (typeof window === 'undefined') return 'en';
 
   const savedLang = localStorage.getItem(POCKLET_LANG_KEY);
+  if (savedLang === 'en-US' || savedLang === 'en-GB' || savedLang === 'ja') {
+    return 'en';
+  }
   if (savedLang && resources[savedLang]) {
     return savedLang;
   }
@@ -820,10 +630,6 @@ export const getInitialLanguage = () => {
       return 'zh-CN';
     }
     
-    if (lowerLang.startsWith('ja')) {
-      return 'ja';
-    }
-    
     if (lowerLang.startsWith('en')) {
       return 'en';
     }
@@ -836,6 +642,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    supportedLngs: ['en', 'zh-TW', 'zh-CN'],
     fallbackLng: 'en',
     lng: getInitialLanguage(), // Default language
     interpolation: {
