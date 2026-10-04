@@ -6,6 +6,7 @@ import pockletLogo from "@/assets/pocklet-logo.png";
 import mapScreenshot from "@/assets/pocklet-mobile-map.webp";
 import demoPoster from "@/assets/pocklet-demo-poster.jpg";
 import "./MobileMarketingSite.css";
+import { GOOGLE_PLAY_URL } from "./downloadLinks";
 
 const categories = [
   { key: "eat" },
@@ -276,7 +277,7 @@ export const MobileMarketingSite = ({ languageSelector }: { languageSelector: Re
           <h2 id="mobile-download-title">{t("mobileHome.download.title1")}<br />{t("mobileHome.download.title2")}</h2>
           <div className="pm-store-group">
             <a className="pm-store" href="#"><small>{t("mobileHome.download.appStorePrefix")}</small>App Store</a>
-            <a className="pm-store" href="#"><small>{t("mobileHome.download.googlePlayPrefix")}</small>Google Play</a>
+            <a className="pm-store" href={GOOGLE_PLAY_URL}><small>{t("mobileHome.download.googlePlayPrefix")}</small>Google Play</a>
           </div>
         </section>
       </main>
