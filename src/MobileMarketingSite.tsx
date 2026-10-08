@@ -10,9 +10,8 @@ import { GOOGLE_PLAY_URL } from "./downloadLinks";
 
 const categories = [
   { key: "eat" },
-  { key: "go" },
-  { key: "buy" },
   { key: "do" },
+  { key: "buy" },
 ];
 
 const socialLinks = [
@@ -174,7 +173,6 @@ const MobileDemo = () => {
         <span className="pm-demo-label">
           <Play aria-hidden="true" />
           {t("mobileHome.demo.title")}
-          <small>{t("mobileHome.demo.duration")}</small>
         </span>
         <Plus className="pm-expand" aria-hidden="true" />
       </summary>
@@ -225,7 +223,7 @@ export const MobileMarketingSite = ({ languageSelector }: { languageSelector: Re
         <section className="pm-section pm-pain" aria-labelledby="mobile-problem-title">
           <p className="pm-eyebrow">{t("mobileHome.problem.eyebrow")}</p>
           <h2 id="mobile-problem-title">{t("mobileHome.problem.title1")}</h2>
-          <p className="pm-problem-copy">{t("mobileHome.problem.example1")}<br />{t("mobileHome.problem.example2")}</p>
+          <p className="pm-problem-copy">{t("mobileHome.problem.example1")}<br />{t("mobileHome.problem.example2")}<br />{t("mobileHome.problem.example3")}</p>
           <p className="pm-problem-copy">{t("mobileHome.problem.pain")}</p>
           <p className="pm-problem-copy">{t("mobileHome.problem.solution").split(/(Pocklet)/g).map((part, index) => part === "Pocklet" ? <span className="pm-purple" key={index}>{part}</span> : part)}</p>
         </section>
@@ -236,7 +234,10 @@ export const MobileMarketingSite = ({ languageSelector }: { languageSelector: Re
           <ol className="pm-steps">
             {[1, 2, 3].map(step => (
               <li key={step}>
-                <h3>{step} — {t(`mobileHome.how.step${step}Title`)}</h3>
+                <h3>
+                  <span className="pm-step-number">{step}</span>
+                  <span> {t(`mobileHome.how.step${step}Title`)}</span>
+                </h3>
                 <p>{t(`mobileHome.how.step${step}Desc`)}</p>
               </li>
             ))}

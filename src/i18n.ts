@@ -31,7 +31,7 @@ const resources: Record<string, any> = {
         title: "You saved it for later.<br />But later never came.",
         ex1: "A restaurant from Reels.",
         ex2: "A weekend spot from TikTok.",
-        ex3: "Something you swore you’d buy later.",
+        ex3: "That book you swore you’d buy later.",
         pain1: "You forgot them.",
         pain2: "Or forgot where you saved them.",
         sol1: "That's where <span class='text-primary'>Pocklet</span> comes in.",

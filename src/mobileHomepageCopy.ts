@@ -1,11 +1,11 @@
 const english = {
   hero: {
-    title1: "Save now.",
+    title1: "You meant to",
     beforeCategory: "",
-    afterCategory: "later",
+    afterCategory: "that, right?",
     verbs: { eat: "Eat", go: "Go", buy: "Buy", do: "Do" },
-    subtitle: "Keep everything you want to come back to in one place.",
-    accessibleTitle: "Save now. Eat, go, buy or do later.",
+    subtitle: "Keep your finds in one place, so you know where to look when you’re ready.",
+    accessibleTitle: "You meant to eat, do or buy that, right?",
     pauseAnimation: "Pause animation",
     resumeAnimation: "Resume animation",
     seeHow: "See how it works",
@@ -15,6 +15,7 @@ const english = {
     title1: "Something in your apps. Somewhere.",
     example1: "That new café everyone’s talking about.",
     example2: "That concert you want to see in 3 months.",
+    example3: "That book you swore you’d buy later.",
     pain: "You remember saving them. Just not where.",
     solution: "Your good finds are just a few taps away.",
   },
@@ -90,14 +91,15 @@ export const mobileHomepageCopy: Record<string, MobileHomepageCopy> = {
   en: english,
   "zh-TW": {
     hero: {
-      title1: "先存起來。", beforeCategory: "晚點再", afterCategory: "",
+      title1: "你本來是想", beforeCategory: "", afterCategory: "那個的，對吧？",
       verbs: { eat: "吃", go: "去", buy: "買", do: "做" },
-      subtitle: "把想回來看的，都收在同一個地方。", accessibleTitle: "現在先收藏。之後再吃、去、買或做。",
+      subtitle: "把想回來看的都收在同一個地方，想找時就找得到。", accessibleTitle: "那個你一直想吃、做或買的，對吧？",
       pauseAnimation: "暫停動畫", resumeAnimation: "繼續動畫", seeHow: "看看怎麼用",
     },
     problem: {
       eyebrow: "是不是很熟悉？", title1: "想做的那件事，\n還躺在某個角落。",
       example1: "那間最近大家都在聊的咖啡廳", example2: "三個月後想去的那場演唱會",
+      example3: "那本你說之後一定要買的書",
       pain: "明明記得有存下來，要找時卻怎麼都找不到。", solution: "用 Pocklet，幾秒就找得到。",
     },
     how: {
@@ -134,14 +136,15 @@ export const mobileHomepageCopy: Record<string, MobileHomepageCopy> = {
   },
   "zh-CN": {
     hero: {
-      title1: "先存起来。", beforeCategory: "晚点再", afterCategory: "。",
+      title1: "你本来是想", beforeCategory: "", afterCategory: "那个的，对吧？",
       verbs: { eat: "吃", go: "去", buy: "买", do: "做" },
-      subtitle: "把想回头看的，都放在一个地方。", accessibleTitle: "现在先收藏。之后再吃、去、买或做。",
+      subtitle: "把想以后再看的都放在一个地方，想找的时候就能找到。", accessibleTitle: "那个你一直想吃、做或买的，对吧？",
       pauseAnimation: "暂停动画", resumeAnimation: "继续动画", seeHow: "看看怎么用",
     },
     problem: {
       eyebrow: "是不是很熟悉？", title1: "想做的那件事，\n还躺在某个角落。",
       example1: "那家最近大家都在聊的咖啡店", example2: "三个月后想去的那场演唱会",
+      example3: "那本你说之后一定要买的书",
       pain: "明明记得存过，真要找的时候却怎么都找不到。", solution: "用 Pocklet，几秒就能找到。",
     },
     how: {

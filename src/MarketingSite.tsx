@@ -76,11 +76,10 @@ const useDesktopCopy = () => {
 
 /* ---------- Hero ---------- */
 
-const heroCategories = ["eat", "go", "buy", "do"] as const;
+const heroCategories = ["eat", "do", "buy"] as const;
 
 const Hero = () => {
   const { t } = useTranslation();
-  const copy = useDesktopCopy();
   const heroRef = useRef<HTMLElement>(null);
   const [activeCategory, setActiveCategory] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -125,8 +124,7 @@ const Hero = () => {
             {t("mobileHome.hero.afterCategory") && <span>{t("mobileHome.hero.afterCategory")}</span>}
           </span>
         </h1>
-        <p className="pd-lead">{copy.heroLead}</p>
-        <p className="pd-hero-detail">{copy.heroDetail}</p>
+        <p className="pd-lead">{t("mobileHome.hero.subtitle")}</p>
         <div className="pd-actions">
           <a className="pd-button" href="#download">{t("nav.getPocklet")}</a>
           <a className="pd-button pd-button-outline" href="#how">{t("mobileHome.hero.seeHow")}<ArrowDown aria-hidden="true" /></a>
@@ -559,7 +557,7 @@ export const MarketingSite = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Pocklet — Save it. Find it. Do it.";
+    document.title = "Pocklet — Save what you want to come back to";
     const initialLang = getInitialLanguage();
     if (i18n.language !== initialLang) {
       i18n.changeLanguage(initialLang);

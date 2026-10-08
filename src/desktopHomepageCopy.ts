@@ -1,8 +1,6 @@
 const english = {
-  heroLead: "Save posts, places, and ideas you want to come back to — and actually find them when it matters.",
-  heroDetail: "From the café someone recommended to the thing you meant to buy, keep your finds together instead of scattered across apps and screenshots.",
   problemTitle: "You saved it\nfor later.\nBut later\nnever came.",
-  problemExamples: ["That new café everyone’s talking about.", "That concert you want to see in 3 months.", "Something you swore you’d buy later."],
+  problemExamples: ["That new café everyone’s talking about.", "That concert you want to see in 3 months.", "Something you  you’d buy later."],
   problemSources: ["Saved post", "Screenshot", "Somewhere in a chat"],
   problemPain: "You remember saving them. Just not where.",
   problemSolution: "brings your finds together, so you can spend less time looking for the thing you saved and more time actually coming back to it.",
@@ -41,8 +39,6 @@ type DesktopHomepageCopy = typeof english;
 export const desktopHomepageCopy: Record<string, DesktopHomepageCopy> = {
   en: english,
   "zh-TW": {
-    heroLead: "把想回來看的貼文、地點和點子存起來，等到需要時，真的找得到。",
-    heroDetail: "從朋友推薦的咖啡廳，到一直想買的東西，把好發現收在一起，不再散落在各個 App 和截圖裡。",
     problemTitle: "想做的那件事，\n還躺在某個角落。",
     problemExamples: ["那間最近大家都在聊的咖啡廳", "三個月後想去的那場演唱會", "那個一直說之後要買的東西"],
     problemSources: ["收藏的貼文", "截圖", "某段聊天裡"],
@@ -78,8 +74,6 @@ export const desktopHomepageCopy: Record<string, DesktopHomepageCopy> = {
     plusReminderDescription: "選擇確切的提醒時間，還能加入多次提前提醒。",
   },
   "zh-CN": {
-    heroLead: "把想回头看的内容、地点和点子存起来，等到需要时，真的找得到。",
-    heroDetail: "从朋友推荐的咖啡店，到一直想买的东西，把好发现放在一起，不再散落在各个 App 和截图里。",
     problemTitle: "想做的那件事，\n还躺在某个角落。",
     problemExamples: ["那家最近大家都在聊的咖啡店", "三个月后想去的那场演唱会", "那个一直说之后要买的东西"],
     problemSources: ["收藏的内容", "截图", "某段聊天里"],

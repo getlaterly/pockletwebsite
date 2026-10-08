@@ -52,15 +52,17 @@
 .pd-hero-copy { max-width: 680px; }
 .pd-hero h1 { width: fit-content; max-width: 100%; margin-inline: auto; font-size: var(--pd-headline); line-height: 1.08; letter-spacing: -1px; text-align: left; }
 .pd-first-line { display: block; padding-left: 16px; }
-.pd-second-line { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; white-space: nowrap; }
-.pd-word { display: inline-grid; padding: 6px 16px 10px; border-radius: 40px; background: var(--pd-eat); color: var(--pd-plum); }
+.pd-second-line { display: flex; align-items: baseline; gap: 10px; margin-top: 0; white-space: nowrap; }
+.pd-word { display: inline-grid; padding: 4px 16px 6px; border-radius: 40px; background: var(--pd-eat); color: var(--pd-plum); }
+:root:lang(zh) .pd-hero h1 { font-size: 60px; line-height: 1.16; letter-spacing: 0; }
+:root:lang(zh) .pd-second-line { gap: 4px; }
+:root:lang(zh) .pd-word { padding-inline-end: 12px; }
 .pd-word[data-category="go"] { background: var(--pd-go); }
 .pd-word[data-category="buy"] { background: var(--pd-buy); }
 .pd-word[data-category="do"] { background: var(--pd-do); }
 .pd-verb { grid-area: 1 / 1; visibility: hidden; opacity: 0; transform: translateY(6px); transition: opacity 150ms, transform 150ms; }
 .pd-verb.is-active { visibility: visible; opacity: 1; transform: none; }
 .pd-hero .pd-lead { max-width: 580px; margin: 24px auto 0; font-size: 18px; line-height: 1.6; }
-.pd-hero .pd-hero-detail { max-width: 580px; margin: 14px auto 0; font-size: 14px; }
 .pd-actions { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 26px; }
 .pd-motion-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 8px; margin-top: 8px; color: var(--pd-body); font: 400 11px/1.5 var(--pd-font-body); }
 .pd-motion-toggle svg { width: 12px; height: 12px; }
